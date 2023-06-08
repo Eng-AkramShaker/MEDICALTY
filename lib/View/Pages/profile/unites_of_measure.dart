@@ -1,5 +1,7 @@
 //import 'dart:js_util';
 
+// ignore_for_file: must_be_immutable
+
 import 'package:Medicalty/View/Pages/profile/setting_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
