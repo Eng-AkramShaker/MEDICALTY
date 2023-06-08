@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
-import 'package:Medicalty/routes/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:medicalty/routes/routes.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 import 'View/Pages/Trainer/addNew.dart';

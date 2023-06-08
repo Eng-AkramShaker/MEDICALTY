@@ -1,30 +1,50 @@
 [
     {
-        "merged": "com.example.clinic_app-merged_res-11:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.example.clinic_app-main-5:/mipmap-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-merged_res-11:\\drawable-v21_launch_background.xml.flat",
+        "source": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-main-5:\\drawable-v21\\launch_background.xml"
     },
     {
-        "merged": "com.example.clinic_app-merged_res-11:/drawable-v21_launch_background.xml.flat",
-        "source": "com.example.clinic_app-main-5:/drawable-v21/launch_background.xml"
+        "merged": "com.example.clinic_app-merged_res-11:/mipmap-hdpi_medicalty.png.flat",
+        "source": "com.example.clinic_app-main-5:/mipmap-hdpi/medicalty.png"
     },
     {
-        "merged": "com.example.clinic_app-merged_res-11:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.example.clinic_app-main-5:/mipmap-mdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-merged_res-11:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-main-5:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.example.clinic_app-merged_res-11:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.example.clinic_app-main-5:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-merged_res-11:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-main-5:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.example.clinic_app-merged_res-11:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.example.clinic_app-main-5:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-merged_res-11:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-main-5:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.example.clinic_app-merged_res-11:/drawable_launch_background.xml.flat",
-        "source": "com.example.clinic_app-main-5:/drawable/launch_background.xml"
+        "merged": "com.example.clinic_app-merged_res-11:/mipmap-xxhdpi_medicalty.png.flat",
+        "source": "com.example.clinic_app-main-5:/mipmap-xxhdpi/medicalty.png"
     },
     {
-        "merged": "com.example.clinic_app-merged_res-11:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.example.clinic_app-main-5:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-merged_res-11:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-main-5:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "com.example.clinic_app-merged_res-11:/mipmap-xxxhdpi_medicalty.png.flat",
+        "source": "com.example.clinic_app-main-5:/mipmap-xxxhdpi/medicalty.png"
+    },
+    {
+        "merged": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-merged_res-11:\\drawable_launch_background.xml.flat",
+        "source": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-main-5:\\drawable\\launch_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-merged_res-11:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Akrammm\\.gradle\\daemon\\7.5\\com.example.clinic_app-main-5:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "com.example.clinic_app-merged_res-11:/mipmap-xhdpi_medicalty.png.flat",
+        "source": "com.example.clinic_app-main-5:/mipmap-xhdpi/medicalty.png"
+    },
+    {
+        "merged": "com.example.clinic_app-merged_res-11:/mipmap-mdpi_medicalty.png.flat",
+        "source": "com.example.clinic_app-main-5:/mipmap-mdpi/medicalty.png"
     }
 ]
