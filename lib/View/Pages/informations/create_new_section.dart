@@ -1,11 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
 
-import 'package:carehealth/View/widget/textfield_screen/my_app_bar.dart';
-import 'package:carehealth/View/widget/textfield_screen/my_textfield_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/my_app_bar.dart';
+import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
@@ -53,7 +53,8 @@ class CreateNewSectionPage extends StatelessWidget {
                   hintText: '#Id Section',
                   keyboardType: TextInputType.number,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/id_section.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/id_section.png',
                     height: 1,
                   ),
                 ),
@@ -66,7 +67,8 @@ class CreateNewSectionPage extends StatelessWidget {
                   hintText: 'Department Name',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/depname.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/depname.png',
                     height: 1,
                   ),
                 ),

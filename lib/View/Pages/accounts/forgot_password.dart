@@ -1,6 +1,6 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, unnecessary_import, unused_import
 
-import 'package:carehealth/View/Pages/accounts/verify_account.dart';
+import 'package:Medicalty/View/Pages/accounts/verify_account.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';

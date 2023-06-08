@@ -1,6 +1,5 @@
 // ignore_for_file: unused_import, file_names, prefer_const_constructors, duplicate_ignore
 
-import 'package:carehealth/view/pages/onboarding/onBoarding_start.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

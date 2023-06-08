@@ -1,11 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
 
-import 'package:carehealth/View/widget/textfield_screen/my_app_bar.dart';
-import 'package:carehealth/View/widget/textfield_screen/my_textfield_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/my_app_bar.dart';
+import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
@@ -65,10 +65,10 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: '#ID Insurance',
                   keyboardType: TextInputType.number,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/id_section.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/id_section.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -77,7 +77,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'name of the insurance company',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/center_name.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/center_name.png',
                     height: 1,
                   ),
                 ),
@@ -97,7 +98,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'phone number',
                   keyboardType: TextInputType.phone,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/phone.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/phone.png',
                     height: 1,
                   ),
                 ),
@@ -108,7 +110,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'phone number 1',
                   keyboardType: TextInputType.phone,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/phone.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/phone.png',
                     height: 1,
                   ),
                 ),
@@ -119,7 +122,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'E-mail',
                   keyboardType: TextInputType.emailAddress,
                   obscureText: false,
-                 suffixIcon: Icon(Icons.email_outlined),
+                  suffixIcon: Icon(Icons.email_outlined),
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -137,7 +140,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'Country',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/country.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/country.png',
                     height: 1,
                   ),
                 ),
@@ -148,7 +152,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'Address',
                   keyboardType: TextInputType.streetAddress,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/location.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/location.png',
                     height: 1,
                   ),
                 ),
@@ -167,7 +172,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'State name',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/country.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/country.png',
                     height: 1,
                   ),
                 ),
@@ -178,7 +184,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'District name',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/state.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/state.png',
                     height: 1,
                   ),
                 ),
@@ -189,7 +196,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'Postal code',
                   keyboardType: TextInputType.number,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/postal.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/postal.png',
                     height: 1,
                   ),
                 ),
@@ -207,7 +215,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'Website',
                   keyboardType: TextInputType.url,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/url.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/url.png',
                     height: 1,
                   ),
                 ),
@@ -218,7 +227,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'Facebook',
                   keyboardType: TextInputType.text,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/facebook.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/facebook.png',
                     height: 1,
                   ),
                 ),
@@ -229,7 +239,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'Instagram',
                   keyboardType: TextInputType.text,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/instagram.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/instagram.png',
                     height: 1,
                   ),
                 ),
@@ -240,7 +251,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'Twitter',
                   keyboardType: TextInputType.text,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/twitter.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/twitter.png',
                     height: 1,
                   ),
                 ),
@@ -251,7 +263,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'Snapchat',
                   keyboardType: TextInputType.text,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/snapchat.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/snapchat.png',
                     height: 1,
                   ),
                 ),
@@ -262,7 +275,8 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                   hintText: 'YouTube',
                   keyboardType: TextInputType.text,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/youtube.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/youtube.png',
                     height: 1,
                   ),
                 ),

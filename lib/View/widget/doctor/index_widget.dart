@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_typing_uninitialized_variables, prefer_const_constructors
 
-import 'package:carehealth/constatnt/font_app_styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constatnt/color_app.dart';
+import '../../../constatnt/font_app_styles.dart';
 
 class IndexWidget extends StatelessWidget {
   const IndexWidget({Key? key, required this.textTitle}) : super(key: key);

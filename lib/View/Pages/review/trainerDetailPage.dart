@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors, file_names, annotate_overrides, sized_box_for_whitespace, avoid_unnecessary_containers, camel_case_types, unused_import, prefer_const_literals_to_create_immutables
 
-import 'package:carehealth/View/Pages/accounts/write__review.dart';
-import 'package:carehealth/View/Pages/review/reviewsPage.dart';
-import 'package:carehealth/view/Pages/home_page/Book_Now.dart';
+import 'package:Medicalty/View/Pages/review/reviewsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scroll_app_bar/scroll_app_bar.dart';

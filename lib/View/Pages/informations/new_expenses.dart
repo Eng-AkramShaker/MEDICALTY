@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, use_key_in_widget_constructors, must_be_immutable
 
-import 'package:carehealth/View/widget/textfield_screen/my_app_bar.dart';
-import 'package:carehealth/View/widget/textfield_screen/my_textfield_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/my_app_bar.dart';
+import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import 'new_invoices.dart';
@@ -26,8 +26,8 @@ class NewExpensesPage extends StatelessWidget {
     return MyTextFieldContainer(
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar:MyAppBar(
-          title:'New Expenses',
+        appBar: MyAppBar(
+          title: 'New Expenses',
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -55,10 +55,10 @@ class NewExpensesPage extends StatelessWidget {
                       hintText: '#ID Expenses',
                       keyboardType: TextInputType.number,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/id_section.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/id_section.png',
                         height: 1,
                       ),
-
                     ),
                     const SizedBox(height: 15.0),
                     OnBoardingTextFormField(
@@ -67,10 +67,10 @@ class NewExpensesPage extends StatelessWidget {
                       hintText: 'address',
                       keyboardType: TextInputType.streetAddress,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/location.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/location.png',
                         height: 1,
                       ),
-
                     ),
                     const SizedBox(height: 15.0),
                     OnBoardingTextFormField(
@@ -92,10 +92,10 @@ class NewExpensesPage extends StatelessWidget {
                             hintText: 'time',
                             keyboardType: TextInputType.number,
                             obscureText: false,
-                            suffixIcon: Image.asset('$imagePath/time.png',
+                            suffixIcon: Image.asset(
+                              '$imagePath/time.png',
                               height: 1,
                             ),
-
                           ),
                         ),
                         const SizedBox(
@@ -109,10 +109,10 @@ class NewExpensesPage extends StatelessWidget {
                             hintText: 'Date',
                             keyboardType: TextInputType.name,
                             obscureText: false,
-                            suffixIcon: Image.asset('$imagePath/date.png',
+                            suffixIcon: Image.asset(
+                              '$imagePath/date.png',
                               height: 1,
                             ),
-
                           ),
                         ),
                       ],
@@ -124,10 +124,10 @@ class NewExpensesPage extends StatelessWidget {
                       hintText: 'The value of the expense \$',
                       keyboardType: TextInputType.name,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/value.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/value.png',
                         height: 1,
                       ),
-
                     ),
                     const SizedBox(height: 15.0),
                     OnBoardingTextFormField(
@@ -145,10 +145,10 @@ class NewExpensesPage extends StatelessWidget {
                       hintText: 'Accounting code',
                       keyboardType: TextInputType.name,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/code.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/code.png',
                         height: 1,
                       ),
-
                     ),
                     const SizedBox(height: 15.0),
                     OnBoardingTextFormField(
@@ -157,10 +157,10 @@ class NewExpensesPage extends StatelessWidget {
                       hintText: 'Customer address1',
                       keyboardType: TextInputType.name,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/location.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/location.png',
                         height: 1,
                       ),
-
                     ),
                     const SizedBox(height: 15.0),
                   ],
@@ -180,7 +180,11 @@ class NewExpensesPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text('Attach File', textAlign: TextAlign.left),
-                          Icon(Icons.add,color: ColorApp.greenColor,size: 35,)
+                          Icon(
+                            Icons.add,
+                            color: ColorApp.greenColor,
+                            size: 35,
+                          )
                         ],
                       )),
                 ),

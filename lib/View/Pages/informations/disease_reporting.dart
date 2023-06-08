@@ -1,11 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, unused_import, must_be_immutable, prefer_const_constructors
 
-import 'package:carehealth/View/widget/textfield_screen/my_app_bar.dart';
-import 'package:carehealth/View/widget/textfield_screen/my_textfield_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/my_app_bar.dart';
+import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
@@ -20,7 +20,6 @@ class DiseaseReportingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyTextFieldContainer(
-
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: MyAppBar(
@@ -51,7 +50,8 @@ class DiseaseReportingPage extends StatelessWidget {
                       hintText: 'ID Disease',
                       keyboardType: TextInputType.number,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/path.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/path.png',
                         height: 1,
                       ),
                     ),
@@ -62,10 +62,10 @@ class DiseaseReportingPage extends StatelessWidget {
                       hintText: 'the name of the disease',
                       keyboardType: TextInputType.name,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/user.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/user.png',
                         height: 1,
                       ),
-
                     ),
                     const SizedBox(height: 15.0),
                     OnBoardingTextFormField(

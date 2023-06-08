@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_import, unused_import
 
-import 'package:carehealth/View/Pages/accounts/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';
 import '../review/write__review.dart';
+import 'login_page.dart';
 
 class Verify extends StatefulWidget {
   const Verify({super.key});

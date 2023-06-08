@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 
-import 'package:carehealth/constatnt/color_app.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../constatnt/color_app.dart';
 import '../../../constatnt/image_app.dart';
 import '../../../constatnt/font_app_styles.dart';
 import '../../../controllers/onboarding/onBoarding_controller.dart';

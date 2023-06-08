@@ -1,6 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, camel_case_types, prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers, unused_import, sized_box_for_whitespace, must_be_immutable, non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_import
 
-import 'package:carehealth/View/Pages/Trainer/paymentCompleted.dart';
+import 'package:Medicalty/View/Pages/Trainer/paymentCompleted.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -48,8 +48,6 @@ class Payment extends StatelessWidget {
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(3),
-
-
                               child: InkWell(
                                 onTap: () {
                                   Get.back();
@@ -57,7 +55,6 @@ class Payment extends StatelessWidget {
                                 child: Icon(Icons.arrow_back_ios_new_outlined,
                                     size: 19, color: Colors.white),
                               ),
-
                             ),
                           ),
                           Padding(

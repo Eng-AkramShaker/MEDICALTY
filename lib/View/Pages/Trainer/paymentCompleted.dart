@@ -1,6 +1,5 @@
 // ignore_for_file: use_key_in_widget_constructors, camel_case_types, prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers, unused_import, sized_box_for_whitespace, must_be_immutable, unnecessary_new, unnecessary_string_interpolations, avoid_types_as_parameter_names, non_constant_identifier_names, file_names, unnecessary_brace_in_string_interps, unnecessary_import
 
-import 'package:carehealth/View/Pages/home_page/navBar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -10,6 +9,7 @@ import '../../../constatnt/image_app.dart';
 import '../../widget/homePage/bottomWidget.dart';
 import '../../widget/homePage/divider.dart';
 import '../home_page/HomePage.dart';
+import '../home_page/navBar.dart';
 
 class PaymentCompleted extends StatefulWidget {
   @override

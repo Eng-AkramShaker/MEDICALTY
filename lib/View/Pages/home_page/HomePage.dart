@@ -1,6 +1,5 @@
 // ignore_for_file: use_key_in_widget_constructors, camel_case_types, prefer_const_constructors, prefer_const_declarations, non_constant_identifier_names, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_unnecessary_containers, unnecessary_new, unused_element, must_be_immutable, unnecessary_import, unused_import, sort_child_properties_last, file_names, unnecessary_brace_in_string_interps
 
-import 'package:carehealth/View/widget/drawer/drawer_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,6 +9,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../constatnt/font_app_styles.dart';
 import '../../../constatnt/image_app.dart';
+import '../../widget/drawer/drawer_list.dart';
 import '../../widget/homePage/appBar.dart';
 import '../../widget/homePage/divider.dart';
 import '../../widget/homePage/listControllerWidget.dart';
@@ -538,24 +538,24 @@ class HomePage extends StatelessWidget {
                   NewListControllerBestDoctorPopularWidget(),
                   // =============== Social worker text ===========================
                   NewTextBookNowWidget(text: 'Social worker'),
-                   // =============== Two top list of doctores title and rate ==================
-                NewListDoctorControllerCardWidgetThree(
-                    screenWidth: MediaQuery.of(context).size.width),
-                      // =============== nutrition text ===========================
+                  // =============== Two top list of doctores title and rate ==================
+                  NewListDoctorControllerCardWidgetThree(
+                      screenWidth: MediaQuery.of(context).size.width),
+                  // =============== nutrition text ===========================
                   NewTextBookNowWidget(text: 'nutrition'),
-                   // =============== Two top list of doctores title and rate ==================
-                NewListDoctorControllerCardWidgetThree(
-                    screenWidth: MediaQuery.of(context).size.width),
-                     // =============== Paid adss text =================
-                   NewTextBestDoctorTwoWidget(word: 'Paid ads'),
+                  // =============== Two top list of doctores title and rate ==================
+                  NewListDoctorControllerCardWidgetThree(
+                      screenWidth: MediaQuery.of(context).size.width),
+                  // =============== Paid adss text =================
+                  NewTextBestDoctorTwoWidget(word: 'Paid ads'),
                   // =============== List detailes doctores ==============
                   NewListControllerBestDoctorPopularWidget(),
-                   // =============== natural therapy text =================
-                
-                   NewTextBestDoctorTwoWidget(word: 'natural therapy'),
+                  // =============== natural therapy text =================
+
+                  NewTextBestDoctorTwoWidget(word: 'natural therapy'),
                   // =============== List detailes doctores ==============
                   NewListControllerBestDoctorPopularWidget(),
-                   // =============== Medical centers text ===========================
+                  // =============== Medical centers text ===========================
                   NewTextBookNowWidget(text: 'Medical centers'),
                   // =============== List Categories =========================
                   NewListControllerCategoryWidget(

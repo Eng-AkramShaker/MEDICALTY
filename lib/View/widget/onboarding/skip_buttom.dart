@@ -1,10 +1,10 @@
 // ignore_for_file: unused_import, prefer_const_constructors
 
-import 'package:carehealth/View/Pages/choose_major/choose_major.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../Pages/accounts/create_accounts.dart';
+import '../../Pages/choose_major/choose_major.dart';
 // import '../../pages/onboarding/center_information.dart';
 //
 // import '../../pages/onboarding/center_information.dart';

@@ -1,9 +1,9 @@
 // ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:carehealth/constatnt/color_app.dart';
-import 'package:carehealth/constatnt/font_app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../constatnt/color_app.dart';
+import '../../../constatnt/font_app_styles.dart';
 import '../../../controllers/onboarding/onBoarding_controller.dart';
 import '../../widget/onboarding/next_bottun.dart';
 import '../../widget/onboarding/skip_buttom.dart';

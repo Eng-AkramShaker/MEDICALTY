@@ -1,14 +1,13 @@
 // ignore_for_file: unnecessary_import, unused_import, prefer_const_constructors, sized_box_for_whitespace
 
-import 'package:carehealth/constatnt/font_app_styles.dart';
-import 'package:carehealth/view/Pages/profile/profile.dart';
-import 'package:carehealth/view/pages/profile/privacy_policy.dart';
-import 'package:carehealth/view/pages/profile/unites_of_measure.dart';
+import 'package:Medicalty/View/Pages/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../../../constatnt/font_app_styles.dart';
 import 'notifications.dart';
+import 'unites_of_measure.dart';
 
 List settingListTitle = [
   "Units of Measure",

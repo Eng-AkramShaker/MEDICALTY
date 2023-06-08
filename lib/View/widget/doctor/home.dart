@@ -1,12 +1,10 @@
-// ignore_for_file: unused_import, prefer_const_constructors
+// ignore_for_file: unused_import, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:carehealth/view/widget/doctor/app_bar.dart';
-import 'package:carehealth/view/widget/doctor/search_widget.dart';
 import 'package:flutter/material.dart';
-
 import '../../../constatnt/color_app.dart';
 import '../../../constatnt/font_app_styles.dart';
 import '../../../constatnt/image_app.dart';
+import 'app_bar.dart';
 import 'doctor_name.dart';
 import 'index_widget.dart';
 
@@ -23,8 +21,8 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: ListView(
         children: [
-          const AppBarWidget(),
-          const SizedBox(
+          AppBarWidget(),
+          SizedBox(
             height: 15,
           ),
           SingleChildScrollView(

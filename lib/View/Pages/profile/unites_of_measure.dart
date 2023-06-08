@@ -1,7 +1,6 @@
 //import 'dart:js_util';
 
-import 'package:carehealth/View/Pages/profile/setting_screen.dart';
-//import 'package:carehealth/View/widget/drawer/drawer_list.dart';
+import 'package:Medicalty/View/Pages/profile/setting_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';

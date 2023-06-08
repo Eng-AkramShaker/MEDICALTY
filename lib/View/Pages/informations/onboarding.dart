@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:carehealth/View/Pages/onboarding/onboarding_one.dart';
-import 'package:carehealth/constatnt/color_app.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constatnt/color_app.dart';
+import '../onboarding/onboarding_one.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({Key? key}) : super(key: key);

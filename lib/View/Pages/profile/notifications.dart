@@ -1,7 +1,6 @@
 // ignore_for_file: unnecessary_import, unused_import, prefer_const_constructors, sized_box_for_whitespace
 
-import 'package:carehealth/View/Pages/profile/setting_screen.dart';
-import 'package:carehealth/constatnt/font_app_styles.dart';
+import 'package:Medicalty/View/Pages/profile/setting_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -9,6 +8,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../constatnt/font_app_styles.dart';
 import '../../../controllers/radio_controller.dart';
 
 class Notifications extends StatelessWidget {

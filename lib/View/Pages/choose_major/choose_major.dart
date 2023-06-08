@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
-import 'package:carehealth/View/Pages/accounts/create_accounts.dart';
-import 'package:carehealth/constatnt/font_app_styles.dart';
-import 'package:carehealth/constatnt/image_app.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../constatnt/font_app_styles.dart';
+import '../../../constatnt/image_app.dart';
 import '../../widget/choose_major/custom_choose_major.dart';
+import '../accounts/create_accounts.dart';
 //import 'alert_dialog.dart';
 
 class ChooseMajor extends StatelessWidget {

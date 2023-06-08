@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, use_key_in_widget_constructors, must_be_immutable
 
-import 'package:carehealth/View/widget/textfield_screen/my_app_bar.dart';
-import 'package:carehealth/View/widget/textfield_screen/my_textfield_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/my_app_bar.dart';
+import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
@@ -59,10 +59,10 @@ class NewRequestPage extends StatelessWidget {
                       hintText: '#ID Request',
                       keyboardType: TextInputType.number,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/id_section.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/id_section.png',
                         height: 1,
                       ),
-
                     ),
                     const SizedBox(height: 15.0),
                     OnBoardingTextFormField(
@@ -80,7 +80,8 @@ class NewRequestPage extends StatelessWidget {
                       hintText: 'address of the request',
                       keyboardType: TextInputType.streetAddress,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/location.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/location.png',
                         height: 1,
                       ),
                     ),
@@ -107,19 +108,19 @@ class NewRequestPage extends StatelessWidget {
                   child: Align(
                       // alignment: Alignment.centerLeft,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          OnBoardingTextWidget(
-                            text: 'appointment,booking schedule',
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                          ),
-                         Image.asset('$imagePath/date_white.png',
-
-                          ),
-                        ],
-                      )),
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      OnBoardingTextWidget(
+                        text: 'appointment,booking schedule',
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      Image.asset(
+                        '$imagePath/date_white.png',
+                      ),
+                    ],
+                  )),
                 ),
               ),
               Padding(
@@ -151,7 +152,8 @@ class NewRequestPage extends StatelessWidget {
                       hintText: 'Choose the date',
                       keyboardType: TextInputType.number,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/date.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/date.png',
                         height: 1,
                       ),
                     ),

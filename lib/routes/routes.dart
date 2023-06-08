@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names
 
-import 'package:carehealth/View/Pages/onboarding/onBoarding_start.dart';
 import 'package:get/get.dart';
 import '../View/Pages/accounts/create_accounts.dart';
 import '../View/Pages/accounts/login_page.dart';
 import '../View/Pages/home_page/HomePage.dart';
 import '../View/Pages/home_page/Favourite.dart';
 import '../View/Pages/home_page/navBar.dart';
+import '../View/Pages/onboarding/onBoarding_start.dart';
 import '../View/Pages/review/appSettingPage.dart';
 import '../View/Pages/review/reviewsPage.dart';
 import '../View/Pages/review/trainerDetailPage.dart';

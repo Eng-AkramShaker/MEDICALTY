@@ -1,10 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
 
-import 'package:carehealth/View/widget/textfield_screen/my_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';

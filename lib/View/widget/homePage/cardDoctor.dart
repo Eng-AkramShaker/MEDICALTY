@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_typing_uninitialized_variables, depend_on_referenced_packages, unused_import, file_names, prefer_const_constructors, unnecessary_brace_in_string_interps, avoid_print, camel_case_types, prefer_const_literals_to_create_immutables, must_be_immutable
 
-import 'package:carehealth/View/Pages/home_page/Favourite.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';

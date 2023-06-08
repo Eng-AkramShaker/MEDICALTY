@@ -1,9 +1,9 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables, use_full_hex_values_for_flutter_colors, unnecessary_import
 
-import 'package:carehealth/constatnt/image_app.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import '../../../constatnt/image_app.dart';
 import '../../widget/accounts/container.dart';
 import '../../widget/accounts/mytext_field.dart';
 import 'login_page.dart';

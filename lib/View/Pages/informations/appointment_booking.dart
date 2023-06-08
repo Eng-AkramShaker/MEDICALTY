@@ -1,11 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
 
-import 'package:carehealth/View/widget/textfield_screen/my_app_bar.dart';
-import 'package:carehealth/View/widget/textfield_screen/my_textfield_container.dart';
+import 'package:Medicalty/View/widget/textfield_screen/my_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
@@ -28,15 +28,15 @@ class AppointmentBookingPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: MyAppBar(
-          title:  'Appointment booking',
+          title: 'Appointment booking',
         ),
         body: SingleChildScrollView(
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-
               Padding(
-               padding: const EdgeInsets.symmetric(horizontal: 21.0, vertical: 31.0),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 21.0, vertical: 31.0),
                 child: Column(
                   children: [
                     OnBoardingTextFormField(
@@ -105,8 +105,6 @@ class AppointmentBookingPage extends StatelessWidget {
                   ],
                 ),
               ),
-
-
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -126,14 +124,18 @@ class AppointmentBookingPage extends StatelessWidget {
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
                           ),
-                          Icon(Icons.add,color: ColorApp.greenColor,size: 35,)
+                          Icon(
+                            Icons.add,
+                            color: ColorApp.greenColor,
+                            size: 35,
+                          )
                         ],
                       )),
                 ),
               ),
-
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 21.0, vertical: 31.0),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 21.0, vertical: 31.0),
                 child: Column(
                   children: [
                     const SizedBox(height: 15.0),
@@ -143,10 +145,10 @@ class AppointmentBookingPage extends StatelessWidget {
                       hintText: 'Reservation time',
                       keyboardType: TextInputType.name,
                       obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/date.png',
+                      suffixIcon: Image.asset(
+                        '$imagePath/date.png',
                         height: 1,
                       ),
-
                     ),
                     const SizedBox(height: 15.0),
                     Row(

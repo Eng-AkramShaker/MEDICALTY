@@ -1,11 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
 
-import 'package:carehealth/View/widget/textfield_screen/my_app_bar.dart';
-import 'package:carehealth/View/widget/textfield_screen/my_textfield_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/my_app_bar.dart';
+import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import 'new_expenses.dart';
@@ -22,7 +22,8 @@ class CreateClientsPage extends StatelessWidget {
   TextEditingController attributedController = TextEditingController();
   TextEditingController mainEmailController = TextEditingController();
   TextEditingController customerAddressController = TextEditingController();
-  TextEditingController secondCustomerAddressController = TextEditingController();
+  TextEditingController secondCustomerAddressController =
+      TextEditingController();
   TextEditingController cityController = TextEditingController();
   TextEditingController interruptController = TextEditingController();
   TextEditingController zipCodeController = TextEditingController();
@@ -31,11 +32,10 @@ class CreateClientsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyTextFieldContainer(
-
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: MyAppBar(
-          title:  'Create Clients',
+          title: 'Create Clients',
         ),
         body: SingleChildScrollView(
           child: Padding(
@@ -60,10 +60,10 @@ class CreateClientsPage extends StatelessWidget {
                   hintText: '#ID Client',
                   keyboardType: TextInputType.number,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/id_section.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/id_section.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 Row(
@@ -90,10 +90,10 @@ class CreateClientsPage extends StatelessWidget {
                         hintText: 'first name',
                         keyboardType: TextInputType.name,
                         obscureText: false,
-                        suffixIcon: Image.asset('$imagePath/path.png',
+                        suffixIcon: Image.asset(
+                          '$imagePath/path.png',
                           height: 1,
                         ),
-
                       ),
                     ),
                   ],
@@ -105,7 +105,8 @@ class CreateClientsPage extends StatelessWidget {
                   hintText: 'second and last name',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/path.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/path.png',
                     height: 1,
                   ),
                 ),
@@ -116,10 +117,10 @@ class CreateClientsPage extends StatelessWidget {
                   hintText: 'name of the client\'s company',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/country.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/country.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 Row(
@@ -146,10 +147,10 @@ class CreateClientsPage extends StatelessWidget {
                         hintText: 'phone number',
                         keyboardType: TextInputType.phone,
                         obscureText: false,
-                        suffixIcon: Image.asset('$imagePath/phone.png',
+                        suffixIcon: Image.asset(
+                          '$imagePath/phone.png',
                           height: 1,
                         ),
-
                       ),
                     ),
                   ],
@@ -199,10 +200,10 @@ class CreateClientsPage extends StatelessWidget {
                   hintText: 'Customer address',
                   keyboardType: TextInputType.streetAddress,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/location.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/location.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -219,10 +220,10 @@ class CreateClientsPage extends StatelessWidget {
                   hintText: 'City',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/country.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/country.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -231,10 +232,10 @@ class CreateClientsPage extends StatelessWidget {
                   hintText: 'Interrupt',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/inter.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/inter.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -243,10 +244,10 @@ class CreateClientsPage extends StatelessWidget {
                   hintText: 'ZIP code',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/postal.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/postal.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -255,7 +256,8 @@ class CreateClientsPage extends StatelessWidget {
                   hintText: 'Country',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/inter.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/inter.png',
                     height: 1,
                   ),
                 ),

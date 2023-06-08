@@ -1,10 +1,8 @@
 // ignore_for_file: sized_box_for_whitespace, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unused_import, prefer_const_constructors
 
-import 'package:carehealth/View/Pages/choose_major/choose_major.dart';
-import 'package:carehealth/View/Pages/home_page/navBar.dart';
-import 'package:carehealth/constatnt/color_app.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../constatnt/color_app.dart';
 import '../../../constatnt/font_app_styles.dart';
 import '../../../controllers/onboarding/onBoarding_controller.dart';
 import '../../../routes/routes.dart';
@@ -12,6 +10,7 @@ import '../../widget/onboarding/next_bottun.dart';
 import '../../widget/onboarding/skip_buttom.dart';
 import '../../widget/onboarding/slider_widget.dart';
 import '../accounts/create_accounts.dart';
+import '../choose_major/choose_major.dart';
 
 class OnboardingThree extends GetView<OnBoardingControllerImp> {
   const OnboardingThree({Key? key}) : super(key: key);

@@ -1,12 +1,12 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
 
-import 'package:carehealth/View/Pages/informations/registration_patient.dart';
-import 'package:carehealth/View/widget/textfield_screen/my_app_bar.dart';
-import 'package:carehealth/View/widget/textfield_screen/my_textfield_container.dart';
+import 'package:Medicalty/View/Pages/informations/registration_patient.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/my_app_bar.dart';
+import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 
@@ -22,7 +22,6 @@ class NewExperiencesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyTextFieldContainer(
-
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: MyAppBar(
@@ -52,10 +51,10 @@ class NewExperiencesPage extends StatelessWidget {
                   hintText: '#ID Experiences',
                   keyboardType: TextInputType.number,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/path.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/path.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -64,10 +63,10 @@ class NewExperiencesPage extends StatelessWidget {
                   hintText: 'name of the experience',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/xmlid.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/xmlid.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -76,10 +75,10 @@ class NewExperiencesPage extends StatelessWidget {
                   hintText: 'name of the place',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/xmlid2.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/xmlid2.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -88,10 +87,10 @@ class NewExperiencesPage extends StatelessWidget {
                   hintText: 'Work place country',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/location2.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/location2.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -100,10 +99,10 @@ class NewExperiencesPage extends StatelessWidget {
                   hintText: 'Beginning work',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/date.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/date.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
@@ -112,10 +111,10 @@ class NewExperiencesPage extends StatelessWidget {
                   hintText: 'work is finished',
                   keyboardType: TextInputType.name,
                   obscureText: false,
-                  suffixIcon: Image.asset('$imagePath/date.png',
+                  suffixIcon: Image.asset(
+                    '$imagePath/date.png',
                     height: 1,
                   ),
-
                 ),
                 const SizedBox(height: 15.0),
                 OnBoardingTextFormField(
