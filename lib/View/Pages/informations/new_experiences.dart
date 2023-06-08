@@ -1,9 +1,9 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
 
-import 'package:Medicalty/View/Pages/informations/registration_patient.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:medicalty/View/Pages/informations/registration_patient.dart';
 import '../../../constatnt/color_app.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';

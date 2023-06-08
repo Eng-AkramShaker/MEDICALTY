@@ -1,9 +1,9 @@
 // ignore_for_file: unnecessary_import, unused_import, prefer_const_constructors, sized_box_for_whitespace
 
-import 'package:Medicalty/View/Pages/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:medicalty/View/Pages/profile/profile.dart';
 
 import '../../../constatnt/font_app_styles.dart';
 import 'notifications.dart';
