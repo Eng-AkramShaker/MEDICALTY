@@ -284,18 +284,6 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "scroll_app_bar",
-      "rootUri": "file:///C:/Users/Metro/AppData/Local/Pub/Cache/hosted/pub.dev/scroll_app_bar-2.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "scroll_bars_common",
-      "rootUri": "file:///C:/Users/Metro/AppData/Local/Pub/Cache/hosted/pub.dev/scroll_bars_common-3.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "shared_preferences",
       "rootUri": "file:///C:/Users/Metro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.1.2",
       "packageUri": "lib/",
@@ -446,7 +434,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-06-09T05:34:13.449139Z",
+  "generated": "2023-06-09T05:54:46.599614Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

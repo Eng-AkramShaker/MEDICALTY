@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medicalty/View/Pages/review/reviewsPage.dart';
-import 'package:scroll_app_bar/scroll_app_bar.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/home_page/homeController.dart';
 import '../../widget/homePage/bottomWidget.dart';
@@ -11,37 +10,27 @@ import '../../widget/homePage/reviewsListWidget.dart';
 import '../accounts/appointment.dart';
 
 class TrainerDetail extends StatelessWidget {
-  TrainerDetail({super.key});
-  final ScrollController extController = ScrollController();
+  const TrainerDetail({super.key});
+ 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        //===================== AppBar Widget =====================================
-        appBar: ScrollAppBar(
-          elevation: 0.0,
-          backgroundColor: ColorApp.whiteColor2,
-          centerTitle: true,
-          toolbarHeight: 249.0,
-          title: Stack(
+      body: Container(
+          color: ColorApp.whiteColor2,
+          child: ListView(
+            scrollDirection: Axis.vertical,
             children: [
-              Container(
-                  margin: EdgeInsets.only(bottom: 29, left: 8.0),
-                  height: 217,
-                  child: Image.asset(
-                    'assets/images/doctor.png',
-                    fit: BoxFit.cover,
-                  )),
-            ],
-          ),
-          leading: Stack(
+              Row(crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              
               Container(
-                margin: EdgeInsets.only(top: 57.0, left: 15.0),
+                margin: EdgeInsets.only(top: 20.0),
                 child: CircleAvatar(
                   backgroundColor: ColorApp.blackColor2.withOpacity(0.2),
-                  maxRadius: 40.0,
-                  minRadius: 40.0,
+                  maxRadius: 20.0,
+                  minRadius: 20.0,
                   child: InkWell(
                     onTap: () {
                       Get.back();
@@ -52,16 +41,18 @@ class TrainerDetail extends StatelessWidget {
                             color: ColorApp.whiteColor2)),
                   ),
                 ),
-              )
+              ),
+           
+              Container(
+                  margin: EdgeInsets.all(20.0),
+                  height: 217,
+                  child: Image.asset(
+                    'assets/images/doctor.png',
+                    fit: BoxFit.cover,
+                  )),
+                     SizedBox(width: 90,),
             ],
           ),
-          controller: extController,
-        ),
-        body: Container(
-          color: ColorApp.whiteColor2,
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: [
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 25.0),
                 height: 55.0,
