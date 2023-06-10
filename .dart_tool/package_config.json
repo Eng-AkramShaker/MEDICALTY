@@ -116,6 +116,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "flutter_lints",
+      "rootUri": "file:///C:/Users/Akrammm/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "flutter_native_splash",
       "rootUri": "file:///C:/Users/Akrammm/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_native_splash-2.3.1",
       "packageUri": "lib/",
@@ -204,6 +210,12 @@
       "rootUri": "file:///C:/Users/Akrammm/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.8.1",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "lints",
+      "rootUri": "file:///C:/Users/Akrammm/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "matcher",
@@ -500,7 +512,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-06-10T19:18:00.862326Z",
+  "generated": "2023-06-10T21:15:38.399292Z",
   "generator": "pub",
   "generatorVersion": "3.0.3"
 }
