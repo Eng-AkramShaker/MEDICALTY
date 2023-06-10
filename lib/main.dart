@@ -22,6 +22,7 @@ void main() async {
   sharedPref = await SharedPreferences.getInstance();
   runApp(MyApp());
 }
+
 //mon
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
