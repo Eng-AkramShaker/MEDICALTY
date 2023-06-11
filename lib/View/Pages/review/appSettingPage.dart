@@ -4,8 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:medicalty/controllers/review/appSetting_controller.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../controllers/home_page/homeController.dart';
 import '../../widget/homePage/bottomWidget.dart';
 import '../../widget/homePage/divider.dart';
 import '../Trainer/payment.dart';
@@ -13,17 +13,14 @@ import '../accounts/forgot_password.dart';
 import '../profile/notifications.dart';
 
 class AppSetting extends StatelessWidget {
-  const AppSetting({super.key});
+  AppSetting({super.key});
 
-  
+  final HomeController extController =
+      Get.put(HomeController(), permanent: true);
 
   @override
   Widget build(BuildContext context) {
-    Get.put(AppSettingController());
-    return GetBuilder(
-      
-      init: AppSettingController(),
-      builder: (controller) => Scaffold(
+    return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: ColorApp.whiteColor,
       //================== AppBar ==========================
@@ -107,10 +104,10 @@ class AppSetting extends StatelessWidget {
                         () => CupertinoSwitch(
                           trackColor: ColorApp.greyColor4,
                           activeColor: ColorApp.greenColor2,
-                          value: controller.isPressed1.isFalse,
+                          value: extController.isPressed1.isFalse,
                           onChanged: (bool change) {
-                            controller.isPressed1.value =
-                                !controller.isPressed1.value;
+                            extController.isPressed1.value =
+                                !extController.isPressed1.value;
                           },
                         ),
                       )),
@@ -133,10 +130,10 @@ class AppSetting extends StatelessWidget {
                       () => CupertinoSwitch(
                         trackColor: ColorApp.greyColor4,
                         activeColor: ColorApp.greenColor2,
-                        value: controller.isPressed2.isTrue,
+                        value: extController.isPressed2.isTrue,
                         onChanged: (bool change) {
-                          controller.isPressed2.value =
-                              !controller.isPressed2.value;
+                          extController.isPressed2.value =
+                              !extController.isPressed2.value;
                         },
                       ),
                     ),
@@ -155,15 +152,15 @@ class AppSetting extends StatelessWidget {
                   Container(
                       child: Obx(
                     () => DropdownButton(
-                      value: controller.selectedItem.value,
-                      items: controller.items.map((String item) {
+                      value: extController.selectedItem.value,
+                      items: extController.items.map((String item) {
                         return DropdownMenuItem<String>(
                           value: item,
                           child: Text(item),
                         );
                       }).toList(),
                       onChanged: (String? item) {
-                        controller.updateSelectedItem(item!);
+                        extController.updateSelectedItem(item!);
                       },
                     ),
                   )),
@@ -268,7 +265,7 @@ class AppSetting extends StatelessWidget {
           ],
         ),
       ),
-    ));
+    );
   }
 }
 

@@ -16,6 +16,7 @@ class OnBoardingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
+
           backgroundColor: ColorApp.primaryColor,
           minimumSize: Size(double.infinity, 51),
         ),

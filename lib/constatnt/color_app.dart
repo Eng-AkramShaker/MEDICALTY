@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names, file_names, use_full_hex_values_for_flutter_colors, constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'dart:ui';
 
 class ColorApp {
   static const backgroundYallowColor = Color(0xFFF1CA58);

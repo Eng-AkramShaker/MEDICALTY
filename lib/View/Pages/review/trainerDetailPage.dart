@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medicalty/View/Pages/review/reviewsPage.dart';
-import 'package:medicalty/controllers/review/trainerDetail_controller.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/home_page/homeController.dart';
 import '../../widget/homePage/bottomWidget.dart';
@@ -11,16 +10,13 @@ import '../../widget/homePage/reviewsListWidget.dart';
 import '../accounts/appointment.dart';
 
 class TrainerDetail extends StatelessWidget {
-  const TrainerDetail({super.key});
- 
+  TrainerDetail({super.key});
+  final ScrollController extController = ScrollController();
   @override
   Widget build(BuildContext context) {
-    Get.put(TrainerDetailController());
-    return GetBuilder(
-      init: TrainerDetailController(),
-      builder: (controller) => SafeArea(
+    return SafeArea(
       child: Scaffold(
-       
+        //===================== AppBar Widget =====================================
         appBar: AppBar(
           elevation: 0.0,
           backgroundColor: ColorApp.whiteColor2,
@@ -154,7 +150,7 @@ class TrainerDetail extends StatelessWidget {
           ),
         ),
       ),
-    ));
+    );
   }
 }
 
