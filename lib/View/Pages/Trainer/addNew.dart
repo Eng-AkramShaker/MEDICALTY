@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../constatnt/font_app_styles.dart';
+import '../../../controllers/Trainer/addNewController.dart';
 import '../../widget/homePage/Custom_Text_Filed.dart';
 import '../../widget/homePage/bottomWidget.dart';
 import '../../widget/homePage/divider.dart';
@@ -15,296 +16,299 @@ class AddNew extends StatefulWidget {
 }
 
 class _AddNewState extends State<AddNew> {
-  dynamic name_string = 'HOLDER NAME';
-  dynamic id_string = '0000 0000 0000 0000';
-  dynamic checkbox_Card = false;
-  dynamic ID_controller = TextEditingController();
-  dynamic Name_controller = TextEditingController();
-  dynamic Expiry_controller = TextEditingController();
-  dynamic CVC_controller = TextEditingController();
-  dynamic Delete_controller = TextEditingController();
-  dynamic TEXT_controller = TextEditingController();
-  dynamic search_controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorApp.backgroundWhaitColor,
-      body: Padding(
-        padding: const EdgeInsets.only(left: 24, right: 24),
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 57, right: 90),
-                  child: Container(
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 32,
-                          width: 32,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: ColorApp.blackColor,
+    return GetBuilder<addNewController>(
+      init: addNewController(),
+      builder: (ctrl) => Scaffold(
+        backgroundColor: ColorApp.backgroundWhaitColor,
+        body: Padding(
+          padding: const EdgeInsets.only(left: 24, right: 24),
+          child: Container(
+            height: double.infinity,
+            width: double.infinity,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 57, right: 90),
+                    child: Container(
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 32,
+                            width: 32,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: ColorApp.blackColor,
+                            ),
+                            child: Icon(Icons.arrow_back_ios_new_outlined,
+                                size: 19, color: Colors.white),
                           ),
-                          child: Icon(Icons.arrow_back_ios_new_outlined,
-                              size: 19, color: Colors.white),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 45),
-                          child: Container(
-                            child: Text(
-                              'Add New Card',
-                              style: C_TextStyle(
-                                size: 20,
-                                color: ColorApp.blackColor,
-                                fontWeight: FontWeight.w700,
+                          Padding(
+                            padding: const EdgeInsets.only(left: 45),
+                            child: Container(
+                              child: Text(
+                                'Add New Card',
+                                style: C_TextStyle(
+                                  size: 20,
+                                  color: ColorApp.blackColor,
+                                  fontWeight: FontWeight.w700,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 32),
-                  child: Container(
-                    height: 588,
-                    width: double.infinity,
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 14),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                height: 176,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topRight,
-                                      end: Alignment.bottomLeft,
-                                      colors: list_colors_VISA),
-                                  borderRadius: BorderRadius.circular(18),
-                                  color: Color.fromARGB(255, 255, 232, 238),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 24, right: 24, left: 16, bottom: 21),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            'VISA',
-                                            style: C_TextStyle(
-                                              size: 35,
-                                              color: ColorApp.whiteColor,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                  bottom: 4,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 32),
+                    child: Container(
+                      height: 588,
+                      width: double.infinity,
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 14),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: 176,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.topRight,
+                                        end: Alignment.bottomLeft,
+                                        colors: list_colors_VISA),
+                                    borderRadius: BorderRadius.circular(18),
+                                    color: Color.fromARGB(255, 255, 232, 238),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 24,
+                                        right: 24,
+                                        left: 16,
+                                        bottom: 21),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              'VISA',
+                                              style: C_TextStyle(
+                                                size: 35,
+                                                color: ColorApp.whiteColor,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    bottom: 4,
+                                                  ),
+                                                  child: Text(
+                                                    '${ctrl.name_string}',
+                                                    style: C_TextStyle(
+                                                      size: 15,
+                                                      color:
+                                                          ColorApp.whiteColor,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                    ),
+                                                  ),
                                                 ),
-                                                child: Text(
-                                                  '${name_string}',
+                                                Text(
+                                                  '${ctrl.id_string}',
                                                   style: C_TextStyle(
-                                                    size: 15,
+                                                    size: 20,
                                                     color: ColorApp.whiteColor,
                                                     fontWeight: FontWeight.w400,
                                                   ),
                                                 ),
-                                              ),
-                                              Text(
-                                                '${id_string}',
-                                                style: C_TextStyle(
-                                                  size: 20,
-                                                  color: ColorApp.whiteColor,
-                                                  fontWeight: FontWeight.w400,
-                                                ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+
+                                // Card Visa -------------------------------------------------------
+
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 40, bottom: 18, left: 25),
+                                  child: Container(
+                                    height: 25,
+                                    width: double.infinity,
+                                    child: Text_Field_3(
+                                      hint_text: 'Card Holder Name',
+                                      TEXT_controller: ctrl.Name_controller,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                    height: 2,
+                                    child: Divider(
+                                      color: Colors.black,
+                                      thickness: 1,
+                                    )),
+                              ],
+                            ),
+                          ),
+
+                          // Card Number -------------------------------------------------------
+
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                top: 39, bottom: 18, left: 25),
+                            child: Container(
+                              height: 25,
+                              width: double.infinity,
+                              child: Text_Field_3(
+                                hint_text: 'Card Number',
+                                TEXT_controller: ctrl.ID_controller,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 2.5,
+                            child: New_Divider(
+                                thickness: 1.1, color: ColorApp.blackColor),
+                          ),
+
+                          // Expiry (MM/YY) -------------------------------------------------------
+
+                          Container(
+                            width: double.infinity,
+                            height: 73,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 39, left: 25),
+                                        child: Container(
+                                          height: 25,
+                                          width: double.infinity,
+                                          child: Text_Field_3(
+                                            hint_text: 'Expiry (MM/YY)',
+                                            TEXT_controller:
+                                                ctrl.Expiry_controller,
+                                            color: Colors.black,
                                           ),
-                                        ],
+                                        ),
                                       ),
                                     ],
                                   ),
                                 ),
-                              ),
-
-                              // Card Visa -------------------------------------------------------
-
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 40, bottom: 18, left: 25),
-                                child: Container(
-                                  height: 25,
-                                  width: double.infinity,
-                                  child: Text_Field_3(
-                                    hint_text: 'Card Holder Name',
-                                    TEXT_controller: Name_controller,
-                                    color: Colors.black,
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 39, right: 20, left: 17),
+                                        child: Container(
+                                          height: 25,
+                                          width: double.infinity,
+                                          child: Text_Field_3(
+                                            hint_text: 'CVC',
+                                            TEXT_controller:
+                                                ctrl.CVC_controller,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              ),
-                              Container(
-                                  height: 2,
-                                  child: Divider(
-                                    color: Colors.black,
-                                    thickness: 1,
-                                  )),
-                            ],
-                          ),
-                        ),
-
-                        // Card Number -------------------------------------------------------
-
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              top: 39, bottom: 18, left: 25),
-                          child: Container(
-                            height: 25,
-                            width: double.infinity,
-                            child: Text_Field_3(
-                              hint_text: 'Card Number',
-                              TEXT_controller: ID_controller,
-                              color: Colors.black,
+                              ],
                             ),
                           ),
-                        ),
-                        Container(
-                          height: 2.5,
-                          child: New_Divider(
-                              thickness: 1.1, color: ColorApp.blackColor),
-                        ),
 
-                        // Expiry (MM/YY) -------------------------------------------------------
-
-                        Container(
-                          width: double.infinity,
-                          height: 73,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 39, left: 25),
-                                      child: Container(
-                                        height: 25,
-                                        width: double.infinity,
-                                        child: Text_Field_3(
-                                          hint_text: 'Expiry (MM/YY)',
-                                          TEXT_controller: Expiry_controller,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                          Container(
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    child: New_Divider(
+                                        thickness: 1.1,
+                                        color: ColorApp.blackColor),
+                                  ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 39, right: 20, left: 17),
-                                      child: Container(
-                                        height: 25,
-                                        width: double.infinity,
-                                        child: Text_Field_3(
-                                          hint_text: 'CVC',
-                                          TEXT_controller: CVC_controller,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                SizedBox(width: 20.5),
+                                Expanded(
+                                  child: Container(
+                                    child: New_Divider(
+                                        thickness: 1.1,
+                                        color: ColorApp.blackColor),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
 
-                        Container(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  child: New_Divider(
-                                      thickness: 1.1,
-                                      color: ColorApp.blackColor),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Checkbox(
+                                  checkColor: Colors.black,
+                                  activeColor: ColorApp.radioButtom,
+                                  value: ctrl.checkbox_Card,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      ctrl.checkbox_Card = value;
+                                    });
+                                  },
                                 ),
-                              ),
-                              SizedBox(width: 20.5),
-                              Expanded(
-                                child: Container(
-                                  child: New_Divider(
-                                      thickness: 1.1,
-                                      color: ColorApp.blackColor),
+                                Text(
+                                  'Set as default payment card',
+                                  style: C_TextStyle(
+                                    size: 11,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Checkbox(
-                                checkColor: Colors.black,
-                                activeColor: ColorApp.radioButtom,
-                                value: checkbox_Card,
-                                onChanged: (value) {
-                                  setState(() {
-                                    checkbox_Card = value;
-                                  });
-                                },
-                              ),
-                              Text(
-                                'Set as default payment card',
-                                style: C_TextStyle(
-                                  size: 11,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                  child: C_Button(name_text: 'Save'),
-                ),
-              ],
+                  Container(
+                    child: C_Button(name_text: 'Save'),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
