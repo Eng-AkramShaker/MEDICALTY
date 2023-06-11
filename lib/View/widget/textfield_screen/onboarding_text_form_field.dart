@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 class OnBoardingTextFormField extends StatelessWidget {
   TextEditingController controller = TextEditingController();
-  Function validator;
+ final Function validator;
   TextInputType? keyboardType;
   int? maxLines;
-  String? hintText;
+  String? labelText;
   Widget? suffixIcon;
   bool? obscureText;
   OnBoardingTextFormField({
@@ -15,7 +15,7 @@ class OnBoardingTextFormField extends StatelessWidget {
     required this.controller,
     required this.validator,
     required this.keyboardType,
-    required this.hintText,
+    required this.labelText,
     this.suffixIcon,
     this.obscureText,
     this.maxLines,
@@ -32,8 +32,9 @@ class OnBoardingTextFormField extends StatelessWidget {
       textAlignVertical: TextAlignVertical.center,
       validator: (value) => validator(value),
       decoration: InputDecoration(
+        labelText: labelText,
         suffixIcon: suffixIcon,
-        hintText: hintText,
+        // hintText: hintText,
         contentPadding:
             const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
         // contentPadding: EdgeInsets.all(15),
@@ -58,6 +59,7 @@ class OnBoardingTextFormField extends StatelessWidget {
           //borderSide: const BorderSide(color: Colors.white),
           borderSide: const BorderSide(
               color: Color.fromRGBO(180, 186, 190, 0.5), width: 1),
+
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
