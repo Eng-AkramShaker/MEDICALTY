@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, must_call_super
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';

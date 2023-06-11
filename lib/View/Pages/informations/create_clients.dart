@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors, duplicate_import
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

@@ -11,7 +11,7 @@ import '../../widget/homePage/divider.dart';
 import '../Trainer/payment.dart';
 import '../accounts/forgot_password.dart';
 import '../profile/notifications.dart';
-
+//================
 class AppSetting extends StatelessWidget {
   const AppSetting({super.key});
 
