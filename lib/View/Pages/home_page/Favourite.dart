@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_typing_uninitialized_variables, prefer_const_constructors, camel_case_types, unused_local_variable, file_names, use_key_in_widget_constructors, non_constant_identifier_names, avoid_unnecessary_containers, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:medicalty/controllers/home_page/favourite_controller.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../constatnt/image_app.dart';
 import '../../widget/homePage/appBar.dart';
@@ -14,7 +16,10 @@ class Favourite extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    Get.put(FavouriteController());
+    return GetBuilder(
+      init: FavouriteController(),
+      builder: (controller) => Container(
       height: double.infinity,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -68,6 +73,6 @@ class Favourite extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ));
   }
 }
