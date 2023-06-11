@@ -1,13 +1,67 @@
-// ignore_for_file: file_names, implementation_imports
+// ignore_for_file: file_names, implementation_imports, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../View/widget/homePage/list_View.dart';
 import '../../constatnt/color_app.dart';
 
 class HomeController extends GetxController {
   // bool notify_1 = true;
   // bool notify_2 = false;
+
+// ====== Part Category  ===========================================================================
+
+  List items_1 = [
+    list_V_1(name: 'Doctors', name_image: 'a5.png'),
+    list_V_1(name: 'nurses', name_image: 'a5.png'),
+    list_V_1(name: 'Medical', name_image: 'a5.png'),
+    list_V_1(name: 'Doctors', name_image: 'a5.png'),
+    list_V_1(name: 'nurses', name_image: 'a5.png'),
+    list_V_1(name: 'Doctors', name_image: 'a5.png'),
+    list_V_1(name: 'nurses', name_image: 'a5.png'),
+    list_V_1(name: 'Medical', name_image: 'a5.png'),
+    list_V_1(name: 'Medical', name_image: 'a5.png'),
+    list_V_1(name: 'Medical', name_image: 'a5.png'),
+    list_V_1(name: 'Medical', name_image: 'a5.png'),
+    list_V_1(name: 'Medical', name_image: 'a5.png'),
+  ];
+  // ====== The best doctors  ===========================================================================
+  List items_2 = [
+    grid_V_2(
+        name: 'Dr. jasmin noor',
+        kcal: '110 kcal',
+        min: '10 min',
+        beginner: 'beginner',
+        color: ColorApp.yellowColor),
+    grid_V_2(
+        name: 'Dr. amany',
+        kcal: '110 kcal',
+        min: '10 min',
+        beginner: 'beginner',
+        color: ColorApp.backgrounOnBoardingTow),
+    grid_V_2(
+        name: 'Dr. noor noor',
+        kcal: '110 kcal',
+        min: '10 min',
+        beginner: 'beginner',
+        color: ColorApp.backgroundonBoardingFour),
+  ];
+
+  // Popular -----------------------------------------------------------
+  List items_3 = [
+    grid_V_Popular(title: 'Physiotherapy session for the elderly'),
+    grid_V_Popular(title: 'Wound changing and sterilization session'),
+  ];
+
+// Meal_Plans -----------------------------------------------------------
+
+  List items_4 = [
+    grid_V_Meal_Plans(title: 'Gastric bypass surgery', num: '1300\$ - 2000\$'),
+    grid_V_Meal_Plans(title: 'LASIK eye surgery', num: '1300\$ - 2000\$'),
+  ];
+
+// =========================================================================================
   String assetName_1 = 'assets/images/Ellipse.png';
 
   
@@ -167,4 +221,5 @@ class HomeController extends GetxController {
       // iconColor = ColorApp.redColor;
     }
   }
+  // =======================================================================
 }
