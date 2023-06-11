@@ -1,4 +1,0 @@
-#Sun Jun 11 13:59:44 EET 2023
-base.0=D\:\\akram\\Medicalty\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

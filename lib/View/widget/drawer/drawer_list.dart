@@ -40,7 +40,7 @@ Widget MyDrawerList() {
         }),
         div(),
         menuItem("Product updates", Icons.system_update, () {
-          Get.to(ProductsPharamcyPage());
+          Get.to(ProductsPharmacyPage());
         }),
         div(),
         menuItem("About  Pro-doctor", Icons.info, () {
