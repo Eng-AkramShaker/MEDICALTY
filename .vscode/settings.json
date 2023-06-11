@@ -6,6 +6,7 @@
         "hexcode",
         "informations",
         "Medicalty",
+        "paymentcompleted",
         "readmore"
     ]
 }
