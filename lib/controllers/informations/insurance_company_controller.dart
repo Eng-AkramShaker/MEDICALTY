@@ -6,6 +6,7 @@ class InsuranceCompanyController extends GetxController{
   TextEditingController idInsuranceController = TextEditingController();
   TextEditingController nameInsuranceController = TextEditingController();
   TextEditingController descInsuranceController = TextEditingController();
+
   TextEditingController phoneController = TextEditingController();
   TextEditingController secondPhoneController = TextEditingController();
   TextEditingController emailController = TextEditingController();

@@ -274,6 +274,7 @@ class NewRequestPage extends StatelessWidget {
                         controller.formKey.currentState!.save();
                         Get.to(NewProductPage());
 
+
                       }else{
                         showDialog(context: context, builder: (_) => AlertDialog(
                           title: Text('Please Enter all Fields'),

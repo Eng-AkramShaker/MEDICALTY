@@ -349,6 +349,7 @@ class RegistrationPatientPage extends StatelessWidget {
                         controller.formKey.currentState!.save();
                         Get.to(AppointmentBookingPage());
 
+
                       }else{
                         showDialog(context: context, builder: (_) => AlertDialog(
                           title: Text('Please Enter all Fields'),

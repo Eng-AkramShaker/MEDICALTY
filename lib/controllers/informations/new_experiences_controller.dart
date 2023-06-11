@@ -18,6 +18,7 @@ class NewExperiencesController extends GetxController{
   TextEditingController idExperiencesController = TextEditingController();
   TextEditingController nameExpController = TextEditingController();
   TextEditingController namePlaceController = TextEditingController();
+
   TextEditingController workPlaceController = TextEditingController();
   TextEditingController beginningWorkController = TextEditingController();
   TextEditingController workFinishedController = TextEditingController();

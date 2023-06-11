@@ -164,6 +164,7 @@ class NewExpensesPage extends StatelessWidget {
                       OnBoardingTextFormField(
                         controller: controller.valueController,
                         validator: (value) {
+
                           if (value == null || value.isEmpty) {
                             return 'Please enter the Value ';
                           }

@@ -19,6 +19,7 @@ class NewExpensesController extends GetxController{
   TextEditingController idExpenesesController = TextEditingController();
   TextEditingController addressController = TextEditingController();
   TextEditingController descController = TextEditingController();
+
   TextEditingController timeController = TextEditingController();
   TextEditingController dateController = TextEditingController();
   TextEditingController valueController = TextEditingController();

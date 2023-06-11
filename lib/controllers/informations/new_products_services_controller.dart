@@ -18,5 +18,6 @@ class NewProductsServicesController extends GetxController{
   TextEditingController productNameController = TextEditingController();
   TextEditingController productDescController = TextEditingController();
   TextEditingController unitPriceController = TextEditingController();
+
   TextEditingController unitNumberController = TextEditingController();
 }

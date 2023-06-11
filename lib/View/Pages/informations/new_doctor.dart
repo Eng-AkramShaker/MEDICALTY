@@ -388,6 +388,7 @@ class NewDoctorPage extends StatelessWidget {
                         Get.to(NewExperiencesPage());
 
                       }else{
+
                         showDialog(context: context, builder: (_) => AlertDialog(
                           title: Text('Please Enter all Fields'),
                         ));

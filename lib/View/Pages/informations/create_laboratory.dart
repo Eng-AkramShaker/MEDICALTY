@@ -208,6 +208,7 @@ class CreateLaboratoryPage extends StatelessWidget {
                       if(controller.formKey.currentState!.validate()){
                         controller.formKey.currentState!.save();
                         Get.to(CreatePharmacyPage());
+
                       }else{
                         showDialog(context: context, builder: (_) => AlertDialog(
                           title: Text('Please Enter all Fields'),

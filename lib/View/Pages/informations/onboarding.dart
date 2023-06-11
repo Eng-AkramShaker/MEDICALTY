@@ -16,6 +16,7 @@ class Onboarding extends StatelessWidget {
           children: [
             Expanded(
               child: Container(
+
                   alignment: Alignment.center,
                   width: double.infinity,
 

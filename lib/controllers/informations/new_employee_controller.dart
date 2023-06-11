@@ -20,6 +20,7 @@ class NewEmployeeController extends GetxController{
   final formKey = GlobalKey<FormState>();
   TextEditingController idEmployeeController = TextEditingController();
   TextEditingController nameController = TextEditingController();
+
   TextEditingController userNameController = TextEditingController();
   TextEditingController hourlySalaryController = TextEditingController();
   TextEditingController totalSalaryController = TextEditingController();

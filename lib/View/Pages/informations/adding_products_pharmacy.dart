@@ -209,6 +209,7 @@ class ProductsPharmacyPage extends StatelessWidget {
                   child: OnBoardingButton(
                     onPressed: () {
                       if(controller.formKey.currentState!.validate()){
+
                         controller.formKey.currentState!.save();
 
                       }else{

@@ -20,6 +20,7 @@ class RegistrationPatientController extends GetxController{
   TextEditingController userNameController = TextEditingController();
   TextEditingController fileNoController = TextEditingController();
   TextEditingController dateController = TextEditingController();
+
   TextEditingController nationalIdController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   TextEditingController emailController = TextEditingController();

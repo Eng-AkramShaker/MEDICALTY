@@ -79,6 +79,7 @@ class CreateNewSectionPage extends StatelessWidget {
                   OnBoardingTextFormField(
                     controller:  controller.departmentController,
                     validator: (value) {
+
                       if (value == null || value.isEmpty) {
                         return 'Please enter the Department Name ';
                       }

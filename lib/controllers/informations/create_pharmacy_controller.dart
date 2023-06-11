@@ -13,6 +13,7 @@ class CreatePharmacyController extends GetxController{
   TextEditingController countryController = TextEditingController();
   TextEditingController addressController = TextEditingController();
   TextEditingController address2Controller = TextEditingController();
+
   TextEditingController stateController = TextEditingController();
   TextEditingController districtNameController = TextEditingController();
   TextEditingController postalCodeController = TextEditingController();

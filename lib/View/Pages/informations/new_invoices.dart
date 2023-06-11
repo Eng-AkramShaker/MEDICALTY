@@ -337,6 +337,7 @@ class NewInvoicesPage extends StatelessWidget {
                       if(controller.formKey.currentState!.validate()){
                         controller.formKey.currentState!.save();
                         Get.to(NewEmployeePage());
+
                       }else{
                         showDialog(context: context, builder: (_) => AlertDialog(
                           title: Text('Please Enter all Fields'),

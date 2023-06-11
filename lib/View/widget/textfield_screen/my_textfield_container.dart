@@ -15,6 +15,7 @@ class MyTextFieldContainer extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
+
             ColorApp.greenColor2,
             Colors.white,
             Colors.white,

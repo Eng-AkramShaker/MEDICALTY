@@ -192,6 +192,7 @@ class CenterInformationPage extends StatelessWidget {
                       },
                       labelText: 'official e-mail',
                       keyboardType: TextInputType.emailAddress,
+
                       obscureText: false,
                       suffixIcon: Icon(Icons.email_outlined),
                     ),

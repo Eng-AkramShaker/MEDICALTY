@@ -16,6 +16,7 @@ class CreateClientsController extends GetxController{
 
   final formKey = GlobalKey<FormState>();
   TextEditingController idClientController = TextEditingController();
+
   TextEditingController firstNameController = TextEditingController();
   TextEditingController mainFirstNameController = TextEditingController();
   TextEditingController secondNameController = TextEditingController();

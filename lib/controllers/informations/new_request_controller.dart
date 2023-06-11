@@ -25,6 +25,7 @@ class NewRequestController extends GetxController{
 
   TextEditingController idRequestController = TextEditingController();
   TextEditingController addressController = TextEditingController();
+
   TextEditingController serviceDetailsController = TextEditingController();
   TextEditingController commentsController = TextEditingController();
   TextEditingController notesController = TextEditingController();

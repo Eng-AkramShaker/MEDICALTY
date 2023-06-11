@@ -232,6 +232,7 @@ class AppointmentBookingPage extends StatelessWidget {
                         onPressed: () {
                           if(controller.formKey.currentState!.validate()){
                             controller.formKey.currentState!.save();
+
                             Get.to(DiseaseReportingPage());
                           }else{
                             showDialog(context: context, builder: (_) => AlertDialog(

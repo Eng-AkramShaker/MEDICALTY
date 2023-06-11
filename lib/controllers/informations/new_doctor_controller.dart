@@ -16,6 +16,7 @@ class NewDoctorController extends GetxController{
 
   final formKey = GlobalKey<FormState>();
   DateTime? selectedDateOfBirth;
+
   TextEditingController idDoctorController = TextEditingController();
   TextEditingController userNameController = TextEditingController();
   TextEditingController jobNumberController = TextEditingController();

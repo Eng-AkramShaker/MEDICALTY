@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 class AppointmentBookingController extends GetxController{
   final formKey = GlobalKey<FormState>();
   String doctorSelectedValue = 'Item 1';
+
   String assignedSelectedValue = 'Item 1';
   DateTime? selectedDateReservation;
   DateTime? selectedStartTime;

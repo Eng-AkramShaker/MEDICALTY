@@ -204,6 +204,7 @@ class NewExperiencesPage extends StatelessWidget {
                     },
                     text: 'Create Experiences',
                     size: 22,
+
                   ),
                   const SizedBox(height: 20),
                 ],

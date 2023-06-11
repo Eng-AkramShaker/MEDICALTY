@@ -31,6 +31,7 @@ class NewInvoicesController extends GetxController{
     formattedDiscount = discount.toStringAsFixed(2);
     formattedTax = tax.toStringAsFixed(2);
     formattedTotal = total.toStringAsFixed(2);
+
     formattedRequiredDeposit = requiredDeposit.toStringAsFixed(2);
   }
 

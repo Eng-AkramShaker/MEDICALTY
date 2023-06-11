@@ -348,6 +348,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                       }
                       if (value.length > 200) {
                         return 'Website cannot be longer than 200 characters';
+
                       }
                       if (value.length < 2) {
                         return 'Website  must have at least 2 characters';

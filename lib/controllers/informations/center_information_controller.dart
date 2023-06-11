@@ -5,6 +5,7 @@ class CenterInformationController extends GetxController{
   final formKey = GlobalKey<FormState>();
 
   TextEditingController nameController = TextEditingController();
+
   TextEditingController userNameController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   TextEditingController secondPhoneController = TextEditingController();

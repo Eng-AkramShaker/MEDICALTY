@@ -7,4 +7,5 @@ class DiseaseReportingController extends GetxController{
   TextEditingController nameDiseaseController = TextEditingController();
   TextEditingController descController = TextEditingController();
 
+
 }

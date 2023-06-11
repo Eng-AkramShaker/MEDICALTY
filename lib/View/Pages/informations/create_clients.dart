@@ -34,6 +34,7 @@ class CreateClientsPage extends StatelessWidget {
             child: Form(
               key: controller.formKey,
               child: Column(
+
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Center(

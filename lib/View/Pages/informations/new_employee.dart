@@ -236,6 +236,7 @@ class NewEmployeePage extends StatelessWidget {
 
                     },
                     text: 'Create employee',
+
                     size: 22,
                   ),
                 ),
