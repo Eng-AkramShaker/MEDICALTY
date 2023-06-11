@@ -64,26 +64,7 @@ class HomeController extends GetxController {
 // =========================================================================================
   String assetName_1 = 'assets/images/Ellipse.png';
 
-  var isPressed1 = false.obs;
-  var isPressed2 = false.obs;
-  final List<String> items = [
-    'English',
-    'Spanish',
-    'Chinese',
-    'Japanese',
-    'French',
-    'German',
-    'Russian',
-    'Portugues',
-    'Italian',
-    'Korean'
-  ];
-
-  late var selectedItem = items[0].obs;
-
-  void updateSelectedItem(String item) {
-    selectedItem.value = item;
-  }
+  
 
 //=================== List Detaile doctores ============================
   List bestDoctorList = [
