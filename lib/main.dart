@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
       },
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
-      //
+
       // home: CreateClientsPage(),
       home: ProductsPharmacyPage(),
       // getPages: AppPage.routes,
