@@ -28,6 +28,7 @@ import 'View/Pages/informations/new_request.dart';
 import 'View/Pages/informations/registration_patient.dart';
 import 'View/Pages/profile/profile.dart';
 import 'View/Pages/review/appSettingPage.dart';
+import 'View/Pages/review/reviewsPage.dart';
 import 'View/Pages/review/trainerDetailPage.dart';
 import 'constatnt/color_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
