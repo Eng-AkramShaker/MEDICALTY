@@ -69,8 +69,6 @@ class MyApp extends StatelessWidget {
       },
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
-      getPages: AppPage.routes,
-      initialRoute: AppPage.getBoarding_Start(),
     );
   }
 }
