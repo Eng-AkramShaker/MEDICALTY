@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:medicalty/View/Pages/Trainer/payment.dart';
+import 'package:Medicalty/View/Pages/Trainer/payment.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../constatnt/font_app_styles.dart';
 import '../../../controllers/Trainer/editcardController.dart';
