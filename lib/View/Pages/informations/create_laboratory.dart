@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:Medicalty/controllers/informations/create_laboratory_controller.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../controllers/informations/create_laboratory_controller.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
