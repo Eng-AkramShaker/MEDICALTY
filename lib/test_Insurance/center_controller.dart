@@ -1,8 +1,7 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'api.dart';
 import 'api_links.dart';
 import 'center_register_model.dart';
@@ -11,21 +10,19 @@ class CenterController extends GetxController {
   final formKey = GlobalKey<FormState>();
 
   TextEditingController nameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController userNameController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
-  TextEditingController secondPhoneController = TextEditingController();
-  TextEditingController websiteController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
   TextEditingController emailController = TextEditingController();
-  TextEditingController officalEmailController = TextEditingController();
+  TextEditingController formal_emailController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController formal_phoneController = TextEditingController();
+  TextEditingController websiteController = TextEditingController();
+  TextEditingController address1Controller = TextEditingController();
   TextEditingController countryController = TextEditingController();
   TextEditingController addressController = TextEditingController();
-  TextEditingController secondAddressController = TextEditingController();
   TextEditingController stateController = TextEditingController();
-  TextEditingController districtNameController = TextEditingController();
-  TextEditingController districtNameController2 = TextEditingController();
-  TextEditingController postalController = TextEditingController();
+  TextEditingController provinceController = TextEditingController();
   TextEditingController facebookController = TextEditingController();
+  TextEditingController zip_codeController = TextEditingController();
   TextEditingController instagramController = TextEditingController();
   TextEditingController twitterController = TextEditingController();
   TextEditingController snapchatController = TextEditingController();
