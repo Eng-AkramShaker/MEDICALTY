@@ -9,7 +9,7 @@ import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_drop_down_menu.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'my_date_time.dart';
 import 'new_products_services.dart';
@@ -48,7 +48,7 @@ class NewRequestPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.idRequestController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -79,7 +79,7 @@ class NewRequestPage extends StatelessWidget {
                           }
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller:  controller.addressController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -102,7 +102,7 @@ class NewRequestPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller:  controller.serviceDetailsController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -155,7 +155,7 @@ class NewRequestPage extends StatelessWidget {
                       horizontal: 21.0, vertical: 15.0),
                   child: Column(
                     children: [
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller:  controller.commentsController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -241,7 +241,7 @@ class NewRequestPage extends StatelessWidget {
                           }
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller:  controller.notesController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {

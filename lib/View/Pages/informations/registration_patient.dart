@@ -9,7 +9,7 @@ import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_drop_down_menu.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import 'appointment_booking.dart';
 import 'my_date_time.dart';
 
@@ -45,7 +45,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.idPatientController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -69,7 +69,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.fullNameController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -93,7 +93,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.userNameController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -117,7 +117,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.fileNoController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -151,7 +151,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     },
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.nationalIdController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -174,7 +174,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.phoneController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -197,7 +197,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.emailController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -217,7 +217,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     suffixIcon: Icon(Icons.email_outlined),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.addressController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -240,7 +240,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.heightController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -259,7 +259,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     obscureText: false,
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.weightController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -288,7 +288,7 @@ class RegistrationPatientPage extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.nameDiseaseController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -307,7 +307,7 @@ class RegistrationPatientPage extends StatelessWidget {
                     obscureText: false,
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.descController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
