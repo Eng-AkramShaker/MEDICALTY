@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:Medicalty/controllers/informations/new_products_services_controller.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../controllers/informations/new_products_services_controller.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_drop_down_menu.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import 'new_doctor.dart';
 
 class NewProductPage extends StatelessWidget {
@@ -47,7 +47,7 @@ class NewProductPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.idProductController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -79,7 +79,7 @@ class NewProductPage extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.productNameController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -98,7 +98,7 @@ class NewProductPage extends StatelessWidget {
                     obscureText: false,
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.productDescController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -122,7 +122,7 @@ class NewProductPage extends StatelessWidget {
                     children: [
                       Expanded(
                         flex: 5,
-                        child: OnBoardingTextFormField(
+                        child: MyTextFormField(
                           controller: controller.unitPriceController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -146,7 +146,7 @@ class NewProductPage extends StatelessWidget {
                       ),
                       Expanded(
                         flex: 5,
-                        child: OnBoardingTextFormField(
+                        child: MyTextFormField(
                           controller: controller.unitNumberController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
