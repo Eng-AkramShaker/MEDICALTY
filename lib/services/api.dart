@@ -1,13 +1,14 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-
 Future<Map<dynamic, dynamic>> postRequest(String url, Map map) async {
   try {
     var response =
-    await http.post(Uri.parse(url), body: json.encode(map), headers: {
-      'Content-Type':'application/json',
+        await http.post(Uri.parse(url), body: json.encode(map), headers: {
+      'Content-Type': 'application/json',
       // 'Authorization':'Bearer $token',
     });
     // print("response: ${response.body}");
