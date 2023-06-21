@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // ignore_for_file: depend_on_referenced_packages, avoid_print
+=======
+// ignore_for_file: depend_on_referenced_packages
+>>>>>>> 706c2c2f198d63d8a89e1b9cce6d599fa181a171
 
 import 'dart:convert';
 
