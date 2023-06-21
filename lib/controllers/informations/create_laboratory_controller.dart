@@ -10,7 +10,6 @@ class CreateLaboratoryController extends GetxController{
   TextEditingController emailController = TextEditingController();
   TextEditingController websiteController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
   bool isVisibility = true;
 
   void visibility() {

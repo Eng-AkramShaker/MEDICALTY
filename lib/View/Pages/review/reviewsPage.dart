@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rating_summary/rating_summary.dart';
 import '../../../constatnt/color_app.dart';
-import '../../../controllers/review/reviews_controller.dart';
 import '../../widget/homePage/bottomWidget.dart';
 import '../../widget/homePage/reviewsListWidget.dart';
 import 'write__review.dart';
@@ -14,10 +13,7 @@ class Reviews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(ReviewsController());
-    return GetBuilder<ReviewsController>(
-      init: ReviewsController(),
-      builder: (controller) => SafeArea(
+    return SafeArea(
       child: Scaffold(
         backgroundColor: ColorApp.backgroundWhaitColor,
         body: Container(
@@ -96,7 +92,7 @@ class Reviews extends StatelessWidget {
           ),
         ),
       ),
-    ));
+    );
   }
 }
 
