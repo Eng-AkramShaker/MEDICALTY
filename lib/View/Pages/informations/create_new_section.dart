@@ -9,7 +9,7 @@ import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'create_insurance_company.dart';
 
@@ -51,7 +51,7 @@ class CreateNewSectionPage extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                       color: ColorApp.primaryColor),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.idSectionController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -76,7 +76,7 @@ class CreateNewSectionPage extends StatelessWidget {
                   const SizedBox(
                     height: 15.0,
                   ),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller:  controller.departmentController,
                     validator: (value) {
 
@@ -102,7 +102,7 @@ class CreateNewSectionPage extends StatelessWidget {
                   const SizedBox(
                     height: 15.0,
                   ),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller:  controller.descController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {

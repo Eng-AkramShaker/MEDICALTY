@@ -1,19 +1,18 @@
-// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
-import '../../../controllers/informations/center_information_controller.dart';
 import '../../../utils/information_image.dart';
-import '../../widget/textfield_screen/my_app_bar.dart';
-import '../../widget/textfield_screen/my_textfield_container.dart';
-import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/my_text_form_field.dart';
-import '../../widget/textfield_screen/onboarding_text_widget.dart';
-import 'create_new_section.dart';
+import '../View/Pages/informations/create_new_section.dart';
+import '../View/widget/textfield_screen/my_app_bar.dart';
+import '../View/widget/textfield_screen/my_textfield_container.dart';
+import '../View/widget/textfield_screen/onboarding_button.dart';
+import '../View/widget/textfield_screen/my_text_form_field.dart';
+import '../View/widget/textfield_screen/onboarding_text_widget.dart';
+import 'center_controller.dart';
+import 'center_register_model.dart';
 
-class CenterInformationPage extends StatelessWidget {
+class CenterHome extends StatelessWidget {
 
 
 
@@ -21,7 +20,7 @@ class CenterInformationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder(
-      init: CenterInformationController(),
+      init: CenterController(),
       builder:(controller) => MyTextFieldContainer(
         child: Scaffold(
           backgroundColor: Colors.transparent,
@@ -31,7 +30,7 @@ class CenterInformationPage extends StatelessWidget {
           body: SingleChildScrollView(
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 21.0, vertical: 31.0),
+              const EdgeInsets.symmetric(horizontal: 21.0, vertical: 31.0),
               child: Form(
                 key: controller.formKey,
                 child: Column(
@@ -61,6 +60,27 @@ class CenterInformationPage extends StatelessWidget {
                         return null;
                       },
                       labelText: 'Center Name',
+                      keyboardType: TextInputType.name,
+                      obscureText: false,
+                      suffixIcon: Image.asset(
+                        '$imagePath/center_name.png',
+                        height: 1,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15.0,
+                    ),
+                    MyTextFormField(
+                      controller: controller.passwordController,
+                      validator: (value) {
+                        if(value!.length > 25){
+                          return 'Password Cant Be Larger Than 25';
+                        }else if(value.length <2){
+                          return 'Password Cant Be Less Than 2';
+                        }
+                        return null;
+                      },
+                      labelText: 'Password',
                       keyboardType: TextInputType.name,
                       obscureText: false,
                       suffixIcon: Image.asset(
@@ -454,7 +474,28 @@ class CenterInformationPage extends StatelessWidget {
                         if(controller.formKey.currentState!.validate()){
                           controller.formKey.currentState!.save();
                           print('success');
-                          Get.to(CreateNewSectionPage());
+                          controller.registerCenter(RegisterCenterModel(
+                            name: controller.nameController.text,
+                            username: controller.userNameController.text,
+                            phone: controller.phoneController.text,
+                            formalPhone: controller.secondPhoneController.text,
+                            password:  controller.passwordController.text,
+                            website: controller.websiteController.text,
+                            address1:  controller.addressController.text,
+                            address2:  controller.secondAddressController.text,
+                            email:  controller.emailController.text,
+                             country: "Egypt",
+                            state:  controller.stateController.text,
+                            facebook:  controller.facebookController.text,
+                            formalEmail:  controller.officalEmailController.text,
+                            instagram:  controller.instagramController.text,
+                            snapchat:  controller.snapchatController.text,
+                            twitter:  controller.twitterController.text,
+                            youtube:  controller.youtubeController.text,
+                            zipCode:  controller.postalController.text,
+                           subscriptionType: controller.districtNameController.text,
+                            subscriptionPeriod: controller.districtNameController.text,
+                          ));
                         }else{
                           showDialog(context: context, builder: (_) => AlertDialog(
                             title: Text('Please Enter all Fields'),

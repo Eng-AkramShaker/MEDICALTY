@@ -10,7 +10,7 @@ import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_drop_down_menu.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'my_date_time.dart';
 import 'new_experiences.dart';
@@ -48,7 +48,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.idDoctorController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -71,7 +71,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.userNameController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -94,7 +94,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.jobNumberController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -117,7 +117,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.fullNameController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -140,7 +140,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.nationalIdController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -163,7 +163,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.obDescController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -183,7 +183,7 @@ class NewDoctorPage extends StatelessWidget {
                     maxLines: 4,
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.aboutDocController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -203,7 +203,7 @@ class NewDoctorPage extends StatelessWidget {
                     maxLines: 4,
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.profileDocController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -233,7 +233,7 @@ class NewDoctorPage extends StatelessWidget {
                     },
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.yearExperienceController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -256,7 +256,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.experienceController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -279,7 +279,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.phoneController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -302,7 +302,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.workPhoneController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -325,7 +325,7 @@ class NewDoctorPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.emailController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -345,7 +345,7 @@ class NewDoctorPage extends StatelessWidget {
                     suffixIcon: Icon(Icons.email_outlined),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.workEmailController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {

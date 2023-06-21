@@ -9,7 +9,7 @@ import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'create_laboratory.dart';
 
@@ -69,7 +69,7 @@ class ProductsPharmacyPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.idProductController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -92,7 +92,7 @@ class ProductsPharmacyPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.productNameController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -115,7 +115,7 @@ class ProductsPharmacyPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.descController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -135,7 +135,7 @@ class ProductsPharmacyPage extends StatelessWidget {
                         maxLines: 3,
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.informationController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -178,7 +178,7 @@ class ProductsPharmacyPage extends StatelessWidget {
                 const SizedBox(height: 34),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 21.0),
-                  child: OnBoardingTextFormField(
+                  child: MyTextFormField(
                     controller: controller.priceController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
