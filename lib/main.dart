@@ -1,12 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
+import 'package:Medicalty/routes/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:medicalty/View/Pages/informations/create_clients.dart';
-import 'package:medicalty/View/Pages/informations/create_insurance_company.dart';
-import 'package:medicalty/View/Pages/informations/create_new_section.dart';
-import 'package:medicalty/View/Pages/informations/new_invoices.dart';
-import 'package:medicalty/routes/routes.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 import 'View/Pages/Trainer/addNew.dart';
@@ -28,6 +24,7 @@ import 'View/Pages/informations/new_request.dart';
 import 'View/Pages/informations/registration_patient.dart';
 import 'View/Pages/profile/profile.dart';
 import 'View/Pages/review/appSettingPage.dart';
+import 'View/Pages/review/reviewsPage.dart';
 import 'View/Pages/review/trainerDetailPage.dart';
 import 'constatnt/color_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -68,10 +65,7 @@ class MyApp extends StatelessWidget {
       },
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
-
-      // home: CreateClientsPage(),
-      home: ProductsPharmacyPage(),
-      // getPages: AppPage.routes,
+      getPages: AppPage.routes,
       initialRoute: AppPage.getBoarding_Start(),
     );
   }

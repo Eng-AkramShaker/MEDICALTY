@@ -1,4 +1,4 @@
-name: medicalty
+name: Medicalty
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -40,28 +40,6 @@ dependencies:
 
 
 
-dev_dependencies:
-  flutter_lints: ^2.0.1
-  flutter_test:
-    sdk: flutter
-
-flutter_launcher_icons:
-  android: "launcher_icon"
-  ios: true
-  image_path: "assets/images/logo.jpg"
-  min_sdk_android: 21
-  web:
-    generate: true
-    image_path: "path/to/image.png"
-    background_color: "#hexcode"
-    theme_color: "#hexcode"
-  windows:
-    generate: true
-    image_path: "path/to/image.png"
-    icon_size: 48 
-  macos:
-    generate: true
-    image_path: "path/to/image.png"
 
 
 
