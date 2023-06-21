@@ -41,7 +41,6 @@ class RegisterCenterModel {
     this.formal_phone,
     this.website,
     this.address1,
-
     this.country,
     this.address,
     this.state,
@@ -63,7 +62,6 @@ class RegisterCenterModel {
         phone: json["phone"],
         formal_phone: json["formal_phone"],
         website: json["website"],
-
         address1: json["address1"],
         country: json["country"],
         address: json["address"],
@@ -79,20 +77,15 @@ class RegisterCenterModel {
 
   Map<dynamic, dynamic> toJson() => {
         "name": name,
-        " description":  description,
+        " description": description,
         "email": email,
         "formal_email": formal_email,
-
-        "phone": country,
-        "formal_phone": subscriptionType,
-        "subscription_period": subscriptionPeriod,
-        "website": formalEmail,
-        "address1": phone,
-        "formal_phone": formalPhone,
-        
+        "phone": phone,
+        "formal_phone": formal_phone,
         "website": website,
-        "address1": address1,
-        "address2": address2,
+        "address1": phone,
+        "country": country,
+        "address": address,
         "state": state,
         "province": province,
         "zip_code": zipCode,

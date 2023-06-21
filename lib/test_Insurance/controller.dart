@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'api.dart';
+import 'api_.dart';
 import 'api_links.dart';
-import 'center_register_model.dart';
+import 'model.dart';
 
 class CenterController extends GetxController {
   final formKey = GlobalKey<FormState>();
