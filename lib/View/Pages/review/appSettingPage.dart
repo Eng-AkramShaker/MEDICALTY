@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:medicalty/controllers/review/app_setting_controller.dart';
+import 'package:Medicalty/controllers/review/app_setting_controller.dart';
 import '../../../constatnt/color_app.dart';
 import '../../widget/homePage/bottomWidget.dart';
 import '../../widget/homePage/divider.dart';
