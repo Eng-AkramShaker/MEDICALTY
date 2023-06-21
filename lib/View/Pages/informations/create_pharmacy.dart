@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:medicalty/controllers/informations/create_pharmacy_controller.dart';
+import 'package:Medicalty/controllers/informations/create_pharmacy_controller.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';

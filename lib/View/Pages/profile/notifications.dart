@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:medicalty/View/Pages/profile/setting_screen.dart';
+import 'package:Medicalty/View/Pages/profile/setting_screen.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../constatnt/font_app_styles.dart';
 import '../../../controllers/radio_controller.dart';

@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:medicalty/View/Pages/review/reviewsPage.dart';
-import 'package:medicalty/controllers/Trainer/trainer_details_controller.dart';
+import 'package:Medicalty/View/Pages/review/reviewsPage.dart';
+import 'package:Medicalty/controllers/Trainer/trainer_details_controller.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/home_page/homeController.dart';
 import '../../widget/homePage/bottomWidget.dart';

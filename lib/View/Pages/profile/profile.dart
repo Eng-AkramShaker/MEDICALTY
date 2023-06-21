@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:medicalty/View/Pages/profile/privacy_policy.dart';
-import 'package:medicalty/View/Pages/profile/setting_screen.dart';
+import 'package:Medicalty/View/Pages/profile/privacy_policy.dart';
+import 'package:Medicalty/View/Pages/profile/setting_screen.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'edit_profile.dart';
 

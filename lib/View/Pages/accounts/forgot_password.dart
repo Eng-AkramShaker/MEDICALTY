@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:medicalty/View/Pages/accounts/verify_account.dart';
+import 'package:Medicalty/View/Pages/accounts/verify_account.dart';
 import '../../widget/login/container.dart';
 import '../../widget/login/mytext_field.dart';
 import '../home_page/navBar.dart';
