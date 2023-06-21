@@ -1,13 +1,16 @@
+// ignore_for_file: unnecessary_this
+
 class AdminLoginModel {
   String? email;
   String? password;
   String? status;
   String? msg;
 
-  AdminLoginModel({required this.email,
+  AdminLoginModel({
+    required this.email,
     required this.password,
-     this.status,
-     this.msg,
+    this.status,
+    this.msg,
   });
 
   factory AdminLoginModel.fromJson(Map<String, dynamic> json) {
