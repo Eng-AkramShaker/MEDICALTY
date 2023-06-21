@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:Medicalty/controllers/informations/new_invoices_controller.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../controllers/informations/new_invoices_controller.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_drop_down_menu.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'my_date_time.dart';
 import 'new_employee.dart';
@@ -51,7 +51,7 @@ class NewInvoicesPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.idInvoicesController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -82,7 +82,7 @@ class NewInvoicesPage extends StatelessWidget {
                           }
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.addressController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -157,7 +157,7 @@ class NewInvoicesPage extends StatelessWidget {
                           }
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.accountingCodeController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -180,7 +180,7 @@ class NewInvoicesPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.customerAddressController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {

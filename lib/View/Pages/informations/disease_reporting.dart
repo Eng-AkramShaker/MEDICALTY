@@ -3,13 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:Medicalty/controllers/informations/disease_reporting_controller.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../controllers/informations/disease_reporting_controller.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'create_laboratory.dart';
 import 'new_invoices.dart';
@@ -46,7 +46,7 @@ class DiseaseReportingPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.idDieasesController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -69,7 +69,7 @@ class DiseaseReportingPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.nameDiseaseController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -92,7 +92,7 @@ class DiseaseReportingPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.descController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
