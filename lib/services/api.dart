@@ -11,7 +11,7 @@ Future<Map<dynamic, dynamic>> postRequest(String url, Map map) async {
       // 'Authorization':'Bearer $token',
     });
     // print("response: ${response.body}");
-    if (response.statusCode >= 200 || response.statusCode < 300) {
+    if (response.statusCode >= 200 && response.statusCode < 300) {
       var responsebody = jsonDecode(response.body);
       return responsebody;
     } else {
