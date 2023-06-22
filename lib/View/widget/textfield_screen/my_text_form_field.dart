@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-class OnBoardingTextFormField extends StatelessWidget {
+class MyTextFormField extends StatelessWidget {
   TextEditingController controller = TextEditingController();
  final Function validator;
   TextInputType? keyboardType;
@@ -10,7 +10,7 @@ class OnBoardingTextFormField extends StatelessWidget {
   String? labelText;
   Widget? suffixIcon;
   bool? obscureText;
-  OnBoardingTextFormField({
+  MyTextFormField({
     super.key,
     required this.controller,
     required this.validator,
@@ -24,7 +24,7 @@ class OnBoardingTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      maxLines: maxLines,
+      maxLines: maxLines ?? 1,
       controller: controller,
       cursorColor: Colors.black,
       keyboardType: keyboardType,

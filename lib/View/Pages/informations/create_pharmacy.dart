@@ -3,13 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:Medicalty/controllers/informations/create_pharmacy_controller.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../controllers/informations/create_pharmacy_controller.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'adding_products_pharmacy.dart';
 
@@ -48,7 +48,7 @@ class CreatePharmacyPage extends StatelessWidget {
                   const SizedBox(
                     height: 15.0,
                   ),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.idPharmacyController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -71,7 +71,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.namePharmacyController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -94,7 +94,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.userNameController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -117,7 +117,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.phoneNumberController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -140,7 +140,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.phoneNumber2Controller,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -163,7 +163,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.emailController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -183,7 +183,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     suffixIcon: Icon(Icons.email_outlined),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.officalEmailController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -203,7 +203,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     suffixIcon: Icon(Icons.email_outlined),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.countryController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -226,7 +226,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.addressController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -249,7 +249,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.address2Controller,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -268,7 +268,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     obscureText: false,
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.stateController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -291,7 +291,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.districtNameController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -314,7 +314,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.postalCodeController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -344,7 +344,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     fontSize: 16,
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.websiteController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -367,7 +367,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.facebookController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -390,7 +390,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.instagramController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -413,7 +413,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.twitterController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -436,7 +436,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.snapchatController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -459,7 +459,7 @@ class CreatePharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.youtubeController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {

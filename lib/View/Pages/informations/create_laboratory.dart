@@ -3,13 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:Medicalty/controllers/informations/create_laboratory_controller.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../controllers/informations/create_laboratory_controller.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import 'create_pharmacy.dart';
 import 'disease_reporting.dart';
 
@@ -46,7 +46,7 @@ class CreateLaboratoryPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.idLaboratoryController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -69,7 +69,7 @@ class CreateLaboratoryPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.nameController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -92,7 +92,7 @@ class CreateLaboratoryPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.addressController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -115,7 +115,7 @@ class CreateLaboratoryPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.phoneController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -138,7 +138,7 @@ class CreateLaboratoryPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.emailController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -159,7 +159,7 @@ class CreateLaboratoryPage extends StatelessWidget {
                     suffixIcon: Icon(Icons.email_outlined),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.websiteController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -178,7 +178,7 @@ class CreateLaboratoryPage extends StatelessWidget {
                     obscureText: false,
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.passwordController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
