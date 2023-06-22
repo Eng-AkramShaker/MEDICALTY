@@ -65,10 +65,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
       //
-      // home: CreateClientsPage(),
-      home: Login(),
       // home: ProductsPharmacyPage(),
-      // getPages: AppPage.routes,
+      //
+      getPages: AppPage.routes,
       initialRoute: AppPage.getBoarding_Start(),
     );
   }
