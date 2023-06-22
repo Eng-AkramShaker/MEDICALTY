@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
+import 'package:Medicalty/View/Pages/home_screen.dart';
 import 'package:Medicalty/bindings/initail_Bindings.dart';
 import 'package:Medicalty/routes/routes.dart';
 import 'package:Medicalty/services/settingServices.dart';
@@ -80,7 +81,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
       initialBinding: InitailBaindings(),
-//
+  // home: HomeScreen(),
       getPages: AppPage.routes,
       initialRoute: AppPage.getBoarding_Start(),
     );

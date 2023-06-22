@@ -1,4 +1,5 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
+import 'package:Medicalty/view/pages/home_page/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -345,16 +346,17 @@ class RegistrationPatientPage extends StatelessWidget {
                   const SizedBox(height: 92),
                   OnBoardingButton(
                     onPressed: () {
-                      if(controller.formKey.currentState!.validate()){
-                        controller.formKey.currentState!.save();
-                        Get.to(AppointmentBookingPage());
+                      // if(controller.formKey.currentState!.validate()){
+                      //   controller.formKey.currentState!.save();
+                      //   Get.to(()=> HomePage());
 
 
-                      }else{
-                        showDialog(context: context, builder: (_) => AlertDialog(
-                          title: Text('Please Enter all Fields'),
-                        ));
-                      }
+                      // }else{
+                      //   showDialog(context: context, builder: (_) => AlertDialog(
+                      //     title: Text('Please Enter all Fields'),
+                      //   ));
+                      // }
+                      Get.to(()=> HomePage());
                     },
                     text: 'Create Patient',
                     size: 22,

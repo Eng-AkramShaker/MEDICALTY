@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors, avoid_print
 
+import 'package:Medicalty/View/Pages/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -501,7 +502,7 @@ class CenterInformationPage extends StatelessWidget {
                           )
                           );
                           print('success');
-                          Get.to(CreateNewSectionPage());
+                          Get.to(HomeScreen());
                         }else{
                           showDialog(context: context, builder: (_) => AlertDialog(
                             title: Text('Please Enter all Fields'),

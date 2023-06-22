@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names
 
+import 'package:Medicalty/View/Pages/home_screen.dart';
+import 'package:Medicalty/middleWare/home_middleware.dart';
 import 'package:get/get.dart';
 import '../View/Pages/accounts/create_accounts.dart';
 import '../View/Pages/accounts/login_page.dart';
@@ -15,7 +17,8 @@ import '../middleWare/auth_middleware.dart';
 class AppPage {
   static List<GetPage> routes = [
     GetPage(name: Boarding_Start, page: () => OnBoardingStart(), middlewares: [
-      AuthMiddleWare(),
+      // AuthMiddleWare(),
+      HomeMiddleWare(),
     ]),
     GetPage(name: navBar, page: () => NavBar()),
     GetPage(name: homePage18_1, page: () => HomePage()),
@@ -25,6 +28,7 @@ class AppPage {
     GetPage(name: homePage18_4, page: () => Favourite()),
     GetPage(name: createAccounts, page: () => Create_Accounts()),
     GetPage(name: login, page: () => Login()),
+    GetPage(name: homeScreen, page: () => HomeScreen(),),
   ];
 
   //===================================================================
@@ -38,6 +42,7 @@ class AppPage {
   static gethomePage18_4() => homePage18_4;
   static getcreateAccounts() => createAccounts;
   static getlogin() => login;
+  static getHomeScreen() => homeScreen;
 
 //====================================================================
   static String Boarding_Start = '/';
@@ -49,4 +54,5 @@ class AppPage {
   static String homePage18_4 = '/homePage18_4';
   static String createAccounts = '/createAccounts';
   static String login = '/login';
+  static String homeScreen = '/homescreen';
 }

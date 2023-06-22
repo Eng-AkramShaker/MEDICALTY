@@ -1,5 +1,9 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, avoid_print
 
+import 'package:Medicalty/view/pages/informations/create_pharmacy.dart';
+import 'package:Medicalty/view/pages/informations/new_doctor.dart';
+import 'package:Medicalty/view/pages/informations/new_employee.dart';
+import 'package:Medicalty/view/pages/informations/registration_patient.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
@@ -48,24 +52,25 @@ class ChooseMajor extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: Styles.textStyle22,
                         ),
-                        InkWell(
-                          onTap: () {
-                            //  Get.to(AlertDailogTest());
-                            Get.to(Create_Accounts());
-                          },
-                          child: Column(
-                            children: [
-                              Image.asset(ImagesApp.medicalCenter),
-                            ],
-                          ),
-                        ),
+                        
+                        CustomChooseMajor(
+                              image: ImagesApp.medicalCenter,
+                              textTitle: "I'm a Pationt'",
+                              onTap: () {
+                                myBox!.put('type', 'pationt');
+                                print('================= myBox type : ${myBox!.get('type')}');
+                                Get.to(()=> RegistrationPatientPage());
+                              },
+                            ),
                         Row(
                           children: [
                             CustomChooseMajor(
                               image: ImagesApp.imDoctor,
                               textTitle: "I'm a Doctor'",
                               onTap: () {
-                                Get.to(Create_Accounts());
+                                myBox!.put('type', 'doctor');
+                                print('================= myBox type : ${myBox!.get('type')}');
+                                Get.to(()=> NewDoctorPage());
                               },
                             ),
                             Spacer(),
@@ -73,7 +78,9 @@ class ChooseMajor extends StatelessWidget {
                               image: ImagesApp.imNurse,
                               textTitle: "I'm a imNurse",
                               onTap: () {
-                                Get.to(Create_Accounts());
+                                 myBox!.put('type', 'nurse');
+                                print('================= myBox type : ${myBox!.get('type')}');
+                                Get.to(()=> NewEmployeePage());
                               },
                             ),
                           ],
@@ -82,7 +89,9 @@ class ChooseMajor extends StatelessWidget {
                           children: [
                             CustomChooseMajor(
                                 onTap: () {
-                                  Get.to(Create_Accounts());
+                                  myBox!.put('type', 'Physiotherapy');
+                                print('================= myBox type : ${myBox!.get('type')}');
+                                Get.to(()=> NewEmployeePage());
                                 },
                                 image: ImagesApp.physiotherapy,
                                 textTitle: "Physiotherapy"),
@@ -91,7 +100,9 @@ class ChooseMajor extends StatelessWidget {
                               image: ImagesApp.pharmacy,
                               textTitle: "pharmacy",
                               onTap: () {
-                                Get.to(Create_Accounts());
+                                myBox!.put('type', 'pharmacy');
+                                print('================= myBox type : ${myBox!.get('type')}');
+                                Get.to(()=> CreatePharmacyPage());
                               },
                             ),
                           ],
@@ -102,7 +113,9 @@ class ChooseMajor extends StatelessWidget {
                               image: ImagesApp.hospital,
                               textTitle: "hospital",
                               onTap: () {
-                                Get.to(Create_Accounts());
+                                myBox!.put('type', 'hospital');
+                                print('================= myBox type : ${myBox!.get('type')}');
+                                Get.to(()=> CenterInformationPage());
                               },
                             ),
                             Spacer(),
