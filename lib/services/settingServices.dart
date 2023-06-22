@@ -3,7 +3,7 @@
 
 import 'package:get/get_state_manager/src/rx_flutter/rx_disposable.dart';
 import 'package:hive/hive.dart';
-
+import 'package:path_provider/path_provider.dart';
 import '../api/functions/check_internet.dart';
 
 Box? myBox;
