@@ -1,15 +1,17 @@
-// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import '../../../api/class/handling_data_view.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/informations/center_information_controller.dart';
+import '../../../model/center/center_body_model.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/my_text_form_field.dart';
+import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'create_new_section.dart';
 
@@ -20,9 +22,11 @@ class CenterInformationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder(
+    return GetBuilder<CenterInformationController>(
       init: CenterInformationController(),
-      builder:(controller) => MyTextFieldContainer(
+      builder:(controller) => HandlingDataView(
+        statusRequest: controller.statusRequest,
+        widget: MyTextFieldContainer(
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: MyAppBar(
@@ -50,8 +54,8 @@ class CenterInformationPage extends StatelessWidget {
                       height: 15.0,
                     ),
                     //Name Controller
-                    MyTextFormField(
-                      controller: controller.nameController,
+                    OnBoardingTextFormField(
+                      controller: controller.centerNameController,
                       validator: (value) {
                         if(value!.length > 25){
                           return 'CenterName Cant Be Larger Than 25';
@@ -72,7 +76,7 @@ class CenterInformationPage extends StatelessWidget {
                       height: 15.0,
                     ),
                     //Username
-                    MyTextFormField(
+                    OnBoardingTextFormField(
                       controller: controller.userNameController,
                       validator: (value) {
                         if(value!.length > 25){
@@ -93,8 +97,45 @@ class CenterInformationPage extends StatelessWidget {
                     const SizedBox(
                       height: 15.0,
                     ),
+                    //Password
+                    OnBoardingTextFormField(
+                      controller: controller.passwordController,
+                      validator: (value) {
+                        if(value!.length > 25){
+                          return 'Password Can\'t Be Larger Than 25';
+                        }else if(value.length <2){
+                          return 'Password Can\'t Be Less Than 2';
+                        }
+                        return null;
+                      },
+                      labelText: 'Password',
+                      keyboardType: TextInputType.visiblePassword,
+                      obscureText: false,
+                      suffixIcon: Icon(Icons.password_outlined),
+                    ),
+                    const SizedBox(
+                      height: 15.0,
+                    ),
                     //phone
-                    MyTextFormField(
+                    OnBoardingTextFormField(
+                      controller: controller.formalPhoneController,
+                      validator: (value) {
+                        if(value!.length > 25){
+                          return 'formal Phone Cant Be Larger Than 25';
+                        }else if(value.length <2){
+                          return 'formal Phone Cant Be Less Than 2';
+                        }
+                        return null;
+                      },
+                      labelText: 'Formal Phone',
+                      keyboardType: TextInputType.phone,
+                      obscureText: false,
+                      suffixIcon: Image.asset('$imagePath/phone.png'),
+                    ),
+                    const SizedBox(
+                      height: 15.0,
+                    ),
+                    OnBoardingTextFormField(
                       controller: controller.phoneController,
                       validator: (value) {
                         if(value!.length > 25){
@@ -104,7 +145,7 @@ class CenterInformationPage extends StatelessWidget {
                         }
                         return null;
                       },
-                      labelText: '+99 -7999999999',
+                      labelText: 'Phone',
                       keyboardType: TextInputType.phone,
                       obscureText: false,
                       suffixIcon: Image.asset('$imagePath/phone.png'),
@@ -112,25 +153,7 @@ class CenterInformationPage extends StatelessWidget {
                     const SizedBox(
                       height: 15.0,
                     ),
-                    MyTextFormField(
-                      controller: controller.secondPhoneController,
-                      validator: (value) {
-                        if(value!.length > 25){
-                          return 'Phone Cant Be Larger Than 25';
-                        }else if(value.length <2){
-                          return 'Phone Cant Be Less Than 2';
-                        }
-                        return null;
-                      },
-                      labelText: '+99 -7999999999',
-                      keyboardType: TextInputType.phone,
-                      obscureText: false,
-                      suffixIcon: Image.asset('$imagePath/phone.png'),
-                    ),
-                    const SizedBox(
-                      height: 15.0,
-                    ),
-                    MyTextFormField(
+                    OnBoardingTextFormField(
                       controller: controller.websiteController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -155,7 +178,7 @@ class CenterInformationPage extends StatelessWidget {
                     const SizedBox(
                       height: 15.0,
                     ),
-                    MyTextFormField(
+                    OnBoardingTextFormField(
                       controller: controller.emailController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -176,11 +199,11 @@ class CenterInformationPage extends StatelessWidget {
                       suffixIcon: Icon(Icons.email_outlined),
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
-                      controller: controller.officalEmailController,
+                    OnBoardingTextFormField(
+                      controller: controller.formalEmailController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter your email';
+                          return 'Please enter your formal email';
                         }
                         if (value!.length < 12) {
                           return 'Email must have at least 2 characters';
@@ -190,14 +213,14 @@ class CenterInformationPage extends StatelessWidget {
                         }
                         return null;
                       },
-                      labelText: 'official e-mail',
+                      labelText: 'Formal Email',
                       keyboardType: TextInputType.emailAddress,
 
                       obscureText: false,
                       suffixIcon: Icon(Icons.email_outlined),
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
+                    OnBoardingTextFormField(
                       controller: controller.countryController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -220,31 +243,8 @@ class CenterInformationPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
-                      controller: controller.addressController,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter the Address ';
-                        }
-                        if (value.length > 25) {
-                          return 'Address cannot be longer than 25 characters';
-                        }
-                        if (value.length < 2) {
-                          return 'Address  must have at least 2 characters';
-                        }
-                        return null;
-                      },
-                      labelText: 'Address',
-                      keyboardType: TextInputType.streetAddress,
-                      obscureText: false,
-                      suffixIcon: Image.asset(
-                        '$imagePath/location.png',
-                        height: 1,
-                      ),
-                    ),
-                    const SizedBox(height: 15.0),
-                    MyTextFormField(
-                      controller: controller.secondAddressController,
+                    OnBoardingTextFormField(
+                      controller: controller.address_1Controller,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Please enter the Address ';
@@ -260,9 +260,32 @@ class CenterInformationPage extends StatelessWidget {
                       labelText: 'Address 1',
                       keyboardType: TextInputType.streetAddress,
                       obscureText: false,
+                      suffixIcon: Image.asset(
+                        '$imagePath/location.png',
+                        height: 1,
+                      ),
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
+                    OnBoardingTextFormField(
+                      controller: controller.address_2Controller,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter the Address ';
+                        }
+                        if (value.length > 25) {
+                          return 'Address cannot be longer than 25 characters';
+                        }
+                        if (value.length < 2) {
+                          return 'Address  must have at least 2 characters';
+                        }
+                        return null;
+                      },
+                      labelText: 'Address 2',
+                      keyboardType: TextInputType.streetAddress,
+                      obscureText: false,
+                    ),
+                    const SizedBox(height: 15.0),
+                    OnBoardingTextFormField(
                       controller: controller.stateController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -285,40 +308,40 @@ class CenterInformationPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
-                      controller: controller.districtNameController,
+                    OnBoardingTextFormField(
+                      controller: controller.provinceNameController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter the District Name ';
+                          return 'Please enter the Province ';
                         }
                         if (value.length > 25) {
-                          return 'District Name cannot be longer than 25 characters';
+                          return 'Province cann\'t be longer than 25 characters';
                         }
                         if (value.length < 2) {
-                          return 'District Name  must have at least 2 characters';
+                          return 'Province  must have at least 2 characters';
                         }
                         return null;
                       },
-                      labelText: 'District name',
+                      labelText: 'Province',
                       keyboardType: TextInputType.name,
                       obscureText: false,
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
-                      controller: controller.postalController,
+                    OnBoardingTextFormField(
+                      controller: controller.zipCodeController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter the Postal Code ';
+                          return 'Please enter the Zip Code ';
                         }
                         if (value.length > 25) {
-                          return 'Postal Code cannot be longer than 25 characters';
+                          return 'Zip Code cannot be longer than 25 characters';
                         }
                         if (value.length < 2) {
-                          return 'Postal Code  must have at least 2 characters';
+                          return 'Zip Code  must have at least 2 characters';
                         }
                         return null;
                       },
-                      labelText: 'Postal code',
+                      labelText: 'Zip code',
                       keyboardType: TextInputType.number,
                       obscureText: false,
                       suffixIcon: Image.asset(
@@ -334,7 +357,7 @@ class CenterInformationPage extends StatelessWidget {
                       fontSize: 16,
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
+                    OnBoardingTextFormField(
                       controller: controller.facebookController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -357,7 +380,7 @@ class CenterInformationPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
+                    OnBoardingTextFormField(
                       controller: controller.instagramController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -380,7 +403,7 @@ class CenterInformationPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
+                    OnBoardingTextFormField(
                       controller: controller.twitterController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -403,7 +426,7 @@ class CenterInformationPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
+                    OnBoardingTextFormField(
                       controller: controller.snapchatController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -426,7 +449,7 @@ class CenterInformationPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 15.0),
-                    MyTextFormField(
+                    OnBoardingTextFormField(
                       controller: controller.youtubeController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -453,6 +476,30 @@ class CenterInformationPage extends StatelessWidget {
                       onPressed: () {
                         if(controller.formKey.currentState!.validate()){
                           controller.formKey.currentState!.save();
+                          controller.postData(CenterBody(
+                            address1: controller.address_1Controller.text,
+                            address2: controller.address_2Controller.text,
+                            country: controller.countryController.text,
+                            email: controller.emailController.text,
+                            facebook: controller.facebookController.text,
+                            formalEmail: controller.formalEmailController.text,
+                            formalPhone: controller.formalPhoneController.text,
+                            instagram: controller.instagramController.text,
+                            name: controller.centerNameController.text,
+                            password: controller.passwordController.text    ,
+                            phone: controller.phoneController.text,
+                            province: controller.provinceNameController.text,
+                            snapchat: controller.snapchatController.text,
+                            state: controller.stateController.text,
+                            subscriptionPeriod: 'Month',
+                            subscriptionType: 'Basic',
+                            twitter: controller.twitterController.text,
+                            username: controller.userNameController.text,
+                            website: controller.websiteController.text,
+                            youtube: controller.youtubeController.text,
+                            zipCode: controller.zipCodeController.text,
+                          )
+                          );
                           print('success');
                           Get.to(CreateNewSectionPage());
                         }else{
@@ -471,6 +518,7 @@ class CenterInformationPage extends StatelessWidget {
             ),
           ),
         ),
+      ),
       ),
     );
   }
