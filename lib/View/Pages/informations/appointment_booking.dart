@@ -10,7 +10,7 @@ import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_drop_down_menu.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/my_text_form_field.dart';
+import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'disease_reporting.dart';
 import 'my_date_time.dart';
@@ -57,7 +57,7 @@ class AppointmentBookingPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      MyTextFormField(
+                      OnBoardingTextFormField(
                         controller: controller.jobNumerController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -76,7 +76,7 @@ class AppointmentBookingPage extends StatelessWidget {
                         obscureText: false,
                       ),
                       const SizedBox(height: 15.0),
-                      MyTextFormField(
+                      OnBoardingTextFormField(
                         controller: controller.doctorNameController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -114,7 +114,7 @@ class AppointmentBookingPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      MyTextFormField(
+                      OnBoardingTextFormField(
                         controller: controller.nameController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -208,7 +208,7 @@ class AppointmentBookingPage extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 15.0),
-                      MyTextFormField(
+                      OnBoardingTextFormField(
                         controller: controller.descController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {

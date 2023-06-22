@@ -1,7 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, sort_child_properties_last, use_full_hex_values_for_flutter_colors, unused_import, unnecessary_import
 
-import 'package:Medicalty/View/widget/textfield_screen/my_text_form_field.dart';
-import 'package:Medicalty/controllers/accounts/login_controller.dart';
-import 'package:Medicalty/model/accounts/admin_login_model/admin_login_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -15,83 +13,103 @@ import '../home_page/navBar.dart';
 import 'create_accounts.dart';
 import 'forgot_password.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  const Login({super.key});
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  bool passwordVisible = false;
+
+  @override
+  void initState() {
+    super.initState();
+    passwordVisible = true;
+  }
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<LoginController>(
-      init: LoginController(),
-        builder: (controller) => Scaffold(
+    return Scaffold(
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 47, left: 24, right: 24),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: const Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.black,
-                  size: 20,
-                ),
-              ),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: EdgeInsets.only(top: 47, left: 24, right: 24),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+              size: 20,
             ),
-            Expanded(
+          ),
+        ),
+        Expanded(
+            child: MediaQuery.removePadding(
+                context: context,
+                removeTop: true,
                 child: ListView(children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(
+                        SizedBox(
                           height: 82,
                         ),
-                        const Text(
+                        Text(
                           'Welcome to Pro Dector!',
                           style: TextStyle(
                               fontSize: 22,
                               fontFamily: 'Switzer',
                               fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 26,
                         ),
-                        const Text(
+                        Text(
                           'Hello there, sign in to continue!',
                           style: TextStyle(
                               fontSize: 16,
                               fontFamily: 'Switzer',
                               fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 46,
                         ),
-                        MyTextFormField(
-                          controller:controller.emailController ,
-                          validator: (){},
+                        Text_Field(
+                          hintText: 'yourmail@mail.com',
                           obscureText: false,
-                          labelText: 'yourmail@mail.com',
-                          keyboardType: TextInputType.text,
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 46,
                         ),
-                        MyTextFormField(
-                          controller:controller.passwordController ,
-                          validator: (){},
-                          obscureText: controller.isVisibility,
-                          labelText: 'Password',
-                          keyboardType: TextInputType.text,
-                          suffixIcon: InkWell(
-                            onTap: (){
-                              controller.visibility();
+                        Text_Field_password(
+                          TextInputType: TextInputType.visiblePassword,
+                          TextInputAction: TextInputAction.done,
+                          hintText: 'password',
+                          obscureText: passwordVisible,
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              passwordVisible
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors.black,
+                            ),
+                            onPressed: () {
+                              setState(
+                                () {
+                                  passwordVisible = !passwordVisible;
+                                },
+                              );
                             },
-                            child: Icon(controller.isVisibility ? Icons.visibility : Icons.visibility_off),
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 17,
                         ),
                         Row(
@@ -99,9 +117,9 @@ class Login extends StatelessWidget {
                           children: [
                             GestureDetector(
                               onTap: () {
-                                Get.to(const Forgot_Password());
+                                Get.to(Forgot_Password());
                               },
-                              child: const Text(
+                              child: Text(
                                 'Forgot Password?',
                                 style: TextStyle(
                                   color: Color(0xff7DB00E),
@@ -112,7 +130,7 @@ class Login extends StatelessWidget {
                             )
                           ],
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 28,
                         ),
                         GestureDetector(
@@ -125,26 +143,20 @@ class Login extends StatelessWidget {
                           },
                           child: InkWell(
                             onTap: () {
-                              controller.loginAdmin(AdminLoginModel(
-                                  email: controller.emailController.text,
-                                  password: controller.passwordController.text,
-
-                              ),
-                                context
-                              );
-
+                              sharedPref!.setString('id', '1');
+                              Get.off(NavBar());
                             },
                             child: Container_wed(
-                              color: const Color(0xff022939),
+                              color: Color(0xff022939),
                               text: 'Login',
                               fontSize: 22,
                             ),
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 47,
                         ),
-                        const Center(
+                        Center(
                           child: Text('Or Login with',
                               style: TextStyle(
                                 color: Color(0xff303841),
@@ -152,7 +164,7 @@ class Login extends StatelessWidget {
                                 fontFamily: 'Switzer',
                               )),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 17.5,
                         ),
                         Container(
@@ -161,37 +173,37 @@ class Login extends StatelessWidget {
                           child: Center(
                             child: Padding(
                               padding:
-                              const EdgeInsets.only(left: 20, right: 20),
+                                  const EdgeInsets.only(left: 20, right: 20),
                               child: Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
                                       height: 30,
                                       width: 30,
                                       decoration: BoxDecoration(
                                           borderRadius:
-                                          BorderRadius.circular(25)),
-                                      child: Image.asset('assets/images/google1.png')),
-                                  const Text('Connect with Google',
+                                              BorderRadius.circular(25)),
+                                      child: Image.asset(ImagesApp.google)),
+                                  Text('Connect with Google',
                                       style: TextStyle(
                                         color: Color(0xff303841),
                                         fontSize: 14,
                                         fontFamily: 'Switzer',
                                       )),
-                                  const SizedBox()
+                                  SizedBox()
                                 ],
                               ),
                             ),
                           ),
                           decoration: BoxDecoration(
                             border: Border.all(
-                                color: const Color(0xff69696940), width: 1),
-                            borderRadius: const BorderRadius.all(Radius.circular(6)),
-                            color: const Color(0xffF5F5F5),
+                                color: Color(0xff69696940), width: 1),
+                            borderRadius: BorderRadius.all(Radius.circular(6)),
+                            color: Color(0xffF5F5F5),
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 15,
                         ),
                         Container(
@@ -199,45 +211,42 @@ class Login extends StatelessWidget {
                           width: double.infinity,
                           child: Center(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 20, right: 20),
+                              padding:
+                                  const EdgeInsets.only(left: 20, right: 20),
                               child: Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Container(
-                                    height: 30,
-                                    width: 30,
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                        BorderRadius.circular(25)),
-                                    child: Image.asset('assets/images/facebook1.png'),
+                                  Icon(
+                                    Icons.facebook,
+                                    color: Colors.white,
+                                    size: 35,
                                   ),
-
-                                  const Text('Connect With Facebook',
+                                  Text('Connect With Facebook',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 14,
                                         fontFamily: 'Switzer',
                                       )),
-                                  const SizedBox()
+                                  SizedBox()
                                 ],
                               ),
                             ),
                           ),
                           decoration: BoxDecoration(
                               border: Border.all(
-                                  color: const Color(0xff69696940), width: 1),
+                                  color: Color(0xff69696940), width: 1),
                               borderRadius:
-                              const BorderRadius.all(Radius.circular(6)),
-                              color: const Color(0xff4267B2)),
+                                  BorderRadius.all(Radius.circular(6)),
+                              color: Color(0xff4267B2)),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 40,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text('Don’t have an account?',
+                            Text('Don’t have an account?',
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 14,
@@ -248,14 +257,14 @@ class Login extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const Create_Accounts()),
+                                      builder: (context) => Create_Accounts()),
                                 );
                               },
                               child: InkWell(
                                 onTap: () {
-                                  Get.to(const Create_Accounts());
+                                  Get.to(Create_Accounts());
                                 },
-                                child: const Text('Register!',
+                                child: Text('Register!',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
@@ -268,8 +277,8 @@ class Login extends StatelessWidget {
                       ],
                     ),
                   ),
-                ]))
-          ],
-        )));
+                ])))
+      ],
+    ));
   }
 }

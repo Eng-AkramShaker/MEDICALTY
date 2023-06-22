@@ -1,12 +1,14 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../constatnt/font_app_styles.dart';
 import '../../../constatnt/image_app.dart';
+import '../../../services/settingServices.dart';
 import '../../widget/choose_major/custom_choose_major.dart';
 import '../accounts/create_accounts.dart';
+import '../informations/center_information.dart';
 //import 'alert_dialog.dart';
 
 class ChooseMajor extends StatelessWidget {
@@ -108,7 +110,11 @@ class ChooseMajor extends StatelessWidget {
                               image: ImagesApp.pharmacy,
                               textTitle: "Medical_Center",
                               onTap: () {
-                                Get.to(Create_Accounts());
+                                // Get.to(Create_Accounts());
+                                //================= hossam test ===================
+                                myBox!.put('type', 'center');
+                                print('================= myBox type : ${myBox!.get('type')}');
+                                Get.to(()=> CenterInformationPage());
                               },
                             ),
                           ],

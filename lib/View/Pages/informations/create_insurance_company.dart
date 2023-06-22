@@ -3,13 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import '../../../controllers/informations/insurance_company_controller.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../controllers/informations/insurance_company_controller.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/my_text_form_field.dart';
+import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'create_clients.dart';
 
@@ -47,7 +47,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.idInsuranceController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -70,7 +70,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.nameInsuranceController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -93,7 +93,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.descInsuranceController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -113,7 +113,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     maxLines: 4,
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.phoneController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -136,7 +136,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.secondPhoneController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -159,7 +159,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.emailController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -179,7 +179,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     suffixIcon: Icon(Icons.email_outlined),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.officalEmailController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -199,7 +199,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     suffixIcon: Icon(Icons.email_outlined),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.countryController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -222,7 +222,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.addressController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -245,7 +245,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.secondAddressController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -264,7 +264,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     obscureText: false,
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.stateController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -287,7 +287,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.districtController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -310,7 +310,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.postalController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -340,7 +340,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     fontSize: 16,
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.websiteController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -364,7 +364,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.facebookController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -387,7 +387,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.instagramController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -410,7 +410,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.twitterController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -433,7 +433,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.snapchatController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -456,7 +456,7 @@ class CreateInsuranceCompanyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.youtubeController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
