@@ -12,10 +12,6 @@ class RequestData {
           };
         
 
-  // postCreateCenterData(Map map) async {
-  //   var response = await crud.postRequest('${AppLink.baseUrl}/${AppLink.endPointCreateCenterUrl}', headers,map);
-  //   return response.fold((l) => l, (r) => r);
-  // }
 
 
   postCreateCenterData(CenterBody? map) async {
