@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, non_constant_identifier_names, sized_box_for_whitespace, file_names, prefer_const_constructors, unused_local_variable, camel_case_types, unused_element, prefer_final_fields, unused_field
 
+import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import '../../../constatnt/color_app.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
@@ -88,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage>
       floatingActionButton: FloatingActionButton(
         backgroundColor: ColorApp.blackBlueColor2,
         onPressed: () {
-          Get.to(CreateNewSectionPage());
+          Get.to(()=> CreateNewSectionPage());
         },
         child: Icon(_isExpanded ? Icons.close : Icons.add),
       ),
@@ -106,36 +107,39 @@ class _MyHomePageState extends State<MyHomePage>
                 padding: const EdgeInsets.only(top: 30),
                 child: ListView(
                   children: [
+                    (myBox!.get('type') == 'doctor' ||myBox!.get('type')  == 'center'||myBox!.get('type')  == 'hospital' )?
                     SpeedDialWidget(
                       title: 'doctors',
                       image: 'doc.png',
                       myColor: ColorApp.brownDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(NewDoctorPage());
+                        Get.to(()=> NewDoctorPage());
                       },
-                    ),
+                    ): Text(''),
+                    (myBox!.get('type')  == 'center'||myBox!.get('type')  == 'hospital' )?
                     SpeedDialWidget(
                       title: 'departments',
                       image: 'departments.png',
                       myColor: ColorApp.redDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(CreatePharmacyPage());
+                        Get.to(()=> CreatePharmacyPage());
                       },
-                    ),
+                     ): Text(''),
+                     (myBox!.get('type')  == 'center'||myBox!.get('type')  == 'hospital' )?
                     SpeedDialWidget(
                       title: 'Insurance',
                       image: 'insurance.png',
                       myColor: ColorApp.blueDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(CreateInsuranceCompanyPage());
+                        Get.to(()=> CreateInsuranceCompanyPage());
                       },
-                    ),
+                     ): Text(''),
                     SpeedDialWidget(
                       title: 'customers',
                       image: 'customers.png',
                       myColor: ColorApp.orangeDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(RegistrationPatientPage());
+                        Get.to(()=> RegistrationPatientPage());
                       },
                     ),
                     SpeedDialWidget(
@@ -143,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage>
                       image: 'spending.png',
                       myColor: ColorApp.greenDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(NewExpensesPage());
+                        Get.to(()=> NewExpensesPage());
                       },
                     ),
                     SpeedDialWidget(
@@ -151,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage>
                       image: 'invoice.png',
                       myColor: ColorApp.indigoDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(NewInvoicesPage());
+                        Get.to(()=> NewInvoicesPage());
                       },
                     ),
                     SpeedDialWidget(
@@ -159,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage>
                       image: 'departure.png',
                       myColor: ColorApp.whiteGreenDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(CenterInformationPage());
+                        Get.to(()=> CenterInformationPage());
                       },
                     ),
                     SpeedDialWidget(
@@ -167,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage>
                       image: 'employees.png',
                       myColor: ColorApp.deepBlueDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(NewEmployeePage());
+                        Get.to(()=> NewEmployeePage());
                       },
                     ),
                     SpeedDialWidget(
@@ -175,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage>
                       image: 'request.png',
                       myColor: ColorApp.pinkDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(NewRequestPage());
+                        Get.to(()=> NewRequestPage());
                       },
                     ),
                     SpeedDialWidget(
@@ -183,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage>
                       image: 'product.png',
                       myColor: ColorApp.whiteBlackDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(NewProductPage());
+                        Get.to(()=> NewProductPage());
                       },
                     ),
                     SpeedDialWidget(
@@ -191,7 +195,7 @@ class _MyHomePageState extends State<MyHomePage>
                       image: 'experience.png',
                       myColor: ColorApp.pinkDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(NewExperiencesPage());
+                        Get.to(()=> NewExperiencesPage());
                       },
                     ),
                     SpeedDialWidget(
@@ -199,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage>
                       image: 'appointments.png',
                       myColor: ColorApp.whiteBlueDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(AppointmentBookingPage());
+                        Get.to(()=> AppointmentBookingPage());
                       },
                     ),
                     SpeedDialWidget(
@@ -207,7 +211,7 @@ class _MyHomePageState extends State<MyHomePage>
                       image: 'diseases.png',
                       myColor: ColorApp.greyDialColor.withOpacity(0.6),
                       onTap: () {
-                        Get.to(DiseaseReportingPage());
+                        Get.to(()=> DiseaseReportingPage());
                       },
                     ),
                   ],

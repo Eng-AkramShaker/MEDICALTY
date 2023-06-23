@@ -3,20 +3,16 @@
 import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../main.dart';
 
-class HomeMiddleWare extends GetMiddleware {
+class HomeScreenMiddleWare extends GetMiddleware {
+  @override
+  int? get priority => 2;
+
   @override
   RouteSettings? redirect(String? route) {
     if (myBox!.get('type') != null)
-    {
       return const RouteSettings(name: '/homescreen');
-    } 
+
     return null;
-    
-       
-    
-    
-      
   }
 }
