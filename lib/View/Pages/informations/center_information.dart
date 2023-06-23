@@ -9,23 +9,18 @@ import '../../../constatnt/color_app.dart';
 import '../../../controllers/informations/center_information_controller.dart';
 import '../../../model/center/center_body_model.dart';
 import '../../../utils/information_image.dart';
+import '../../../view/widget/textfield_screen/onboarding_text_widget.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
-import '../../widget/textfield_screen/onboarding_text_widget.dart';
-import 'create_new_section.dart';
 
 class CenterInformationPage extends StatelessWidget {
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<CenterInformationController>(
       init: CenterInformationController(),
-      builder:(controller) =>MyTextFieldContainer(
+      builder: (controller) => MyTextFieldContainer(
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: MyAppBar(
@@ -58,9 +53,9 @@ class CenterInformationPage extends StatelessWidget {
                       OnBoardingTextFormField(
                         controller: controller.centerNameController,
                         validator: (value) {
-                          if(value!.length > 25){
+                          if (value!.length > 25) {
                             return 'CenterName Cant Be Larger Than 25';
-                          }else if(value.length <2){
+                          } else if (value.length < 2) {
                             return 'CenterName Cant Be Less Than 2';
                           }
                           return null;
@@ -80,9 +75,9 @@ class CenterInformationPage extends StatelessWidget {
                       OnBoardingTextFormField(
                         controller: controller.userNameController,
                         validator: (value) {
-                          if(value!.length > 25){
+                          if (value!.length > 25) {
                             return 'username Cant Be Larger Than 25';
-                          }else if(value.length <2){
+                          } else if (value.length < 2) {
                             return 'username Cant Be Less Than 2';
                           }
                           return null;
@@ -102,9 +97,9 @@ class CenterInformationPage extends StatelessWidget {
                       OnBoardingTextFormField(
                         controller: controller.passwordController,
                         validator: (value) {
-                          if(value!.length > 25){
+                          if (value!.length > 25) {
                             return 'Password Can\'t Be Larger Than 25';
-                          }else if(value.length <2){
+                          } else if (value.length < 2) {
                             return 'Password Can\'t Be Less Than 2';
                           }
                           return null;
@@ -121,9 +116,9 @@ class CenterInformationPage extends StatelessWidget {
                       OnBoardingTextFormField(
                         controller: controller.formalPhoneController,
                         validator: (value) {
-                          if(value!.length > 25){
+                          if (value!.length > 25) {
                             return 'formal Phone Cant Be Larger Than 25';
-                          }else if(value.length <2){
+                          } else if (value.length < 2) {
                             return 'formal Phone Cant Be Less Than 2';
                           }
                           return null;
@@ -139,9 +134,9 @@ class CenterInformationPage extends StatelessWidget {
                       OnBoardingTextFormField(
                         controller: controller.phoneController,
                         validator: (value) {
-                          if(value!.length > 25){
+                          if (value!.length > 25) {
                             return 'Phone Cant Be Larger Than 25';
-                          }else if(value.length <2){
+                          } else if (value.length < 2) {
                             return 'Phone Cant Be Less Than 2';
                           }
                           return null;
@@ -216,7 +211,6 @@ class CenterInformationPage extends StatelessWidget {
                         },
                         labelText: 'Formal Email',
                         keyboardType: TextInputType.emailAddress,
-              
                         obscureText: false,
                         suffixIcon: Icon(Icons.email_outlined),
                       ),
@@ -475,7 +469,7 @@ class CenterInformationPage extends StatelessWidget {
                       const SizedBox(height: 94.0),
                       OnBoardingButton(
                         onPressed: () {
-                          if(controller.formKey.currentState!.validate()){
+                          if (controller.formKey.currentState!.validate()) {
                             controller.formKey.currentState!.save();
                             controller.postData(CenterBody(
                               address1: controller.address_1Controller.text,
@@ -483,11 +477,13 @@ class CenterInformationPage extends StatelessWidget {
                               country: controller.countryController.text,
                               email: controller.emailController.text,
                               facebook: controller.facebookController.text,
-                              formalEmail: controller.formalEmailController.text,
-                              formalPhone: controller.formalPhoneController.text,
+                              formalEmail:
+                                  controller.formalEmailController.text,
+                              formalPhone:
+                                  controller.formalPhoneController.text,
                               instagram: controller.instagramController.text,
                               name: controller.centerNameController.text,
-                              password: controller.passwordController.text    ,
+                              password: controller.passwordController.text,
                               phone: controller.phoneController.text,
                               province: controller.provinceNameController.text,
                               snapchat: controller.snapchatController.text,
@@ -499,16 +495,16 @@ class CenterInformationPage extends StatelessWidget {
                               website: controller.websiteController.text,
                               youtube: controller.youtubeController.text,
                               zipCode: controller.zipCodeController.text,
-                            )
-                            );
+                            ));
                             print('success');
                             Get.to(HomeScreen());
-                          }else{
-                            showDialog(context: context, builder: (_) => AlertDialog(
-                              title: Text('Please Enter all Fields'),
-                            ));
+                          } else {
+                            showDialog(
+                                context: context,
+                                builder: (_) => AlertDialog(
+                                      title: Text('Please Enter all Fields'),
+                                    ));
                           }
-              
                         },
                         text: 'SAVE',
                         size: 22,

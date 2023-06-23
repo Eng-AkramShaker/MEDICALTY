@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import '../../widget/textfield_screen/onboarding_text_widget.dart';
+import '../../../view/widget/textfield_screen/onboarding_text_widget.dart';
 import 'edit_profile.dart';
 
 class Profile extends StatelessWidget {

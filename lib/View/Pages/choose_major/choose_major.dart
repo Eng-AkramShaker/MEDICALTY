@@ -11,7 +11,6 @@ import '../../../constatnt/font_app_styles.dart';
 import '../../../constatnt/image_app.dart';
 import '../../../services/settingServices.dart';
 import '../../widget/choose_major/custom_choose_major.dart';
-import '../accounts/create_accounts.dart';
 import '../informations/center_information.dart';
 //import 'alert_dialog.dart';
 
@@ -52,16 +51,16 @@ class ChooseMajor extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: Styles.textStyle22,
                         ),
-                        
                         CustomChooseMajor(
-                              image: ImagesApp.medicalCenter,
-                              textTitle: "I'm a Patient'",
-                              onTap: () {
-                                myBox!.put('type', 'patient');
-                                print('================= myBox type : ${myBox!.get('type')}');
-                                Get.to(()=> RegistrationPatientPage());
-                              },
-                            ),
+                          image: ImagesApp.medicalCenter,
+                          textTitle: "I'm a Patient'",
+                          onTap: () {
+                            myBox!.put('type', 'patient');
+                            print(
+                                '================= myBox type : ${myBox!.get('type')}');
+                            Get.to(() => RegistrationPatientPage());
+                          },
+                        ),
                         Row(
                           children: [
                             CustomChooseMajor(
@@ -69,8 +68,9 @@ class ChooseMajor extends StatelessWidget {
                               textTitle: "I'm a Doctor'",
                               onTap: () {
                                 myBox!.put('type', 'doctor');
-                                print('================= myBox type : ${myBox!.get('type')}');
-                                Get.to(()=> NewDoctorPage());
+                                print(
+                                    '================= myBox type : ${myBox!.get('type')}');
+                                Get.to(() => NewDoctorPage());
                               },
                             ),
                             Spacer(),
@@ -78,9 +78,10 @@ class ChooseMajor extends StatelessWidget {
                               image: ImagesApp.imNurse,
                               textTitle: "I'm a Nurse",
                               onTap: () {
-                                 myBox!.put('type', 'nurse');
-                                print('================= myBox type : ${myBox!.get('type')}');
-                                Get.to(()=> NewEmployeePage());
+                                myBox!.put('type', 'nurse');
+                                print(
+                                    '================= myBox type : ${myBox!.get('type')}');
+                                Get.to(() => NewEmployeePage());
                               },
                             ),
                           ],
@@ -90,8 +91,9 @@ class ChooseMajor extends StatelessWidget {
                             CustomChooseMajor(
                                 onTap: () {
                                   myBox!.put('type', 'Physiotherapy');
-                                print('================= myBox type : ${myBox!.get('type')}');
-                                Get.to(()=> NewEmployeePage());
+                                  print(
+                                      '================= myBox type : ${myBox!.get('type')}');
+                                  Get.to(() => NewEmployeePage());
                                 },
                                 image: ImagesApp.physiotherapy,
                                 textTitle: "Physiotherapy"),
@@ -101,8 +103,9 @@ class ChooseMajor extends StatelessWidget {
                               textTitle: "pharmacy",
                               onTap: () {
                                 myBox!.put('type', 'pharmacy');
-                                print('================= myBox type : ${myBox!.get('type')}');
-                                Get.to(()=> CreatePharmacyPage());
+                                print(
+                                    '================= myBox type : ${myBox!.get('type')}');
+                                Get.to(() => CreatePharmacyPage());
                               },
                             ),
                           ],
@@ -114,8 +117,9 @@ class ChooseMajor extends StatelessWidget {
                               textTitle: "hospital",
                               onTap: () {
                                 myBox!.put('type', 'hospital');
-                                print('================= myBox type : ${myBox!.get('type')}');
-                                Get.to(()=> CenterInformationPage());
+                                print(
+                                    '================= myBox type : ${myBox!.get('type')}');
+                                Get.to(() => CenterInformationPage());
                               },
                             ),
                             Spacer(),
@@ -126,8 +130,9 @@ class ChooseMajor extends StatelessWidget {
                                 // Get.to(Create_Accounts());
                                 //================= hossam test ===================
                                 myBox!.put('type', 'center');
-                                print('================= myBox type : ${myBox!.get('type')}');
-                                Get.to(()=> CenterInformationPage());
+                                print(
+                                    '================= myBox type : ${myBox!.get('type')}');
+                                Get.to(() => CenterInformationPage());
                               },
                             ),
                           ],
