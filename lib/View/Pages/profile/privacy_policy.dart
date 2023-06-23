@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, avoid_unnecessary_containers
 
+import 'package:Medicalty/View/Pages/profile/setting_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:Medicalty/View/Pages/profile/setting_screen.dart';
-
 import '../../../constatnt/font_app_styles.dart';
 
 class PrivacyPolicy extends StatelessWidget {

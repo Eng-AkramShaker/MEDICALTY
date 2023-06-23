@@ -33,7 +33,6 @@ class HomePage extends StatelessWidget {
     return GetBuilder<HomeController>(
       init: HomeController(),
       builder: (ctrl) => Scaffold(
-        backgroundColor: Colors.transparent,
         body: Container(
           height: double.infinity,
           width: double.infinity,

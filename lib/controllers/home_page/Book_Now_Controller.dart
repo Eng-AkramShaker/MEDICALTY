@@ -1,8 +1,8 @@
-// ignore_for_file: non_constant_identifier_names, camel_case_types
+// ignore_for_file: non_constant_identifier_names, camel_case_types, file_names
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:Medicalty/View/Pages/home_page/HomePage.dart';
+import '../../View/Pages/home_page/HomePage.dart';
 import '../../View/widget/homePage/list_View.dart';
 import '../../constatnt/color_app.dart';
 

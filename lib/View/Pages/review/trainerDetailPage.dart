@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, file_names, annotate_overrides, sized_box_for_whitespace, avoid_unnecessary_containers, camel_case_types, unused_import, prefer_const_literals_to_create_immutables
 
+import 'package:Medicalty/View/Pages/review/reviewsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:Medicalty/View/Pages/review/reviewsPage.dart';
-import 'package:Medicalty/controllers/Trainer/trainer_details_controller.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../controllers/Trainer/trainer_details_controller.dart';
 import '../../../controllers/home_page/homeController.dart';
 import '../../widget/homePage/bottomWidget.dart';
 import '../../widget/homePage/reviewsListWidget.dart';
