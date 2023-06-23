@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names, avoid_unnecessary_containers
 
+import 'package:Medicalty/View/Pages/onboarding/OnBoarding.dart';
+import 'package:Medicalty/View/Pages/onboarding/onBoarding_start.dart';
+import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../main.dart';
@@ -20,48 +23,50 @@ Widget MyDrawerList() {
     child: Column(
       children: [
         menuItem("Profile", Icons.person, () {
-          Get.to(Profile());
+          Get.to(()=> Profile());
         }),
         div(),
         menuItem("details", Icons.dynamic_feed, () {
-          Get.to(TrainerDetail());
+          Get.to(()=> TrainerDetail());
         }),
         div(),
         menuItem("Notifications", Icons.notifications_active, () {
-          Get.to(Notifications());
+          Get.to(()=> Notifications());
         }),
         div(),
         menuItem("Subscription", Icons.subscriptions, () {
-          Get.to(Subscription());
+          Get.to(()=> Subscription());
         }),
         div(),
         menuItem("Support", Icons.support_agent, () {
-          Get.to(Support());
+          Get.to(()=> Support());
         }),
         div(),
         menuItem("Product updates", Icons.system_update, () {
-          Get.to(ProductsPharmacyPage());
+          Get.to(()=> ProductsPharmacyPage());
         }),
         div(),
         menuItem("About  Pro-doctor", Icons.info, () {
-          Get.to(About());
+          Get.to(()=> About());
         }),
         div(),
         menuItem("Pro-doctor setup", Icons.settings_accessibility, () {
-          Get.to(NewProductPage());
+          Get.to(()=> NewProductPage());
         }),
         div(),
         menuItem("Settings system", Icons.settings_suggest, () {
-          Get.to(AppSetting());
+          Get.to(()=> AppSetting());
         }),
         div(),
         menuItem("Login setting", Icons.settings_applications, () {
-          Get.to(Verify());
+          Get.to(()=> Verify());
         }),
         div(),
         menuItem("Logout", Icons.logout, () {
           sharedPref!.clear();
-          Get.off(Login());
+          myBox!.clear();
+          print('========= Clear myBox ==============');
+          Get.off( ()=> OnBoardingStart());
         }),
       ],
     ),
