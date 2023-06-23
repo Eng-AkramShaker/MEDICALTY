@@ -10,8 +10,8 @@ class HomePageMiddleWare extends GetMiddleware {
 
   @override
   RouteSettings? redirect(String? route) {
-    if (myBox!.get('type') == 'pationt')
-      return const RouteSettings(name: '/homepage');
+    if (myBox!.get('type') == 'patient')
+      return const RouteSettings(name: '/navBar');
 
     return null;
   }

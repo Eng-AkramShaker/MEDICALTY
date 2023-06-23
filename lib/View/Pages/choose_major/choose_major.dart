@@ -55,9 +55,9 @@ class ChooseMajor extends StatelessWidget {
                         
                         CustomChooseMajor(
                               image: ImagesApp.medicalCenter,
-                              textTitle: "I'm a Pationt'",
+                              textTitle: "I'm a Patient'",
                               onTap: () {
-                                myBox!.put('type', 'pationt');
+                                myBox!.put('type', 'patient');
                                 print('================= myBox type : ${myBox!.get('type')}');
                                 Get.to(()=> RegistrationPatientPage());
                               },
@@ -76,7 +76,7 @@ class ChooseMajor extends StatelessWidget {
                             Spacer(),
                             CustomChooseMajor(
                               image: ImagesApp.imNurse,
-                              textTitle: "I'm a imNurse",
+                              textTitle: "I'm a Nurse",
                               onTap: () {
                                  myBox!.put('type', 'nurse');
                                 print('================= myBox type : ${myBox!.get('type')}');
