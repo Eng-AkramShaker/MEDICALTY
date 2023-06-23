@@ -1,12 +1,13 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
 
+import 'package:Medicalty/model/pharmacy/pharmcy_register_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/informations/create_pharmacy_controller.dart';
 import '../../../utils/information_image.dart';
-import '../../../view/widget/textfield_screen/onboarding_text_widget.dart';
+// import '../../../view/widget/textfield_screen/onboarding_text_widget.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
@@ -343,18 +344,7 @@ class CreatePharmacyPage extends StatelessWidget {
                           const SizedBox(height: 15.0),
                           OnBoardingTextFormField(
                             controller: controller.websiteController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter the Website ';
-                              }
-                              if (value.length > 200) {
-                                return 'Website cannot be longer than 200 characters';
-                              }
-                              if (value.length < 2) {
-                                return 'Website  must have at least 2 characters';
-                              }
-                              return null;
-                            },
+                            validator: (value){},
                             labelText: 'Website',
                             keyboardType: TextInputType.url,
                             obscureText: false,
@@ -366,18 +356,7 @@ class CreatePharmacyPage extends StatelessWidget {
                           const SizedBox(height: 15.0),
                           OnBoardingTextFormField(
                             controller: controller.facebookController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter the Facebook ';
-                              }
-                              if (value.length > 200) {
-                                return 'Facebook cannot be longer than 200 characters';
-                              }
-                              if (value.length < 2) {
-                                return 'Facebook  must have at least 2 characters';
-                              }
-                              return null;
-                            },
+                            validator: (value) {},
                             labelText: 'Facebook',
                             keyboardType: TextInputType.name,
                             obscureText: false,
@@ -389,18 +368,7 @@ class CreatePharmacyPage extends StatelessWidget {
                           const SizedBox(height: 15.0),
                           OnBoardingTextFormField(
                             controller: controller.instagramController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter the Instagram ';
-                              }
-                              if (value.length > 200) {
-                                return 'Instagram cannot be longer than 200 characters';
-                              }
-                              if (value.length < 2) {
-                                return 'Instagram  must have at least 2 characters';
-                              }
-                              return null;
-                            },
+                            validator: (value) {},
                             labelText: 'Instagram',
                             keyboardType: TextInputType.name,
                             obscureText: false,
@@ -412,18 +380,7 @@ class CreatePharmacyPage extends StatelessWidget {
                           const SizedBox(height: 15.0),
                           OnBoardingTextFormField(
                             controller: controller.twitterController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter the Twitter ';
-                              }
-                              if (value.length > 200) {
-                                return 'Twitter cannot be longer than 200 characters';
-                              }
-                              if (value.length < 2) {
-                                return 'Twitter  must have at least 2 characters';
-                              }
-                              return null;
-                            },
+                            validator: (value) {},
                             labelText: 'Twitter',
                             keyboardType: TextInputType.name,
                             obscureText: false,
@@ -435,18 +392,7 @@ class CreatePharmacyPage extends StatelessWidget {
                           const SizedBox(height: 15.0),
                           OnBoardingTextFormField(
                             controller: controller.snapchatController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter the Snapchat ';
-                              }
-                              if (value.length > 200) {
-                                return 'Snapchat cannot be longer than 200 characters';
-                              }
-                              if (value.length < 2) {
-                                return 'Snapchat  must have at least 2 characters';
-                              }
-                              return null;
-                            },
+                            validator: (value) {},
                             labelText: 'Snapchat',
                             keyboardType: TextInputType.name,
                             obscureText: false,
@@ -458,18 +404,7 @@ class CreatePharmacyPage extends StatelessWidget {
                           const SizedBox(height: 15.0),
                           OnBoardingTextFormField(
                             controller: controller.youtubeController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter the Youtube ';
-                              }
-                              if (value.length > 20) {
-                                return 'Youtube cannot be longer than 200 characters';
-                              }
-                              if (value.length < 2) {
-                                return 'Youtube  must have at least 2 characters';
-                              }
-                              return null;
-                            },
+                            validator: (value){},
                             labelText: 'YouTube',
                             keyboardType: TextInputType.name,
                             obscureText: false,
@@ -483,7 +418,31 @@ class CreatePharmacyPage extends StatelessWidget {
                             onPressed: () {
                               if (controller.formKey.currentState!.validate()) {
                                 controller.formKey.currentState!.save();
-                                Get.to(ProductsPharmacyPage());
+                                controller.registerPharmacy(PharmacyRegisterModel(
+                                  name: controller.namePharmacyController.text,
+                                  username: controller.userNameController.text,
+                                  email: controller.emailController.text,
+                                  work_email: controller.officalEmailController.text,
+                                  password: controller.passwordController.text,
+                                  phone: controller.phoneNumberController.text,
+                                  work_phone: controller.phoneNumber2Controller.text,
+                                  country: controller.countryController.text,
+                                  address: controller.addressController.text,
+                                  zipCod: controller.postalCodeController.text,
+                                  state: controller.stateController.text,
+                                  province:controller.provinceController.text,
+
+
+
+                                  facebook: controller.facebookController.text,
+                                  website: controller.websiteController.text,
+                                  instagram: controller.instagramController.text,
+                                  twitter: controller.twitterController.text,
+                                  snapchat: controller.snapchatController.text,
+                                  youtube: controller.youtubeController.text,
+
+
+                                ), context);
                               } else {
                                 showDialog(
                                     context: context,
@@ -504,4 +463,10 @@ class CreatePharmacyPage extends StatelessWidget {
               ),
             ));
   }
+
+  OnBoardingTextWidget({
+    required String text,
+    required FontWeight fontWeight,
+    required Color color,
+    required int fontSize}) {}
 }
