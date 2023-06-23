@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home Screen for test only'),),
+      appBar: AppBar(title:  Text('Home Screen for test only as ${myBox!.get('type')}'),),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

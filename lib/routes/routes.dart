@@ -2,6 +2,8 @@
 
 import 'package:Medicalty/View/Pages/home_screen.dart';
 import 'package:Medicalty/middleWare/home_screen_middleware.dart';
+import 'package:Medicalty/view/pages/home_page/Speed_Dial.dart';
+import 'package:Medicalty/view/pages/informations/new_doctor.dart';
 import 'package:get/get.dart';
 import '../View/Pages/accounts/create_accounts.dart';
 import '../View/Pages/accounts/login_page.dart';
@@ -29,6 +31,8 @@ class AppPage {
     GetPage(name: createAccounts, page: () => Create_Accounts()),
     GetPage(name: login, page: () => Login()),
     GetPage(name: homeScreen, page: () => HomeScreen(),),
+    GetPage(name: speedDial, page: () => Speed_Dial(),),
+    GetPage(name: createNewDoctor, page: () => NewDoctorPage(),),
   ];
 
   //===================================================================
@@ -43,6 +47,8 @@ class AppPage {
   static getcreateAccounts() => createAccounts;
   static getlogin() => login;
   static getHomeScreen() => homeScreen;
+  static getCreateNewDoctor() => createNewDoctor;
+  static getSpeedDial() => speedDial;
 
 //====================================================================
   static String Boarding_Start = '/';
@@ -55,4 +61,7 @@ class AppPage {
   static String createAccounts = '/createAccounts';
   static String login = '/login';
   static String homeScreen = '/homescreen';
+  static String createNewDoctor = '/createNewDoctor';
+  static String speedDial = '/speedDial';
 }
+//  
