@@ -5,8 +5,7 @@ import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import '../../../constatnt/color_app.dart';
 import 'package:get/get.dart';
-
-import '../../../view/widget/textfield_screen/onboarding_text_widget.dart';
+import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import '../informations/appointment_booking.dart';
 import '../informations/center_information.dart';
 import '../informations/create_insurance_company.dart';
