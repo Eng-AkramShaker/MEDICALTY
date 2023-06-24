@@ -8,7 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
-import 'constatnt/color_app.dart';
+import '../../../constatnt/color_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
