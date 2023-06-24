@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../api/class/status_request.dart';
-import '../../api/data/dataResoures/remote/request_data.dart';
+import '../../api/data/remote/request_data.dart';
 import '../../api/functions/handling_data_controller.dart';
 import '../../model/center/center_body_model.dart';
 import '../../model/center/create_center_model.dart';

@@ -6,7 +6,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import '../../../constatnt/image_app.dart';
-import '../../../main.dart';
 import '../../widget/login/container.dart';
 import '../../widget/login/mytext_field.dart';
 import '../Trainer/paymentCompleted.dart';

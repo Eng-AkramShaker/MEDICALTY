@@ -1,6 +1,5 @@
 // ignore_for_file: file_names, prefer_const_constructors, unused_import
 
-import 'package:Medicalty/View/Pages/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';

@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../utils/link_api.dart';
 import '../../model/doctor/register_doctor_model.dart';
-import '../../services/api.dart';
-import '../../services/api_links.dart';
+import '../../api/functions/api.dart';
 
 class NewDoctorController extends GetxController {
   String genderValue = 'Item 1';
@@ -46,7 +46,7 @@ class NewDoctorController extends GetxController {
       TextEditingController();
 
   void registerDoctor(RegisterDoctorModel model) {
-    postRequest(ApiLinks.RegisterDoctorUrl, model.toJson()).then((value) {
+    postRequest(AppLink.RegisterDoctorUrl, model.toJson()).then((value) {
       if (value['status'] == true) {
         print(value['msg']);
       } else {

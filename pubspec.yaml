@@ -22,7 +22,7 @@ dependencies:
   get: ^4.6.5
   reactive_cupertino_switch: ^0.5.0
   readmore: ^2.2.0
-  responsive_framework: ^0.2.0
+  # responsive_framework: ^0.2.0
   rating_summary: ^1.0.2+1
   google_fonts: ^3.0.1
   otp_text_field: ^1.1.3

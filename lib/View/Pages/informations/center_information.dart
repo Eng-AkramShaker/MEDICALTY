@@ -1,6 +1,5 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors, avoid_print
 
-import 'package:Medicalty/View/Pages/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -14,6 +13,7 @@ import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import '../../widget/textfield_screen/onboarding_text_widget.dart';
+import '../test_home_screen.dart';
 
 class CenterInformationPage extends StatelessWidget {
   @override
