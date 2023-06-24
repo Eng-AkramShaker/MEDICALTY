@@ -16,7 +16,6 @@ class OnBoardingTextWidget extends StatelessWidget {
       required this.color,
       this.textDecoration});
 
-
   @override
   Widget build(BuildContext context) {
     return Text(

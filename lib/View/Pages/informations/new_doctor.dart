@@ -385,6 +385,7 @@ class NewDoctorPage extends StatelessWidget {
                                     username:
                                         controller.userNameController.text,
                                     password: '123456',
+                                    specialty: 'zoz',
                                     jobId: 1,
                                     name: controller.fullNameController.text,
                                     jobDescription: controller

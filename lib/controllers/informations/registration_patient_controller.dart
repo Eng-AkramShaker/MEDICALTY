@@ -1,7 +1,9 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RegistrationPatientController extends GetxController{
+class RegistrationPatientController extends GetxController {
   // List of items in our dropdown menu
   var items = [
     'Item 1',
@@ -29,5 +31,4 @@ class RegistrationPatientController extends GetxController{
   TextEditingController weightController = TextEditingController();
   TextEditingController nameDiseaseController = TextEditingController();
   TextEditingController descController = TextEditingController();
-
 }

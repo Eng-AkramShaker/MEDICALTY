@@ -6,6 +6,10 @@ class AppointmentBookingController extends GetxController{
   String doctorSelectedValue = 'Item 1';
 
   String assignedSelectedValue = 'Item 1';
+  DateTime? selectedDateReservation;
+  DateTime? selectedStartTime;
+  DateTime? selectedEndTime;
+  // List of items in our dropdown menu
   var items = [
     'Item 1',
     'Item 2',
@@ -13,11 +17,6 @@ class AppointmentBookingController extends GetxController{
     'Item 4',
     'Item 5',
   ];
-  DateTime? selectedDateReservation;
-  DateTime? selectedStartTime;
-  DateTime? selectedEndTime;
-  // List of items in our dropdown menu
-
   TextEditingController jobNumerController = TextEditingController();
   TextEditingController doctorNameController = TextEditingController();
   TextEditingController assignedController = TextEditingController();
