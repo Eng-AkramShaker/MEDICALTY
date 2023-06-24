@@ -3,14 +3,9 @@
 import 'package:get/get.dart';
 import '../api/class/crud.dart';
 
-class InitailBaindings extends Bindings
-{
+class InitailBaindings extends Bindings {
   @override
   void dependencies() {
     Get.put(Crud());
-    
   }
-
 }
-
-

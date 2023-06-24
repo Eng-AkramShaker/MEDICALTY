@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../constatnt/font_app_styles.dart';
 import '../../../constatnt/image_app.dart';
@@ -17,7 +16,7 @@ import '../../widget/homePage/divider.dart';
 import '../../widget/homePage/listControllerWidget.dart';
 import '../../widget/homePage/list_View.dart';
 import '../../widget/homePage/textBox.dart';
-import '../drawers/my_drawer_header.dart';
+import '../../widget/drawer/my_drawer_header.dart';
 import '../review/trainerDetailPage.dart';
 import 'Book_Now.dart';
 
@@ -33,6 +32,7 @@ class HomePage extends StatelessWidget {
     return GetBuilder<HomeController>(
       init: HomeController(),
       builder: (ctrl) => Scaffold(
+        backgroundColor: Colors.black,
         body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -553,18 +553,18 @@ class HomePage extends StatelessWidget {
                         child: NewListControllerCardTwoWidget_1(
                             screenWidth: MediaQuery.of(context).size.width),
                       ),
-                      // =============== List doctor per houres ===============
+                      // =============== List doctor per houres ==============
                       NewListControllerBestDoctorOneWidget(),
-                      // =============== popular doctors text =================
+                      // =============== popular doctors text ================
                       NewTextBestDoctorTwoWidget(word: 'Popular Doctors'),
                       // =============== List detailes doctores ==============
                       NewListControllerBestDoctorPopularWidget(),
-                      // =============== Social worker text ===========================
+                      // =============== Social worker text ==================
                       NewTextBookNowWidget(text: 'Social worker'),
                       // =============== Two top list of doctores title and rate ==================
                       NewListDoctorControllerCardWidgetThree(
                           screenWidth: MediaQuery.of(context).size.width),
-                      // =============== nutrition text ===========================
+                      // =============== nutrition text ======================
                       NewTextBookNowWidget(text: 'nutrition'),
                       // =============== Two top list of doctores title and rate ==================
                       NewListDoctorControllerCardWidgetThree(
@@ -573,14 +573,14 @@ class HomePage extends StatelessWidget {
                       NewTextBestDoctorTwoWidget(word: 'Paid ads'),
                       // =============== List detailes doctores ==============
                       NewListControllerBestDoctorPopularWidget(),
-                      // =============== natural therapy text =================
+                      // =============== natural therapy text ================
 
                       NewTextBestDoctorTwoWidget(word: 'natural therapy'),
                       // =============== List detailes doctores ==============
                       NewListControllerBestDoctorPopularWidget(),
-                      // =============== Medical centers text ===========================
+                      // =============== Medical centers text =================
                       NewTextBookNowWidget(text: 'Medical centers'),
-                      // =============== List Categories =========================
+                      // =============== List Categories ======================
                       NewListControllerCategoryWidget(
                           screenWidth: MediaQuery.of(context).size.width),
                       // =============== Three top card doctor rate ===========
