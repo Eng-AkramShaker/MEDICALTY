@@ -18,7 +18,7 @@ class OnBoardingTextFormField extends StatelessWidget {
     required this.labelText,
     this.suffixIcon,
     this.obscureText,
-    this.maxLines,
+    this.maxLines, required String text, required int fontSize, required FontWeight fontWeight, required Color color,
   });
 
   @override
