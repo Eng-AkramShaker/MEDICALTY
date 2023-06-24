@@ -10,7 +10,7 @@ import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_drop_down_menu.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/my_text_form_field.dart';
+import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 import 'new_expenses.dart';
 
 class CreateClientsPage extends StatelessWidget {
@@ -46,7 +46,7 @@ class CreateClientsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.idClientController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -87,7 +87,7 @@ class CreateClientsPage extends StatelessWidget {
                         flex: 7,
                         child: ConstrainedBox(
                           constraints: BoxConstraints(maxWidth: 200), // Adjust the maximum width as needed
-                          child: MyTextFormField(
+                          child: OnBoardingTextFormField(
                             controller: controller.firstNameController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
@@ -115,7 +115,7 @@ class CreateClientsPage extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.secondNameController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -138,7 +138,7 @@ class CreateClientsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.nameCompanyController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -177,7 +177,7 @@ class CreateClientsPage extends StatelessWidget {
                       ),
                       Expanded(
                         flex: 7,
-                        child: MyTextFormField(
+                        child: OnBoardingTextFormField(
                           controller: controller.phoneController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -219,7 +219,7 @@ class CreateClientsPage extends StatelessWidget {
                       ),
                       Expanded(
                         flex: 7,
-                        child: MyTextFormField(
+                        child: OnBoardingTextFormField(
                           controller: controller.emailController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -242,7 +242,7 @@ class CreateClientsPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.attributedController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -262,7 +262,7 @@ class CreateClientsPage extends StatelessWidget {
                     obscureText: false,
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.customerAddressController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -286,7 +286,7 @@ class CreateClientsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.secondCustomerAddressController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -306,7 +306,7 @@ class CreateClientsPage extends StatelessWidget {
                     obscureText: false,
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.cityController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -330,7 +330,7 @@ class CreateClientsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.interruptController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -354,7 +354,7 @@ class CreateClientsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.zipCodeController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -378,7 +378,7 @@ class CreateClientsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  MyTextFormField(
+                  OnBoardingTextFormField(
                     controller: controller.countryController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {

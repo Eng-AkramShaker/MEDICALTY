@@ -3,7 +3,6 @@
 import 'package:Medicalty/View/Pages/profile/setting_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../constatnt/font_app_styles.dart';
 
 class PrivacyPolicy extends StatelessWidget {

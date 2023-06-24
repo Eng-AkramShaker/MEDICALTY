@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, prefer_const_constructors, sort_child_properties_last
+
 import 'package:flutter/material.dart';
 
 class MyDropDownMenu extends StatelessWidget {
@@ -5,7 +7,7 @@ class MyDropDownMenu extends StatelessWidget {
   List myList;
   String? text;
 
-  MyDropDownMenu({required this.onChanged,required this.myList,this.text});
+  MyDropDownMenu({required this.onChanged, required this.myList, this.text});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,15 +20,13 @@ class MyDropDownMenu extends StatelessWidget {
       ),
       child: DropdownButtonFormField<String>(
         hint: Text(text ?? 'Main'),
-
         items: myList.map((e) {
           return DropdownMenuItem<String>(
             child: Text(e),
             value: e,
           );
         }).toList(),
-        onChanged:onChanged
-        ,
+        onChanged: onChanged,
         validator: (value) {
           if (value == null) {
             return 'Please select an option';

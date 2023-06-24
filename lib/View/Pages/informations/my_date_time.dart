@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, library_private_types_in_public_api, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -7,13 +9,11 @@ class DateTimeFormField extends StatefulWidget {
   final void Function(DateTime?) onChanged;
   String? image;
 
-  DateTimeFormField({
-    required this.label,
-    this.initialValue,
-    required this.onChanged,
-    this.image
-
-  });
+  DateTimeFormField(
+      {required this.label,
+      this.initialValue,
+      required this.onChanged,
+      this.image});
 
   @override
   _DateTimeFormFieldState createState() => _DateTimeFormFieldState();
@@ -32,7 +32,6 @@ class _DateTimeFormFieldState extends State<DateTimeFormField> {
   Widget build(BuildContext context) {
     return Container(
       height: 53.0,
-
       child: InkWell(
         onTap: () {
           showDatePicker(
@@ -50,7 +49,8 @@ class _DateTimeFormFieldState extends State<DateTimeFormField> {
           });
         },
         child: SizedBox(
-          width: double.infinity, // Set the width to match a normal TextFormField
+          width:
+              double.infinity, // Set the width to match a normal TextFormField
           child: InputDecorator(
             decoration: InputDecoration(
               labelText: widget.label,
