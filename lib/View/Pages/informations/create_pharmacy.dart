@@ -6,11 +6,11 @@ import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/informations/create_pharmacy_controller.dart';
 import '../../../utils/information_image.dart';
-import '../../../view/widget/textfield_screen/onboarding_text_widget.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'adding_products_pharmacy.dart';
 
 class CreatePharmacyPage extends StatelessWidget {

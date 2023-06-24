@@ -9,11 +9,11 @@ import '../../../constatnt/color_app.dart';
 import '../../../controllers/informations/center_information_controller.dart';
 import '../../../model/center/center_body_model.dart';
 import '../../../utils/information_image.dart';
-import '../../../view/widget/textfield_screen/onboarding_text_widget.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
 import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/onboarding_text_widget.dart';
 
 class CenterInformationPage extends StatelessWidget {
   @override
