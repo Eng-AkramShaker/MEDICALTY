@@ -2,6 +2,8 @@
 
 import 'package:Medicalty/View/Pages/home_screen.dart';
 import 'package:Medicalty/View/widget/textfield_screen/onboarding_text_widget.dart';
+import 'package:Medicalty/class/handling_data_view.dart';
+import 'package:Medicalty/model/create_center/center_body_model.dart';
 import 'package:Medicalty/view/widget/textfield_screen/my_app_bar.dart';
 import 'package:Medicalty/view/widget/textfield_screen/my_textfield_container.dart';
 import 'package:Medicalty/view/widget/textfield_screen/onboarding_button.dart';
@@ -41,557 +43,256 @@ class CenterInformationPage extends StatelessWidget {
                       key: controller.formKey,
                       child: Column(
                         children: [
-                          SizedBox(
-                            height: 20.0,
+                           Center(
+                            child: CircleAvatar(
+                              backgroundColor: ColorApp.greyColor2,
+                              radius: 60,
+                              child: SvgPicture.asset(
+                                'assets/images/profile-edit.svg',
+                                height: 130,
+                              ),
+                            ),
                           ),
                           TextFormFieldWidget(
                             keyboardType: TextInputType.name,
-                            controller: controller.nameController,
+                            controller: controller.name,
                             validate: controller.validateInput,
                             hintText: ' Enter the Name center',
                             labelText: 'Name center',
-                            suffixIcon: Image.asset(
-                              '$imagePath/center_name.png',
-                              height: 1,
-                            ), 
+                            suffixIcon: Icon(Icons.person_2_outlined),
                           ),
-                           TextFormFieldWidget(
+                          TextFormFieldWidget(
                             keyboardType: TextInputType.name,
-                            controller: controller.nameController,
+                            controller: controller.username,
                             validate: controller.validateInput,
-                            hintText: ' Enter the Name center',
-                            labelText: 'Name center',
+                            hintText: ' Enter the username',
+                            labelText: 'Username',
+                            suffixIcon: Icon(Icons.person_2_outlined),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.emailAddress,
+                            controller: controller.email,
+                            validate: controller.validateEmail,
+                            hintText: ' Enter the email',
+                            labelText: 'E-mail',
+                            suffixIcon: Icon(Icons.email_outlined),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.visiblePassword,
+                            controller: controller.password,
+                            validate: controller.validatePassword,
+                            hintText: ' Enter the password',
+                            labelText: 'Password',
+                            suffixIcon: Icon(Icons.password_outlined),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.name,
+                            controller: controller.country,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the country',
+                            labelText: 'Country',
+                            suffixIcon: Icon(Icons.location_city_outlined),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.name,
+                            controller: controller.subscriptionType,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the subscription_type',
+                            labelText: 'Subscription_type',
+                            suffixIcon: Icon(Icons.av_timer_rounded),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.name,
+                            controller: controller.subscriptionPeriod,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the subscription_period',
+                            labelText: 'Subscription_period',
+                            suffixIcon: Icon(Icons.av_timer_rounded),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.emailAddress,
+                            controller: controller.formalEmail,
+                            validate: controller.validateEmail,
+                            hintText: ' Enter the formal_email',
+                            labelText: 'Formal_email',
+                            suffixIcon: Icon(Icons.email_outlined),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.phone,
+                            controller: controller.phone,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the phone',
+                            labelText: 'Phone',
+                            suffixIcon: Icon(Icons.phone),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.phone,
+                            controller: controller.formalPhone,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the formal_phone',
+                            labelText: 'Formal_phone',
+                            suffixIcon: Icon(Icons.phone),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.url,
+                            controller: controller.website,
+                            validate: controller.validateWebAddress,
+                            hintText: ' Enter the website',
+                            labelText: 'Website',
+                            suffixIcon: Icon(Icons.web),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.streetAddress,
+                            controller: controller.address1,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the address1',
+                            labelText: 'Address1',
+                            suffixIcon: Icon(Icons.location_city_outlined),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.streetAddress,
+                            controller: controller.address2,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the address2',
+                            labelText: 'Address2',
+                            suffixIcon: Icon(Icons.location_city_outlined),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.name,
+                            controller: controller.state,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the state',
+                            labelText: 'State',
+                            suffixIcon: Icon(Icons.location_city_outlined),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.name,
+                            controller: controller.province,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the province',
+                            labelText: 'Province',
+                            suffixIcon: Icon(Icons.location_city_outlined),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.number,
+                            controller: controller.zipCode,
+                            validate: controller.validateInput,
+                            hintText: ' Enter the zip_code',
+                            labelText: 'zip_code',
+                            suffixIcon: Icon(Icons.post_add_outlined),
+                          ),
+                           const SizedBox(height: 15.0),
+                          OnBoardingTextWidget(
+                            text: 'Social media links for the center',
+                            fontWeight: FontWeight.w500,
+                            color: ColorApp.primaryColor,
+                            fontSize: 16,
+                          ),
+                          const SizedBox(height: 15.0),
+                          
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.url,
+                            controller: controller.facebook,
+                            validate: controller.validateWebAddress,
+                            hintText: ' Enter the your facebook',
+                            labelText: 'Facebook',
+                            suffixIcon: Icon(Icons.facebook),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.url,
+                            controller: controller.instagram,
+                            validate: controller.validateWebAddress,
+                            hintText: ' Enter the your instagram',
+                            labelText: 'Instagram',
                             suffixIcon: Image.asset(
-                              '$imagePath/center_name.png',
+                              '$imagePath/instagram.png',
                               height: 1,
-                            ), 
+                            ),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.url,
+                            controller: controller.twitter,
+                            validate: controller.validateWebAddress,
+                            hintText: ' Enter the your twitter',
+                            labelText: 'Twitter',
+                           suffixIcon: Image.asset(
+                              '$imagePath/twitter.png',
+                              height: 1,
+                            ),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.url,
+                            controller: controller.snapchat,
+                            validate: controller.validateWebAddress,
+                            hintText: ' Enter the your snapchat',
+                            labelText: 'Snapchat',
+                             suffixIcon: Image.asset(
+                              '$imagePath/snapchat.png',
+                              height: 1,
+                            ),
+                          ),
+                          TextFormFieldWidget(
+                            keyboardType: TextInputType.url,
+                            controller: controller.youtube,
+                            validate: controller.validateWebAddress,
+                            hintText: ' Enter the your youtube',
+                            labelText: 'Youtube',
+                            suffixIcon: Image.asset(
+                              '$imagePath/youtube.png',
+                              height: 1,
+                            ),
                           ),
                         ],
                       )),
-                  // Form(
-                  //     key: controller.formKey,
-                  //     child: Column(
-                  //       children: [
-                  //         Center(
-                  //           child: CircleAvatar(
-                  //             backgroundColor: ColorApp.greyColor2,
-                  //             radius: 60,
-                  //             child: SvgPicture.asset(
-                  //               'assets/images/profile-edit.svg',
-                  //               height: 130,
-                  //             ),
-                  //           ),
-                  //         ),
-                  //         const SizedBox(
-                  //           height: 15.0,
-                  //         ),
-                  //         //Name Controller
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.nameController,
-                  //           validator: (value) {
-                  //             if(value!.length > 25){
-                  //               return 'CenterName Cant Be Larger Than 25';
-                  //             }else if(value.length <2){
-                  //               return 'CenterName Cant Be Less Than 2';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Center Name',
-                  //           keyboardType: TextInputType.name,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/center_name.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(
-                  //           height: 15.0,
-                  //         ),
-                  //         //Username
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.userNameController,
-                  //           validator: (value) {
-                  //             if(value!.length > 25){
-                  //               return 'username Cant Be Larger Than 25';
-                  //             }else if(value.length <2){
-                  //               return 'username Cant Be Less Than 2';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: '@username',
-                  //           keyboardType: TextInputType.name,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/username.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(
-                  //           height: 15.0,
-                  //         ),
-                  //         //Password
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.passwordController,
-                  //           validator: (value) {
-                  //             if(value!.length > 25){
-                  //               return 'Password Can\'t Be Larger Than 25';
-                  //             }else if(value.length <2){
-                  //               return 'Password Can\'t Be Less Than 2';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Password',
-                  //           keyboardType: TextInputType.visiblePassword,
-                  //           obscureText: false,
-                  //           suffixIcon: Icon(Icons.password_outlined),
-                  //         ),
-                  //         const SizedBox(
-                  //           height: 15.0,
-                  //         ),
-                  //         //phone
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.formalPhoneController,
-                  //           validator: (value) {
-                  //             if(value!.length > 25){
-                  //               return 'formal Phone Cant Be Larger Than 25';
-                  //             }else if(value.length <2){
-                  //               return 'formal Phone Cant Be Less Than 2';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Formal Phone',
-                  //           keyboardType: TextInputType.phone,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset('$imagePath/phone.png'),
-                  //         ),
-                  //         const SizedBox(
-                  //           height: 15.0,
-                  //         ),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.phoneController,
-                  //           validator: (value) {
-                  //             if(value!.length > 25){
-                  //               return 'Phone Cant Be Larger Than 25';
-                  //             }else if(value.length <2){
-                  //               return 'Phone Cant Be Less Than 2';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Phone',
-                  //           keyboardType: TextInputType.phone,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset('$imagePath/phone.png'),
-                  //         ),
-                  //         const SizedBox(
-                  //           height: 15.0,
-                  //         ),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.websiteController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the center website';
-                  //             }
-                  //             if (value.length > 25) {
-                  //               return 'Center website cannot be longer than 25 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Center website must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Center website',
-                  //           keyboardType: TextInputType.url,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/url.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(
-                  //           height: 15.0,
-                  //         ),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.emailController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter your email';
-                  //             }
-                  //             if (value!.length < 12) {
-                  //               return 'Email must have at least 2 characters';
-                  //             }
-                  //             if (!value.contains('@')) {
-                  //               return 'Invalid email';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'E-mail',
-                  //           keyboardType: TextInputType.emailAddress,
-                  //           obscureText: false,
-                  //           // suffixIcon: Image.asset('$imagePath/email.png',),
-                  //           suffixIcon: Icon(Icons.email_outlined),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.formalEmailController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter your formal email';
-                  //             }
-                  //             if (value!.length < 12) {
-                  //               return 'Email must have at least 2 characters';
-                  //             }
-                  //             if (!value.contains('@')) {
-                  //               return 'Invalid email';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Formal Email',
-                  //           keyboardType: TextInputType.emailAddress,
-
-                  //           obscureText: false,
-                  //           suffixIcon: Icon(Icons.email_outlined),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.countryController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Country ';
-                  //             }
-                  //             if (value.length > 25) {
-                  //               return 'Country cannot be longer than 25 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Country  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Country',
-                  //           keyboardType: TextInputType.streetAddress,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/country.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.address_1Controller,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Address ';
-                  //             }
-                  //             if (value.length > 25) {
-                  //               return 'Address cannot be longer than 25 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Address  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Address 1',
-                  //           keyboardType: TextInputType.streetAddress,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/location.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.address_2Controller,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Address ';
-                  //             }
-                  //             if (value.length > 25) {
-                  //               return 'Address cannot be longer than 25 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Address  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Address 2',
-                  //           keyboardType: TextInputType.streetAddress,
-                  //           obscureText: false,
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.stateController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the State Name ';
-                  //             }
-                  //             if (value.length > 25) {
-                  //               return 'State Name cannot be longer than 25 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'State Name  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'State name',
-                  //           keyboardType: TextInputType.name,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/state.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.provinceNameController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Province ';
-                  //             }
-                  //             if (value.length > 25) {
-                  //               return 'Province cann\'t be longer than 25 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Province  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Province',
-                  //           keyboardType: TextInputType.name,
-                  //           obscureText: false,
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.zipCodeController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Zip Code ';
-                  //             }
-                  //             if (value.length > 25) {
-                  //               return 'Zip Code cannot be longer than 25 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Zip Code  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Zip code',
-                  //           keyboardType: TextInputType.number,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/postal.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextWidget(
-                  //           text: 'Social media links for the cent',
-                  //           fontWeight: FontWeight.w500,
-                  //           color: ColorApp.primaryColor,
-                  //           fontSize: 16,
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.facebookController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Facebook ';
-                  //             }
-                  //             if (value.length > 200) {
-                  //               return 'Facebook cannot be longer than 200 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Facebook  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Facebook',
-                  //           keyboardType: TextInputType.url,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/facebook.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.instagramController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Instagram ';
-                  //             }
-                  //             if (value.length > 200) {
-                  //               return 'Instagram cannot be longer than 200 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Instagram  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Instagram',
-                  //           keyboardType: TextInputType.name,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/instagram.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.twitterController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Twitter ';
-                  //             }
-                  //             if (value.length > 200) {
-                  //               return 'Twitter cannot be longer than 200 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Twitter  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Twitter',
-                  //           keyboardType: TextInputType.name,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/twitter.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.snapchatController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Snapchat ';
-                  //             }
-                  //             if (value.length > 200) {
-                  //               return 'Snapchat cannot be longer than 200 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Snapchat  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'Snapchat',
-                  //           keyboardType: TextInputType.name,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/snapchat.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(height: 15.0),
-                  //         OnBoardingTextFormField(
-                  //           controller: controller.youtubeController,
-                  //           validator: (value) {
-                  //             if (value == null || value.isEmpty) {
-                  //               return 'Please enter the Youtube ';
-                  //             }
-                  //             if (value.length > 200) {
-                  //               return 'Youtube cannot be longer than 200 characters';
-                  //             }
-                  //             if (value.length < 2) {
-                  //               return 'Youtube  must have at least 2 characters';
-                  //             }
-                  //             return null;
-                  //           },
-                  //           labelText: 'YouTube',
-                  //           keyboardType: TextInputType.name,
-                  //           obscureText: false,
-                  //           suffixIcon: Image.asset(
-                  //             '$imagePath/youtube.png',
-                  //             height: 1,
-                  //           ),
-                  //         ),
-                  //         const SizedBox(height: 94.0),
-                  //         OnBoardingButton(
-                  //           onPressed: () {
-                  //             if(controller.formKey.currentState!.validate()){
-                  //               controller.formKey.currentState!.save();
-                  //               controller.postData(CenterBody(
-                  //                 address1: controller.address_1Controller.text,
-                  //                 address2: controller.address_2Controller.text,
-                  //                 country: controller.countryController.text,
-                  //                 email: controller.emailController.text,
-                  //                 facebook: controller.facebookController.text,
-                  //                 formalEmail: controller.formalEmailController.text,
-                  //                 formalPhone: controller.formalPhoneController.text,
-                  //                 instagram: controller.instagramController.text,
-                  //                 name: controller.nameController.text,
-                  //                 password: controller.passwordController.text    ,
-                  //                 phone: controller.phoneController.text,
-                  //                 province: controller.provinceNameController.text,
-                  //                 snapchat: controller.snapchatController.text,
-                  //                 state: controller.stateController.text,
-                  //                 subscriptionPeriod: 'Month',
-                  //                 subscriptionType: 'Basic',
-                  //                 twitter: controller.twitterController.text,
-                  //                 username: controller.userNameController.text,
-                  //                 website: controller.websiteController.text,
-                  //                 youtube: controller.youtubeController.text,
-                  //                 zipCode: controller.zipCodeController.text,
-                  //               )
-                  //               );
-                  //               print('success');
-                  //               Get.to(HomeScreen());
-                  //             }else{
-                  //               showDialog(context: context, builder: (_) => AlertDialog(
-                  //                 title: Text('Please Enter all Fields'),
-                  //               ));
-                  //             }
-
-                  //           },
-                  //           text: 'SAVE',
-                  //           size: 22,
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   ),
-                  OnBoardingButton(
-                    onPressed: () {
-                      if (controller.formKey.currentState!.validate()) {
-                        controller.formKey.currentState!.save();
-                        controller.update();
-                        // controller.postData(CenterBody(
-                        //   address1: controller.address_1Controller.text,
-                        //   address2: controller.address_2Controller.text,
-                        //   country: controller.countryController.text,
-                        //   email: controller.emailController.text,
-                        //   facebook: controller.facebookController.text,
-                        //   formalEmail: controller.formalEmailController.text,
-                        //   formalPhone: controller.formalPhoneController.text,
-                        //   instagram: controller.instagramController.text,
-                        //   name: controller.nameController.text,
-                        //   password: controller.passwordController.text    ,
-                        //   phone: controller.phoneController.text,
-                        //   province: controller.provinceNameController.text,
-                        //   snapchat: controller.snapchatController.text,
-                        //   state: controller.stateController.text,
-                        //   subscriptionPeriod: 'Month',
-                        //   subscriptionType: 'Basic',
-                        //   twitter: controller.twitterController.text,
-                        //   username: controller.userNameController.text,
-                        //   website: controller.websiteController.text,
-                        //   youtube: controller.youtubeController.text,
-                        //   zipCode: controller.zipCodeController.text,
-                        // )
-                        // );
-                        print('success');
-                        print(
-                            '===========================${controller.nameController.text}');
-                        print(
-                            '===========================${controller.emailController.text}');
-                        Get.to(() => HomeScreen());
-                      } else {
-                        showDialog(
-                            context: context,
-                            builder: (_) => AlertDialog(
-                                  title: Text('Please Enter all Fields'),
-                                ));
-                      }
-                    },
-                    text: 'SAVE',
-                    size: 22,
+                  
+                  HandlingDataView(
+                    statusRequest: controller.statusRequest,
+                    widget: OnBoardingButton(
+                      onPressed: () {
+                        if (controller.formKey.currentState!.validate()) {
+                          controller.formKey.currentState!.save();
+                          controller.update();
+                          controller.postData(CenterBody(
+                            name: controller.name.text,
+                            username: controller.username.text,
+                            email: controller.email.text,
+                            password: controller.password.text,
+                            country: controller.country.text,
+                            subscriptionType: controller.subscriptionType.text,
+                            subscriptionPeriod: controller.subscriptionPeriod.text,
+                            formalEmail: controller.formalEmail.text,
+                            phone: controller.phone.text,
+                            formalPhone: controller.formalPhone.text,
+                            website: controller.website.text,
+                            address1: controller.address1.text,
+                            address2: controller.address2.text,
+                            state: controller.state.text,
+                            province: controller.province.text,
+                            zipCode: controller.zipCode.text,
+                            facebook: controller.facebook.text,
+                            instagram: controller.instagram.text,
+                            twitter: controller.twitter.text,
+                            snapchat: controller.snapchat.text,
+                            youtube: controller.youtube.text,
+                          )
+                          );
+                          print('success');
+                          print(
+                              '===========================${controller.name.text}');
+                          print(
+                              '===========================${controller.email.text}');
+                          Get.to(() => HomeScreen());
+                        } else {
+                          showDialog(
+                              context: context,
+                              builder: (_) => AlertDialog(
+                                    title: Text('Please Enter all Fields'),
+                                  ));
+                        }
+                      },
+                      text: 'SAVE',
+                      size: 22,
+                    ),
                   ),
                 ],
               ),
@@ -640,8 +341,10 @@ class TextFormFieldWidget extends StatelessWidget {
             fontWeight: FontWeight.w500,
             color: Color(0xffC4C4C4),
           ),
-          errorStyle:
-              Theme.of(context).textTheme.labelSmall?.copyWith(color: Colors.red),
+          errorStyle: Theme.of(context)
+              .textTheme
+              .labelSmall
+              ?.copyWith(color: Colors.red),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),

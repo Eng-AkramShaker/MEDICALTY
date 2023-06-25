@@ -17,24 +17,27 @@ class CenterInformationController extends GetxController {
   RequestData requestData = RequestData(Get.find());
   late StatusRequest statusRequest;
 
-  TextEditingController nameController = TextEditingController();
-  TextEditingController userNameController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
-  TextEditingController secondPhoneController = TextEditingController();
-  TextEditingController websiteController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController officalEmailController = TextEditingController();
-  TextEditingController countryController = TextEditingController();
-  TextEditingController addressController = TextEditingController();
-  TextEditingController secondAddressController = TextEditingController();
-  TextEditingController stateController = TextEditingController();
-  TextEditingController districtNameController = TextEditingController();
-  TextEditingController postalController = TextEditingController();
-  TextEditingController facebookController = TextEditingController();
-  TextEditingController instagramController = TextEditingController();
-  TextEditingController twitterController = TextEditingController();
-  TextEditingController snapchatController = TextEditingController();
-  TextEditingController youtubeController = TextEditingController();
+  TextEditingController name = TextEditingController();
+  TextEditingController username = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+  TextEditingController country = TextEditingController();
+  TextEditingController subscriptionType = TextEditingController();
+  TextEditingController subscriptionPeriod = TextEditingController();
+  TextEditingController formalEmail = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  TextEditingController formalPhone = TextEditingController();
+  TextEditingController website = TextEditingController();
+  TextEditingController address1 = TextEditingController();
+  TextEditingController address2 = TextEditingController();
+  TextEditingController state = TextEditingController();
+  TextEditingController province = TextEditingController();
+  TextEditingController zipCode = TextEditingController();
+  TextEditingController facebook = TextEditingController();
+  TextEditingController instagram = TextEditingController();
+  TextEditingController twitter = TextEditingController();
+  TextEditingController snapchat = TextEditingController();
+  TextEditingController youtube = TextEditingController();
 
   postData(CenterBody? centerBody) async {
     print('==================== centerBody Befor loading: $centerBody');
