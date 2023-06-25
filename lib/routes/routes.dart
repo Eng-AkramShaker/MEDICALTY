@@ -10,6 +10,7 @@ import '../View/Pages/accounts/login_page.dart';
 import '../View/Pages/home_page/HomePage.dart';
 import '../View/Pages/home_page/Favourite.dart';
 import '../View/Pages/home_page/navBar.dart';
+import '../View/Pages/informations/create_pharmacy.dart';
 import '../View/Pages/onboarding/onBoarding_start.dart';
 import '../View/Pages/review/appSettingPage.dart';
 import '../View/Pages/review/reviewsPage.dart';
@@ -33,6 +34,7 @@ class AppPage {
     GetPage(name: homeScreen, page: () => HomeScreen(),),
     GetPage(name: speedDial, page: () => Speed_Dial(),),
     GetPage(name: createNewDoctor, page: () => NewDoctorPage(),),
+    GetPage(name: createPharmacyPage, page: () => CreatePharmacyPage(),),
   ];
 
   //===================================================================
@@ -49,6 +51,7 @@ class AppPage {
   static getHomeScreen() => homeScreen;
   static getCreateNewDoctor() => createNewDoctor;
   static getSpeedDial() => speedDial;
+  static getCreatePharmacyPage() => createPharmacyPage;
 
 //====================================================================
   static String Boarding_Start = '/';
@@ -63,5 +66,6 @@ class AppPage {
   static String homeScreen = '/homescreen';
   static String createNewDoctor = '/createNewDoctor';
   static String speedDial = '/speedDial';
+  static String createPharmacyPage = '/createPharmacyPage';
 }
 //  

@@ -8,6 +8,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
+import 'View/Pages/informations/create_pharmacy.dart';
+import 'View/Pages/informations/create_pharmacy.dart';
+import 'View/Pages/informations/create_pharmacy.dart';
+import 'View/Pages/informations/create_pharmacy.dart';
+import 'View/Pages/onboarding/onBoarding_start.dart';
+import 'View/Pages/onboarding/onBoarding_start.dart';
 import 'constatnt/color_app.dart';
 
 void main() async {
@@ -58,7 +64,7 @@ class MyApp extends StatelessWidget {
       initialBinding: InitailBaindings(),
       // home: NewExpensesPage(),
       getPages: AppPage.routes,
-      initialRoute: AppPage.getBoarding_Start(),
+      initialRoute: AppPage.Boarding_Start,
     );
   }
 }
