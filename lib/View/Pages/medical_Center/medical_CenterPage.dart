@@ -21,11 +21,11 @@ import '../../widget/homePage/meal_Plans.dart';
 import '../../widget/homePage/selectGoal.dart';
 import '../../widget/homePage/textBox.dart';
 import '../drawers/my_drawer_header.dart';
+import '../home_page/Book_Now.dart';
 import '../review/trainerDetailPage.dart';
-import 'Book_Now.dart';
 
-class HomePage extends StatelessWidget {
-  dynamic name_controller = 'Sophia !';
+class medical_CenterPage extends StatelessWidget {
+  dynamic name_controller = 'medical Center';
 
   dynamic search_controller = TextEditingController();
   @override

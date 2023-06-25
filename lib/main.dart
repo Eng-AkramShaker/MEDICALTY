@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
+import 'package:Medicalty/View/Pages/home_page/HomePage.dart';
 import 'package:Medicalty/bindings/initail_Bindings.dart';
 import 'package:Medicalty/routes/routes.dart';
 import 'package:Medicalty/services/settingServices.dart';
@@ -16,9 +17,6 @@ void main() async {
   await initialServices();
   runApp(MyApp());
 }
-
-
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -46,10 +44,10 @@ class MyApp extends StatelessWidget {
       },
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
-      initialBinding: InitailBaindings(),
-      // home: NewExpensesPage(),
-      getPages: AppPage.routes,
-      initialRoute: AppPage.getBoarding_Start(),
+      // initialBinding: InitailBaindings(),
+      home: HomePage(),
+      // getPages: AppPage.routes,
+      // initialRoute: AppPage.getBoarding_Start(),
     );
   }
 }

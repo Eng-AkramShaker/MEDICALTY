@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:Medicalty/services/api.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../model/pharmacy/pharmcy_register_model.dart';
 import '../../services/api_links.dart';
 
-class CreatePharmacyController extends GetxController{
+class CreatePharmacyController extends GetxController {
   final formKey = GlobalKey<FormState>();
   TextEditingController idPharmacyController = TextEditingController();
   TextEditingController namePharmacyController = TextEditingController();
@@ -33,21 +31,24 @@ class CreatePharmacyController extends GetxController{
   TextEditingController snapchatController = TextEditingController();
   TextEditingController youtubeController = TextEditingController();
 
-  registerPharmacy(PharmacyRegisterModel pharmacyRegisterModel ,context){
-    postRequest(ApiLinks.RegisterPharmacyUrl, pharmacyRegisterModel.toJson()).then((value) async {
-      if(value['status'] == true) {
+  registerPharmacy(PharmacyRegisterModel pharmacyRegisterModel, context) {
+    postRequest(ApiLinks.RegisterPharmacyUrl, pharmacyRegisterModel.toJson())
+        .then((value) async {
+      if (value['status'] == true) {
         String accessToken = value['token'];
         print(value['msg']);
         print('Access token: $accessToken');
         SharedPreferences prefs = await SharedPreferences.getInstance();
         await prefs.setString('token', value['token']);
-      }else{
-        showDialog(context: context, builder:(context)=> const AlertDialog(
-          title: Text('Login Alert'),
-          content: Text("Email or Password is Wrong please try again"),
-        ));
+      } else {
+        showDialog(
+            context: context,
+            builder: (context) => const AlertDialog(
+                  title: Text('Login Alert'),
+                  content: Text("Email or Password is Wrong please try again"),
+                ));
         print(value['msg']);
       }
     });
-}
+  }
 }
