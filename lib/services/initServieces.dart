@@ -14,3 +14,4 @@ Future initialServices() async {
   await Get.putAsync(() => SettingServices().initSharedPref());
 
 }
+
