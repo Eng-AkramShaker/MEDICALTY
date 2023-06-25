@@ -1,1 +1,0 @@
-String imagePath = 'assets/images/textfield';
