@@ -1,15 +1,17 @@
-// ignore_for_file: file_names
 
+//============= Services =================
 import 'package:Medicalty/services/settingServices.dart';
 import 'package:get/get.dart';
-//============= Services =================
 
 Future initialServices() async {
   //===================== Init check internet ===============
   await Get.putAsync(() => SettingServices().init());
   //==================== open Hive Box ======================
-  await Get.putAsync(() => SettingServices().openHiveBox('medical'));
+  await Get.putAsync(
+    () => SettingServices().openHiveBox('medical'));
   myBox = await SettingServices().openHiveBox('medical');
   //===================== Init check internet ===============
   await Get.putAsync(() => SettingServices().initSharedPref());
+
 }
+
