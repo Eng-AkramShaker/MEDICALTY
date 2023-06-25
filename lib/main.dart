@@ -44,10 +44,10 @@ class MyApp extends StatelessWidget {
       },
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
-      // initialBinding: InitailBaindings(),
-      home: HomePage(),
-      // getPages: AppPage.routes,
-      // initialRoute: AppPage.getBoarding_Start(),
+      initialBinding: InitailBaindings(),
+      // home: HomePage(),
+      getPages: AppPage.routes,
+      initialRoute: AppPage.getBoarding_Start(),
     );
   }
 }
