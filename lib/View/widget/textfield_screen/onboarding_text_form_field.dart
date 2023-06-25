@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 // ignore_for_file: must_be_immutable
 
+import 'package:Medicalty/controllers/informations/center_information_controller.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingTextFormField extends StatelessWidget {
@@ -28,6 +29,7 @@ class OnBoardingTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      
       maxLines: maxLines,
       controller: controller,
       cursorColor: Colors.black,

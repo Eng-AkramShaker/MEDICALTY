@@ -11,8 +11,9 @@ class RequestData {
   };
 
   postCreateCenterData(CenterBody? map) async {
+    print('postCreateCenterData==============================');
     var response = await crud.postRequest(
-        '${AppLink.baseUrl}/${AppLink.endPointCreateCenterUrl}',
+        'http://medicalty.space/api/center/save',
         headers,
         map!.toJson());
     return response.fold((l) => l, (r) => r);
