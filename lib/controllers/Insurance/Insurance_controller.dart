@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, non_constant_identifier_names
 
 import 'package:Medicalty/services/api_links.dart';
 import 'package:flutter/material.dart';
@@ -8,22 +8,17 @@ import '../../services/api.dart';
 
 class InsuranceController extends GetxController {
   final formKey = GlobalKey<FormState>();
-
   TextEditingController nameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController userNameController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
-  TextEditingController secondPhoneController = TextEditingController();
-  TextEditingController websiteController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
   TextEditingController emailController = TextEditingController();
-  TextEditingController officalEmailController = TextEditingController();
+  TextEditingController formal_emailController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController formal_phoneController = TextEditingController();
+  TextEditingController websiteController = TextEditingController();
+  TextEditingController address1Controller = TextEditingController();
   TextEditingController countryController = TextEditingController();
-  TextEditingController addressController = TextEditingController();
-  TextEditingController secondAddressController = TextEditingController();
   TextEditingController stateController = TextEditingController();
-  TextEditingController districtNameController = TextEditingController();
-  TextEditingController districtNameController2 = TextEditingController();
-  TextEditingController postalController = TextEditingController();
+  TextEditingController provinceController = TextEditingController();
   TextEditingController facebookController = TextEditingController();
   TextEditingController instagramController = TextEditingController();
   TextEditingController twitterController = TextEditingController();
