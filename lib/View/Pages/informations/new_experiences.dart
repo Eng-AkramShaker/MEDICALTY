@@ -11,7 +11,7 @@ import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_drop_down_menu.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 
 class NewExperiencesPage extends StatelessWidget {
 
@@ -45,7 +45,7 @@ class NewExperiencesPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller: controller.idExperiencesController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -68,7 +68,7 @@ class NewExperiencesPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller:  controller.nameExpController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -91,7 +91,7 @@ class NewExperiencesPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller:  controller.namePlaceController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -114,7 +114,7 @@ class NewExperiencesPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller:  controller.workPlaceController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -137,7 +137,7 @@ class NewExperiencesPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller:  controller.beginningWorkController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -160,7 +160,7 @@ class NewExperiencesPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  OnBoardingTextFormField(
+                  MyTextFormField(
                     controller:  controller.workFinishedController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {

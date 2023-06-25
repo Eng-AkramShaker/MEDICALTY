@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../view/widget/textfield_screen/onboarding_text_widget.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
+import '../../widget/textfield_screen/onboarding_text_widget.dart';
 
 class EditProfile extends StatelessWidget {
   @override

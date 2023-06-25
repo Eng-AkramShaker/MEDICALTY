@@ -1,12 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors, non_constant_identifier_names, sized_box_for_whitespace, file_names, prefer_const_constructors, unused_local_variable, camel_case_types, unused_element, prefer_final_fields, unused_field
 
-import 'package:Medicalty/View/Pages/informations/create_laboratory.dart';
-import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import '../../../constatnt/color_app.dart';
+import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'package:get/get.dart';
 
-import '../../../view/widget/textfield_screen/onboarding_text_widget.dart';
 import '../informations/appointment_booking.dart';
 import '../informations/center_information.dart';
 import '../informations/create_insurance_company.dart';
@@ -90,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage>
       floatingActionButton: FloatingActionButton(
         backgroundColor: ColorApp.blackBlueColor2,
         onPressed: () {
-          Get.to(() => CreateNewSectionPage());
+          Get.to(CreateNewSectionPage());
         },
         child: Icon(_isExpanded ? Icons.close : Icons.add),
       ),
@@ -108,181 +106,110 @@ class _MyHomePageState extends State<MyHomePage>
                 padding: const EdgeInsets.only(top: 30),
                 child: ListView(
                   children: [
-                    (myBox!.get('type') == 'doctor' ||
-                            myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital')
-                        ? SpeedDialWidget(
-                            title: 'doctors',
-                            image: 'doc.png',
-                            myColor: ColorApp.brownDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => NewDoctorPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital')
-                        ? SpeedDialWidget(
-                            title: 'departments',
-                            image: 'departments.png',
-                            myColor: ColorApp.redDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => CreatePharmacyPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital')
-                        ? SpeedDialWidget(
-                            title: 'Insurance',
-                            image: 'insurance.png',
-                            myColor: ColorApp.blueDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => CreateInsuranceCompanyPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital' ||
-                            myBox!.get('type') == 'Physiotherapy' ||
-                            myBox!.get('type') == 'doctor')
-                        ? SpeedDialWidget(
-                            title: 'Patient',
-                            image: 'customers.png',
-                            myColor: ColorApp.orangeDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => RegistrationPatientPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital' ||
-                            myBox!.get('type') == 'Physiotherapy' ||
-                            myBox!.get('type') == 'doctor')
-                        ? SpeedDialWidget(
-                            title: 'Expenses',
-                            image: 'spending.png',
-                            myColor: ColorApp.greenDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => NewExpensesPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital' ||
-                            myBox!.get('type') == 'Physiotherapy' ||
-                            myBox!.get('type') == 'doctor')
-                        ? SpeedDialWidget(
-                            title: 'Invoice',
-                            image: 'invoice.png',
-                            myColor: ColorApp.indigoDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => NewInvoicesPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital')
-                        ? SpeedDialWidget(
-                            title: 'Departure',
-                            image: 'departure.png',
-                            myColor:
-                                ColorApp.whiteGreenDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => CenterInformationPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital' ||
-                            myBox!.get('type') == 'Physiotherapy' ||
-                            myBox!.get('type') == 'doctor')
-                        ? SpeedDialWidget(
-                            title: 'New Request',
-                            image: 'customers.png',
-                            myColor: ColorApp.blackBlueColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => NewRequestPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital')
-                        ? SpeedDialWidget(
-                            title: 'employees',
-                            image: 'employees.png',
-                            myColor:
-                                ColorApp.deepBlueDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => NewEmployeePage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital' ||
-                            myBox!.get('type') == 'Physiotherapy' ||
-                            myBox!.get('type') == 'doctor')
-                        ? SpeedDialWidget(
-                            title: 'laboratory',
-                            image: 'departments.png',
-                            myColor: ColorApp.orangeDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => CreateLaboratoryPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital')
-                        ? SpeedDialWidget(
-                            title: 'Add product',
-                            image: 'product.png',
-                            myColor:
-                                ColorApp.whiteBlackDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => NewProductPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital' ||
-                            myBox!.get('type') == 'Physiotherapy' ||
-                            myBox!.get('type') == 'doctor')
-                        ? SpeedDialWidget(
-                            title: 'Experience',
-                            image: 'experience.png',
-                            myColor: ColorApp.pinkDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => NewExperiencesPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital' ||
-                            myBox!.get('type') == 'Physiotherapy' ||
-                            myBox!.get('type') == 'doctor')
-                        ? SpeedDialWidget(
-                            title: 'appointments',
-                            image: 'appointments.png',
-                            myColor:
-                                ColorApp.whiteBlueDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => AppointmentBookingPage());
-                            },
-                          )
-                        : Text(''),
-                    (myBox!.get('type') == 'center' ||
-                            myBox!.get('type') == 'hospital' ||
-                            myBox!.get('type') == 'Physiotherapy' ||
-                            myBox!.get('type') == 'doctor')
-                        ? SpeedDialWidget(
-                            title: 'Disease Reporting',
-                            image: 'diseases.png',
-                            myColor: ColorApp.greyDialColor.withOpacity(0.6),
-                            onTap: () {
-                              Get.to(() => DiseaseReportingPage());
-                            },
-                          )
-                        : Text(''),
+                    SpeedDialWidget(
+                      title: 'doctors',
+                      image: 'doc.png',
+                      myColor: ColorApp.brownDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(NewDoctorPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'departments',
+                      image: 'departments.png',
+                      myColor: ColorApp.redDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(CreatePharmacyPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'Insurance',
+                      image: 'insurance.png',
+                      myColor: ColorApp.blueDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(CreateInsuranceCompanyPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'customers',
+                      image: 'customers.png',
+                      myColor: ColorApp.orangeDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(RegistrationPatientPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'spending',
+                      image: 'spending.png',
+                      myColor: ColorApp.greenDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(NewExpensesPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'Invoice',
+                      image: 'invoice.png',
+                      myColor: ColorApp.indigoDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(NewInvoicesPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'Departure',
+                      image: 'departure.png',
+                      myColor: ColorApp.whiteGreenDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(CenterInformationPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'employees',
+                      image: 'employees.png',
+                      myColor: ColorApp.deepBlueDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(NewEmployeePage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'new request',
+                      image: 'request.png',
+                      myColor: ColorApp.pinkDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(NewRequestPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'Add product',
+                      image: 'product.png',
+                      myColor: ColorApp.whiteBlackDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(NewProductPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'experience',
+                      image: 'experience.png',
+                      myColor: ColorApp.pinkDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(NewExperiencesPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'appointments',
+                      image: 'appointments.png',
+                      myColor: ColorApp.whiteBlueDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(AppointmentBookingPage());
+                      },
+                    ),
+                    SpeedDialWidget(
+                      title: 'Diseases',
+                      image: 'diseases.png',
+                      myColor: ColorApp.greyDialColor.withOpacity(0.6),
+                      onTap: () {
+                        Get.to(DiseaseReportingPage());
+                      },
+                    ),
                   ],
                 ),
               ),

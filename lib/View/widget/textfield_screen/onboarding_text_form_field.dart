@@ -1,29 +1,35 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // ignore_for_file: must_be_immutable
 
+import 'package:Medicalty/controllers/informations/center_information_controller.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingTextFormField extends StatelessWidget {
   TextEditingController controller = TextEditingController();
- final Function validator;
+  final Function validator;
   TextInputType? keyboardType;
   int? maxLines;
   String? labelText;
   Widget? suffixIcon;
   bool? obscureText;
   OnBoardingTextFormField({
-    super.key,
-    required this.controller,
+    Key? key,
+    String? text,
+    int? fontSize,
+    FontWeight? fontWeight,
+    Color? color,
     required this.validator,
-    required this.keyboardType,
-    required this.labelText,
-    this.suffixIcon,
-    this.obscureText,
+    this.keyboardType,
     this.maxLines,
-  });
+    this.labelText,
+    this.suffixIcon,
+    this.obscureText, required TextEditingController controller,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      
       maxLines: maxLines,
       controller: controller,
       cursorColor: Colors.black,
@@ -59,7 +65,6 @@ class OnBoardingTextFormField extends StatelessWidget {
           //borderSide: const BorderSide(color: Colors.white),
           borderSide: const BorderSide(
               color: Color.fromRGBO(180, 186, 190, 0.5), width: 1),
-
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),

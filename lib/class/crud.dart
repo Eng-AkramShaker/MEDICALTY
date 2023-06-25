@@ -1,10 +1,11 @@
 // ignore_for_file: avoid_print, depend_on_referenced_packages
 
 import 'dart:convert';
+import 'package:Medicalty/api/functions/check_internet.dart';
+import 'package:Medicalty/class/status_request.dart';
 import 'package:either_dart/either.dart';
 import 'package:http/http.dart' as http;
-import '../functions/check_internet.dart';
-import 'status_request.dart';
+
 
 class Crud {
   //===================== Get request ===================================================
