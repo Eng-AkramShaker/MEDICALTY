@@ -20,3 +20,10 @@ Widget New_Divider({color, thickness}) {
     thickness: thickness,
   );
 }
+
+// -------------------------------------------------------------------------------
+Widget Tow_Divider({color, thickness}) {
+  return Padding(
+      padding: const EdgeInsets.only(top: 28, bottom: 20, right: 20),
+      child: SizedBox(height: 2, child: New_Divider()));
+}

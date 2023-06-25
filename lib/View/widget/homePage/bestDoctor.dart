@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/home_page/homeController.dart';
 import '../../Pages/review/trainerDetailPage.dart';
+import 'list_View.dart';
 
 class NewWidgetBestDoctorOne extends StatelessWidget {
   final dynamic num;
@@ -365,6 +366,30 @@ class NewWidgetBestDoctorThree extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+// -----------------------------------------------------------------------
+
+class NewWidgetBestDoctorFour extends StatelessWidget {
+  const NewWidgetBestDoctorFour({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 370,
+      width: double.infinity,
+      child: ListView.builder(
+        scrollDirection: Axis.vertical,
+        itemCount: 3,
+        shrinkWrap: true,
+        itemBuilder: (context, i) {
+          return items_2[i];
+        },
       ),
     );
   }
