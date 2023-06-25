@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names, avoid_unnecessary_containers
 
+import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../main.dart';
@@ -60,7 +61,7 @@ Widget MyDrawerList() {
         }),
         div(),
         menuItem("Logout", Icons.logout, () {
-          sharedPref!.clear();
+          myBox!.clear();
           Get.off(Login());
         }),
       ],

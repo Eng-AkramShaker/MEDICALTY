@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 import 'package:Medicalty/View/Pages/profile/privacy_policy.dart';
 import 'package:Medicalty/View/Pages/profile/setting_screen.dart';
+import 'package:Medicalty/view/widget/textfield_screen/onboarding_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import '../../widget/textfield_screen/onboarding_text_widget.dart';
 import 'edit_profile.dart';
 
 class Profile extends StatelessWidget {

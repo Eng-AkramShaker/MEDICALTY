@@ -1,11 +1,23 @@
+// ignore_for_file: avoid_print
+
+import 'package:Medicalty/api/functions/handling_data_controller.dart';
+import 'package:Medicalty/api/data/remote/request_data.dart';
+import 'package:Medicalty/class/status_request.dart';
+import 'package:Medicalty/model/create_center/center_body_model.dart';
+import 'package:Medicalty/model/create_center/create_center_model.dart';
+import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class CenterInformationController extends GetxController{
+
+
+class CenterInformationController extends GetxController {
   final formKey = GlobalKey<FormState>();
 
-  TextEditingController nameController = TextEditingController();
+  RequestData requestData = RequestData(Get.find());
+  late StatusRequest statusRequest;
 
+  TextEditingController nameController = TextEditingController();
   TextEditingController userNameController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   TextEditingController secondPhoneController = TextEditingController();
@@ -23,4 +35,79 @@ class CenterInformationController extends GetxController{
   TextEditingController twitterController = TextEditingController();
   TextEditingController snapchatController = TextEditingController();
   TextEditingController youtubeController = TextEditingController();
+
+  postData(CenterBody? centerBody) async {
+    print('==================== centerBody Befor loading: $centerBody');
+    statusRequest = StatusRequest.loading;
+    var response = await requestData.postCreateCenterData(centerBody);
+    print('==================== response After loading: $response');
+
+    statusRequest = handlingData(response);
+    if (StatusRequest.success == statusRequest) {
+      print('=============== statusRequest is success: ===============');
+      var createCenter = CreateCenter.fromJson(response);
+      update();
+      print(
+          '====================== Create center token : ${createCenter.token}');
+      myBox!.put('token', createCenter.token);
+      print('====================== myBox token is put =================');
+      print(
+          '====================== myBox token is get ${myBox!.get('token')}=================');
+    }
+  }
+
+  @override
+  void onInit() {
+    postData(CenterBody());
+    update();
+    super.onInit();
+  }
+
+  String? validateInput(String? value) {
+    if (value!.isEmpty) {
+      return 'Please enter some text';
+    } else if (value.length > 25) {
+      return 'Text Can\'t Be Larger Than 25';
+    } else if (value.length < 2) {
+      return 'Text Can\'t Be Less Than 2';
+    }
+    return null;
+  }
+
+  String? validateEmail(String? value) {
+  if (value!.isEmpty) {
+    return 'Please enter your email';
+  }
+  if (!GetUtils.isEmail(value)) {
+    return 'Please enter a valid email';
+  }
+  return null;
+}
+
+String? validatePassword(String? value) {
+  if (value!.isEmpty) {
+    return 'Please enter your password';
+  }
+  if (value.length < 6) {
+    return 'Password must be at least 6 characters long';
+  }
+  return null;
+}
+
+String? validateWebAddress(String? value) {
+  if (value!.isEmpty) {
+    return 'Please enter a web address';
+  }
+
+  try {
+    final Uri uri = Uri.parse(value);
+    if (uri.scheme.isEmpty || uri.host.isEmpty) {
+      throw const FormatException();
+    }
+  } on FormatException {
+    return 'Please enter a valid web address';
+  }
+
+  return null;
+}
 }
