@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names
 
+import 'package:Medicalty/View/Pages/home_screen.dart';
 import 'package:Medicalty/middleWare/home_screen_middleware.dart';
 import 'package:Medicalty/view/pages/home_page/Speed_Dial.dart';
 import 'package:Medicalty/view/pages/informations/new_doctor.dart';
@@ -13,7 +14,6 @@ import '../View/Pages/onboarding/onBoarding_start.dart';
 import '../View/Pages/review/appSettingPage.dart';
 import '../View/Pages/review/reviewsPage.dart';
 import '../View/Pages/review/trainerDetailPage.dart';
-import '../View/Pages/test_home_screen.dart';
 import '../middleWare/home_page_middleware.dart';
 
 class AppPage {

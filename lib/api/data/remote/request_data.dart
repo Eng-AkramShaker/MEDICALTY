@@ -1,6 +1,7 @@
-import '../../../../model/center/center_body_model.dart';
-import '../../../../utils/link_api.dart';
-import '../../class/crud.dart';
+
+
+import 'package:Medicalty/class/crud.dart';
+import 'package:Medicalty/model/create_center/center_body_model.dart';
 
 class RequestData {
   Crud crud;

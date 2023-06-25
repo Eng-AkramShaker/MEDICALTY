@@ -1,17 +1,15 @@
 // ignore_for_file: avoid_print
 
+import 'package:Medicalty/api/functions/handling_data_controller.dart';
 import 'package:Medicalty/api/data/remote/request_data.dart';
+import 'package:Medicalty/class/status_request.dart';
+import 'package:Medicalty/model/create_center/center_body_model.dart';
+import 'package:Medicalty/model/create_center/create_center_model.dart';
+import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../api/class/status_request.dart';
 
-import '../../api/functions/handling_data_controller.dart';
-import '../../model/center/center_body_model.dart';
-import '../../model/center/create_center_model.dart';
-import '../../services/settingServices.dart';
-
-final RxString inputText = ''.obs;
 
 class CenterInformationController extends GetxController {
   final formKey = GlobalKey<FormState>();
@@ -21,18 +19,17 @@ class CenterInformationController extends GetxController {
 
   TextEditingController nameController = TextEditingController();
   TextEditingController userNameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController formalPhoneController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
+  TextEditingController secondPhoneController = TextEditingController();
   TextEditingController websiteController = TextEditingController();
   TextEditingController emailController = TextEditingController();
-  TextEditingController formalEmailController = TextEditingController();
+  TextEditingController officalEmailController = TextEditingController();
   TextEditingController countryController = TextEditingController();
-  TextEditingController address_1Controller = TextEditingController();
-  TextEditingController address_2Controller = TextEditingController();
+  TextEditingController addressController = TextEditingController();
+  TextEditingController secondAddressController = TextEditingController();
   TextEditingController stateController = TextEditingController();
-  TextEditingController provinceNameController = TextEditingController();
-  TextEditingController zipCodeController = TextEditingController();
+  TextEditingController districtNameController = TextEditingController();
+  TextEditingController postalController = TextEditingController();
   TextEditingController facebookController = TextEditingController();
   TextEditingController instagramController = TextEditingController();
   TextEditingController twitterController = TextEditingController();
