@@ -67,7 +67,7 @@ class Notifications_Drawer extends StatelessWidget {
                           height: 20,
                         ),
                         Row_Switch(
-                          text: 'Today\'s schedule changed',
+                          text: 'Today’s schedule changed',
                         ),
                         Row_Switch(
                           text: 'New request',

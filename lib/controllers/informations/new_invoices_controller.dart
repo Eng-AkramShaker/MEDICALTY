@@ -1,9 +1,8 @@
-// ignore_for_file: must_call_super
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
-class NewInvoicesController extends GetxController {
+class NewInvoicesController extends GetxController{
   TextEditingController idInvoicesController = TextEditingController();
   TextEditingController payController = TextEditingController();
   TextEditingController addressController = TextEditingController();
@@ -13,11 +12,13 @@ class NewInvoicesController extends GetxController {
   TextEditingController accountingCodeController = TextEditingController();
   TextEditingController customerAddressController = TextEditingController();
 
-  late double subTotal = 0.00;
-  late double discount = 0.00;
-  late double tax = 0.00;
-  late double total = 0.00;
-  late double requiredDeposit = 0.00;
+
+ late double subTotal = 0.00;
+  late  double discount = 0.00;
+  late  double tax = 0.00;
+  late  double total = 0.00;
+  late  double requiredDeposit = 0.00;
+
 
   String formattedSubTotal = '';
   String formattedDiscount = '';

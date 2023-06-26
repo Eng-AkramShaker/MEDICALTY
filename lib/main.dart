@@ -15,6 +15,7 @@ import 'View/Pages/informations/create_pharmacy.dart';
 import 'View/Pages/onboarding/onBoarding_start.dart';
 import 'View/Pages/onboarding/onBoarding_start.dart';
 import 'constatnt/color_app.dart';
+import 'services/initServieces.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,17 +23,7 @@ void main() async {
   runApp(MyApp());
 }
 
-//============= Services =================
-Future initialServices() async {
-  //===================== Init check internet ===============
-  await Get.putAsync(() => SettingServices().init());
-  //==================== open Hive Box ======================
-  await Get.putAsync(
-    () => SettingServices().openHiveBox('medical'));
-  myBox = await SettingServices().openHiveBox('medical');
-  //===================== Init check internet ===============
-  await Get.putAsync(() => SettingServices().initSharedPref());
-}
+
 
 
 class MyApp extends StatelessWidget {

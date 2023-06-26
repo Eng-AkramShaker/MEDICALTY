@@ -4,6 +4,7 @@ import 'package:Medicalty/View/Pages/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+
 import '../../../constatnt/font_app_styles.dart';
 import 'notifications.dart';
 import 'unites_of_measure.dart';

@@ -1,13 +1,7 @@
-// ignore_for_file: non_constant_identifier_names, avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../model/doctor/register_doctor_model.dart';
-import '../../services/api.dart';
-import '../../services/api_links.dart';
-
-class NewDoctorController extends GetxController {
+class NewDoctorController extends GetxController{
   String genderValue = 'Item 1';
   String nationalityValue = 'Item 1';
 
@@ -28,10 +22,8 @@ class NewDoctorController extends GetxController {
   TextEditingController jobNumberController = TextEditingController();
   TextEditingController fullNameController = TextEditingController();
   TextEditingController nationalIdController = TextEditingController();
-  TextEditingController jobDescriptionController = TextEditingController();
-
   TextEditingController obDescController = TextEditingController();
-  TextEditingController AboutthedoctorController = TextEditingController();
+  TextEditingController aboutDocController = TextEditingController();
   TextEditingController profileDocController = TextEditingController();
   TextEditingController yearExperienceController = TextEditingController();
   TextEditingController experienceController = TextEditingController();
@@ -39,19 +31,4 @@ class NewDoctorController extends GetxController {
   TextEditingController workPhoneController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController workEmailController = TextEditingController();
-  TextEditingController datebirthController = TextEditingController();
-  TextEditingController YearsExperienceController = TextEditingController();
-
-  TextEditingController comprehensiveprofiledoctorsController =
-      TextEditingController();
-
-  void registerDoctor(RegisterDoctorModel model) {
-    postRequest(ApiLinks.RegisterDoctorUrl, model.toJson()).then((value) {
-      if (value['status'] == true) {
-        print(value['msg']);
-      } else {
-        print(value['msg']);
-      }
-    });
-  }
 }

@@ -10,7 +10,7 @@ import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_drop_down_menu.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
 import '../../widget/textfield_screen/onboarding_button.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
+import '../../widget/textfield_screen/my_text_form_field.dart';
 import 'my_date_time.dart';
 import 'new_invoices.dart';
 
@@ -49,7 +49,7 @@ class NewExpensesPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.idExpenesesController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -72,7 +72,7 @@ class NewExpensesPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.addressController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -95,7 +95,7 @@ class NewExpensesPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.descController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -119,7 +119,7 @@ class NewExpensesPage extends StatelessWidget {
                         children: [
                           Expanded(
                             flex: 5,
-                            child: OnBoardingTextFormField(
+                            child: MyTextFormField(
                               controller: controller.timeController,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
@@ -161,7 +161,7 @@ class NewExpensesPage extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.valueController,
                         validator: (value) {
 
@@ -193,7 +193,7 @@ class NewExpensesPage extends StatelessWidget {
                           }
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.accountingCodeController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -216,7 +216,7 @@ class NewExpensesPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 15.0),
-                      OnBoardingTextFormField(
+                      MyTextFormField(
                         controller: controller.customerAddressController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {

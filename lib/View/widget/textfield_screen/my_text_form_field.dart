@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class MyTextFormField extends StatelessWidget {
   TextEditingController controller = TextEditingController();
-  final Function validator;
+ final Function validator;
   TextInputType? keyboardType;
   int? maxLines;
   String? labelText;
@@ -59,6 +59,7 @@ class MyTextFormField extends StatelessWidget {
           //borderSide: const BorderSide(color: Colors.white),
           borderSide: const BorderSide(
               color: Color.fromRGBO(180, 186, 190, 0.5), width: 1),
+
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
