@@ -29,6 +29,7 @@ class NewDoctorController extends GetxController {
   TextEditingController fullNameController = TextEditingController();
   TextEditingController nationalIdController = TextEditingController();
   TextEditingController jobDescriptionController = TextEditingController();
+  TextEditingController countryController = TextEditingController();
 
   TextEditingController obDescController = TextEditingController();
   TextEditingController AboutthedoctorController = TextEditingController();

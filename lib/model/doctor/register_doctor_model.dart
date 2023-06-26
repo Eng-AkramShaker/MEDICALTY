@@ -15,6 +15,7 @@ String registerDoctorModelToJson(RegisterDoctorModel data) =>
 class RegisterDoctorModel {
   String? centerId;
   String? departmentId;
+  String? country;
   String? specialty;
   String? jobDescription;
   String? username;
@@ -41,6 +42,7 @@ class RegisterDoctorModel {
   RegisterDoctorModel(
       {this.centerId,
       this.departmentId,
+      this.country,
       this.specialty,
       this.jobDescription,
       this.username,
@@ -72,6 +74,7 @@ class RegisterDoctorModel {
           jobDescription: json["job_description"],
           username: json["username"],
           name: json["name"],
+          country: json["country"],
           ssn: json["ssn"],
           phone: json["phone"],
           workPhone: json["work_phone"],
@@ -100,6 +103,7 @@ class RegisterDoctorModel {
         "job_description": jobDescription,
         "username": username,
         "name": name,
+        "country": country,
         "ssn": ssn,
         "phone": phone,
         "work_phone": workPhone,

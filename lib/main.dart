@@ -13,6 +13,7 @@ import 'View/Pages/informations/adding_products_pharmacy.dart';
 import 'View/Pages/informations/create_insurance_company.dart';
 import 'View/Pages/informations/create_laboratory.dart';
 import 'View/Pages/informations/create_pharmacy.dart';
+import 'View/Pages/informations/new_doctor.dart';
 import 'constatnt/color_app.dart';
 import 'services/initServieces.dart';
 
@@ -48,9 +49,11 @@ class MyApp extends StatelessWidget {
       },
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
-      initialBinding: InitailBaindings(),
-      getPages: AppPage.routes,
-      initialRoute: AppPage.getBoarding_Start(),
+      // initialBinding: InitailBaindings(),
+      // getPages: AppPage.routes,
+      // initialRoute: AppPage.getBoarding_Start(),
+
+      home: NewDoctorPage(),
     );
   }
 }
