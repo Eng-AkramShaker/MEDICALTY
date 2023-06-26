@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeScreenMiddleWare extends GetMiddleware {
-  @override
-  int? get priority => 2;
+  // @override
+  // int? get priority => 2;
 
   @override
   RouteSettings? redirect(String? route) {
     if (myBox!.get('type') != null)
-      return const RouteSettings(name: '/homescreen');
+      return const RouteSettings(name: '/navBar');
 
     return null;
   }
