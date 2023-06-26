@@ -10,10 +10,15 @@ import '../../../constatnt/color_app.dart';
 import '../../../constatnt/font_app_styles.dart';
 import '../../../constatnt/image_app.dart';
 import '../../widget/drawer/drawer_list.dart';
+import '../../widget/homePage/Popular.dart';
 import '../../widget/homePage/appBar.dart';
+import '../../widget/homePage/bestDoctor.dart';
+import '../../widget/homePage/category.dart';
 import '../../widget/homePage/divider.dart';
 import '../../widget/homePage/listControllerWidget.dart';
 import '../../widget/homePage/list_View.dart';
+import '../../widget/homePage/meal_Plans.dart';
+import '../../widget/homePage/selectGoal.dart';
 import '../../widget/homePage/textBox.dart';
 import '../drawers/my_drawer_header.dart';
 import '../review/trainerDetailPage.dart';
@@ -21,9 +26,6 @@ import 'Book_Now.dart';
 
 class HomePage extends StatelessWidget {
   dynamic name_controller = 'Sophia !';
-  dynamic book_1_controller = 'Medical Centers';
-  dynamic book_2_controller = 'treatment centres';
-  dynamic book_3_controller = 'Pharmacies';
 
   dynamic search_controller = TextEditingController();
   @override
@@ -224,287 +226,23 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   // select  ---------------------------------------------------------------
-                  Padding(
-                    padding: const EdgeInsets.only(top: 3, bottom: 12),
-                    child: Container(
-                      height: 69,
-                      width: double.infinity,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 22),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Select your Goal',
-                                  style: C_TextStyle(
-                                    size: 16,
-                                    color: ColorApp.blackColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 12),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Container(
-                                    alignment: Alignment.center,
-                                    height: 32,
-                                    width: 116,
-                                    decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 177, 177, 177),
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 9, bottom: 8),
-                                      child: Text(
-                                        "${book_1_controller}",
-                                        style: C_TextStyle(
-                                          size: 11,
-                                          color: ColorApp.greyColor5,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(width: 8),
-                                Expanded(
-                                  flex: 2,
-                                  child: Container(
-                                    alignment: Alignment.center,
-                                    height: 32,
-                                    width: 116,
-                                    decoration: BoxDecoration(
-                                      color: ColorApp.blackColor2,
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 9, bottom: 8),
-                                      child: Text(
-                                        "${book_2_controller}",
-                                        style: C_TextStyle(
-                                          size: 11,
-                                          color: ColorApp.whiteColor,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(width: 8),
-                                Expanded(
-                                  flex: 2,
-                                  child: Container(
-                                    alignment: Alignment.center,
-                                    height: 32,
-                                    width: 90,
-                                    decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 177, 177, 177),
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 9, bottom: 8),
-                                      child: Text(
-                                        "${book_3_controller}",
-                                        style: C_TextStyle(
-                                          size: 11,
-                                          color: ColorApp.greyColor5,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                  SelectyourGoalWidget(text: "Select your Goal"),
+                  Select_Goal(),
                   // Category  --------------------------------------------------------------
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(top: 28, bottom: 19, right: 24),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Category',
-                          style: C_TextStyle(
-                            size: 15,
-                            color: ColorApp.blackColor,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          'See all',
-                          style: C_TextStyle(
-                            size: 15,
-                            color: ColorApp.blackColor,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    height: 100,
-                    width: double.infinity,
-                    child: Center(
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: items_1.length,
-                        itemBuilder: (context, i) {
-                          return items_1[i];
-                        },
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(top: 28, bottom: 20, right: 20),
-                    child: Container(height: 2, child: New_Divider()),
-                  ),
+                  CategoryWidget(word: "Category"),
+                  Category_W(),
+                  Tow_Divider(),
                   // Popular  --------------------------------------------------------------
-                  Container(
-                    height: 538,
-                    width: double.infinity,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 24, bottom: 13),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Popular Doctors',
-                                style: C_TextStyle(
-                                  size: 18,
-                                  color: ColorApp.blackColor,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              Text(
-                                'See all',
-                                style: C_TextStyle(
-                                  size: 12,
-                                  color: ColorApp.blackColor,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        ListView.builder(
-                          scrollDirection: Axis.vertical,
-                          itemCount: 2,
-                          shrinkWrap: true,
-                          itemBuilder: (context, i) {
-                            return items_3[i];
-                          },
-                        )
-                      ],
-                    ),
-                  ),
+                  Popular_W(),
 
                   // Meal Plans  --------------------------------------------------------------
 
-                  Container(
-                    height: 540,
-                    width: double.infinity,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 24, bottom: 13),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Meal Plans',
-                                style: C_TextStyle(
-                                  size: 18,
-                                  color: ColorApp.blackColor,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              Text(
-                                'See all',
-                                style: C_TextStyle(
-                                  size: 12,
-                                  color: ColorApp.blackColor,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        ListView.builder(
-                          scrollDirection: Axis.vertical,
-                          itemCount: 2,
-                          shrinkWrap: true,
-                          itemBuilder: (context, i) {
-                            return items_4[i];
-                          },
-                        )
-                      ],
-                    ),
-                  ),
+                  Meal_Plans_W(),
 
-                  // The best doctors -------------------------------------------------------------------------
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 28, right: 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'The best doctors',
-                          style: C_TextStyle(
-                            size: 18,
-                            color: ColorApp.blackColor,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        Text(
-                          'See all',
-                          style: C_TextStyle(
-                            size: 12,
-                            color: ColorApp.blackColor,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  // The best doctors Four -------------------------------------------------------------------------
+                  NewTextBestDoctorTwoWidget(word: 'The best doctors'),
 
-                  Container(
-                    height: 370,
-                    width: double.infinity,
-                    child: ListView.builder(
-                      scrollDirection: Axis.vertical,
-                      itemCount: 3,
-                      shrinkWrap: true,
-                      itemBuilder: (context, i) {
-                        return items_2[i];
-                      },
-                    ),
-                  ),
+                  NewWidgetBestDoctorFour(),
 
                   // ================ The best doctor text ===================
                   NewTextBestDoctorTwoWidget(word: 'The best doctors'),

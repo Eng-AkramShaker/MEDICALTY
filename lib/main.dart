@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
+import 'package:Medicalty/View/Pages/home_page/HomePage.dart';
 import 'package:Medicalty/bindings/initail_Bindings.dart';
 import 'package:Medicalty/routes/routes.dart';
 import 'package:Medicalty/services/settingServices.dart';
-import 'package:Medicalty/test/center_home.dart';
 import 'package:Medicalty/view/pages/informations/new_expenses.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -17,9 +17,6 @@ void main() async {
   await initialServices();
   runApp(MyApp());
 }
-
-
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -48,7 +45,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
       initialBinding: InitailBaindings(),
-      // home: CenterHo/me(),
+      // home: HomePage(),
       getPages: AppPage.routes,
       initialRoute: AppPage.getBoarding_Start(),
     );
