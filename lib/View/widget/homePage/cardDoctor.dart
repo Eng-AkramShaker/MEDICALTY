@@ -5,6 +5,8 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
+import '../../../constatnt/font_app_styles.dart';
+import '../../../constatnt/image_app.dart';
 import '../../../controllers/home_page/homeController.dart';
 import '../../Pages/home_page/Book_Now.dart';
 import '../../Pages/home_page/Speed_Dial.dart';
@@ -518,6 +520,165 @@ class NewCardDoctorWidgetTwo_1 extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+// ======================================================================
+
+class Photo_First extends StatelessWidget {
+  const Photo_First({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 14.5, right: 34.5),
+      child: SizedBox(
+        height: 249,
+        width: double.infinity,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Stack(
+                children: [
+                  Positioned(
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(top: 55, bottom: 30, left: 10),
+                      child: Container(
+                        height: 160,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: ColorApp.Color_yellow_2,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Expanded(flex: 2, child: SizedBox()),
+                            Expanded(
+                              flex: 3,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          height: 42.18,
+                                          width: 200.37,
+                                          padding: EdgeInsets.only(left: 10),
+                                          child: Column(
+                                            children: [
+                                              Text(
+                                                'Are you in any pain ! \nFind our certfed doctor!',
+                                                style: C_TextStyle(
+                                                  size: 14,
+                                                  color: ColorApp.whiteColor,
+                                                  fontWeight: FontWeight.w700,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 30,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: -28,
+                    top: 10,
+                    bottom: 22,
+                    child: SizedBox(
+                      height: 249,
+                      width: 195,
+                      child: Image.asset(
+                        ImagesApp.photo,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 90, left: 10),
+                      child: Container(
+                        height: 160,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          // color: Colors.grey,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Expanded(flex: 2, child: SizedBox()),
+                            Expanded(
+                              flex: 3,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  InkWell(
+                                    onTap: () {
+                                      Get.to(Book_Now());
+                                    },
+                                    child: Container(
+                                      height: 27.5,
+                                      width: 110,
+                                      decoration: BoxDecoration(
+                                        color: ColorApp.blackColor2,
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          "Book Now",
+                                          style: C_TextStyle(
+                                            size: 14,
+                                            color: ColorApp.whiteColor,
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 70,
+                                    width: 70,
+                                    child: Image.asset(
+                                      ImagesApp.mdcl,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -13,7 +13,6 @@ import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/informations/center_information_controller.dart';
 import '../../../utils/information_image.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 
 class CenterInformationPage extends StatelessWidget {
   String? validateName(String value) {
