@@ -333,12 +333,12 @@ class CreatePharmacyPage extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 15.0),
-                          OnBoardingTextWidget(
-                            text: 'Social media links for the cent',
-                            fontWeight: FontWeight.w500,
-                            color: ColorApp.primaryColor,
-                            fontSize: 16,
-                          ),
+                          // OnBoardingTextWidget(
+                          //   text: 'Social media links for the cent',
+                          //   fontWeight: FontWeight.w500,
+                          //   color: ColorApp.primaryColor,
+                          //   fontSize: 16,
+                          // ),
                           const SizedBox(height: 15.0),
                           OnBoardingTextFormField(
                             controller: controller.websiteController,

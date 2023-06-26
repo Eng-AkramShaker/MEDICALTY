@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/informations/adding_product_pharmacy_controller.dart';
+import '../../../model/pharmacy/addProdacteModle.dart';
 import '../../../utils/information_image.dart';
 import '../../widget/textfield_screen/my_app_bar.dart';
 import '../../widget/textfield_screen/my_textfield_container.dart';
@@ -211,6 +212,15 @@ class ProductsPharmacyPage extends StatelessWidget {
                       if(controller.formKey.currentState!.validate()){
 
                         controller.formKey.currentState!.save();
+
+                        controller.addProductPharmacy(AddProductModel(
+                          name: controller.productNameController.text,
+                          description: controller.descController.text,
+                          details: controller.informationController.text,
+                          price: controller.priceController.text,
+
+                        ), context);
+
 
                       }else{
                         showDialog(context: context, builder: (_) => AlertDialog(

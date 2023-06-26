@@ -1,6 +1,4 @@
-
 // ignore_for_file: non_constant_identifier_names
-
 
 class ApiLinks {
   static String loginAdmin = "$baseUrl/api/center/admin/login";
@@ -13,4 +11,7 @@ class ApiLinks {
 
   static String RegisterPharmacyUrl = '$baseUrl/api/pharmacy/register';
 
+  static String LaboratoryUrl = '$baseUrl/api/lab/register';
+
+  static String addProductsPharmacyUrl = '$baseUrl/api/pharmacy/addProduct';
 }
