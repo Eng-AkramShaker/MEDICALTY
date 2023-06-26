@@ -1,13 +1,16 @@
 
-
 // ignore_for_file: sort_child_properties_last
 
 
 import 'package:Medicalty/View/widget/textfield_screen/my_text_form_field.dart';
 import 'package:Medicalty/controllers/accounts/login_controller.dart';
+import 'package:Medicalty/controllers/informations/center_information_controller.dart';
 import 'package:Medicalty/model/accounts/admin_login_model/admin_login_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import '../../../constatnt/image_app.dart';
+import '../../../main.dart';
 import '../../widget/login/container.dart';
 import '../Trainer/paymentCompleted.dart';
 import 'create_accounts.dart';
@@ -19,26 +22,26 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<LoginController>(
-        init: LoginController(),
+      init: LoginController(),
         builder: (controller) => Scaffold(
-                body: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 47, left: 24, right: 24),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Icon(
-                      Icons.arrow_back_ios,
-                      color: Colors.black,
-                      size: 20,
-                    ),
-                  ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 47, left: 24, right: 24),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.black,
+                  size: 20,
                 ),
-                Expanded(
-                    child: ListView(children: [
+              ),
+            ),
+            Expanded(
+                child: ListView(children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: Column(

@@ -1,9 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors, avoid_print
 
 import 'package:Medicalty/View/widget/textfield_screen/onboarding_text_widget.dart';
-import 'package:Medicalty/api/class/crud.dart';
-import 'package:Medicalty/api/class/handling_data_view.dart';
-import 'package:Medicalty/api/class/status_request.dart';
 import 'package:Medicalty/model/create_center/center_body_model.dart';
 import 'package:Medicalty/view/pages/accounts/login_page.dart';
 import 'package:Medicalty/view/widget/textfield_screen/my_app_bar.dart';

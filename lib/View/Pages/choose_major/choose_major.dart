@@ -11,7 +11,6 @@ import '../../../constatnt/font_app_styles.dart';
 import '../../../constatnt/image_app.dart';
 import '../../../services/settingServices.dart';
 import '../../widget/choose_major/custom_choose_major.dart';
-import '../accounts/create_accounts.dart';
 import '../informations/center_information.dart';
 //import 'alert_dialog.dart';
 

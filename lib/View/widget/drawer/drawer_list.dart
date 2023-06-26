@@ -3,7 +3,6 @@
 import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../main.dart';
 import '../../Pages/accounts/login_page.dart';
 import '../../Pages/accounts/verify_account.dart';
 import '../../Pages/drawers/about.dart';
