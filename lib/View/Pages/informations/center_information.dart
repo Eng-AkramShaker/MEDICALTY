@@ -1,9 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors, avoid_print
 
-import 'package:Medicalty/View/Pages/home_screen.dart';
 import 'package:Medicalty/View/widget/textfield_screen/onboarding_text_widget.dart';
+import 'package:Medicalty/api/class/crud.dart';
 import 'package:Medicalty/api/class/handling_data_view.dart';
+import 'package:Medicalty/api/class/status_request.dart';
 import 'package:Medicalty/model/create_center/center_body_model.dart';
+import 'package:Medicalty/view/pages/accounts/login_page.dart';
 import 'package:Medicalty/view/widget/textfield_screen/my_app_bar.dart';
 import 'package:Medicalty/view/widget/textfield_screen/my_textfield_container.dart';
 import 'package:Medicalty/view/widget/textfield_screen/onboarding_button.dart';
@@ -244,9 +246,7 @@ class CenterInformationPage extends StatelessWidget {
                         ],
                       )),
                   
-                 HandlingDataView(
-                  statusRequest: controller.statusRequest,
-                   widget: OnBoardingButton(
+                 OnBoardingButton(
                         onPressed: () {
                           if (controller.formKey.currentState!.validate()) {
                             controller.formKey.currentState!.save();
@@ -277,10 +277,10 @@ class CenterInformationPage extends StatelessWidget {
                             );
                             print('success');
                             print(
-                                '===========================${controller.name.text}');
-                            print(
                                 '===========================${controller.email.text}');
-                            Get.to(() => HomeScreen());
+                            print(
+                                '===========================${controller.password.text}');
+                            Get.to(() => Login());
                           } else {
                             showDialog(
                                 context: context,
@@ -292,7 +292,6 @@ class CenterInformationPage extends StatelessWidget {
                         text: 'SAVE',
                         size: 22,
                       ),
-                 ),
                 ],
               ),
             ),
