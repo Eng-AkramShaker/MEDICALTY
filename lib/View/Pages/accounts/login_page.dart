@@ -1,19 +1,15 @@
 
-// ignore_for_file: sort_child_properties_last
+// ignore_for_file: sort_child_properties_last, unrelated_type_equality_checks
 
 import 'package:Medicalty/View/widget/textfield_screen/my_text_form_field.dart';
 import 'package:Medicalty/controllers/accounts/login_controller.dart';
+import 'package:Medicalty/controllers/informations/center_information_controller.dart';
 import 'package:Medicalty/model/accounts/admin_login_model/admin_login_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import '../../../constatnt/image_app.dart';
-import '../../../main.dart';
+import '../../../api/class/status_request.dart';
 import '../../widget/login/container.dart';
-import '../../widget/login/mytext_field.dart';
 import '../Trainer/paymentCompleted.dart';
-import '../home_page/navBar.dart';
 import 'create_accounts.dart';
 import 'forgot_password.dart';
 
@@ -21,9 +17,10 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final CenterInformationController extController = Get.put(CenterInformationController());
     return GetBuilder<LoginController>(
       init: LoginController(),
-        builder: (controller) => Scaffold(
+        builder: (controller) =>  Scaffold(
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -15,7 +15,7 @@ class CenterInformationController extends GetxController {
   final formKey = GlobalKey<FormState>();
 
   RequestData requestData = RequestData(Get.find());
-  late StatusRequest statusRequest;
+  late final StatusRequest statusRequest;
 
   TextEditingController name = TextEditingController();
   TextEditingController username = TextEditingController();

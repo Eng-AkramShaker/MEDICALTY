@@ -1,8 +1,9 @@
 
 
+// ignore_for_file: avoid_print
+
 import 'package:Medicalty/api/class/crud.dart';
 import 'package:Medicalty/model/create_center/center_body_model.dart';
-import 'package:Medicalty/services/api_links.dart';
 
 class RequestData {
   Crud crud;

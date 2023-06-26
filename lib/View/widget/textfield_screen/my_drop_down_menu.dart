@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 class MyDropDownMenu extends StatelessWidget {
@@ -5,7 +7,7 @@ class MyDropDownMenu extends StatelessWidget {
   List myList;
   String? text;
 
-  MyDropDownMenu({required this.onChanged,required this.myList,this.text});
+  MyDropDownMenu({super.key, required this.onChanged,required this.myList,this.text});
   @override
   Widget build(BuildContext context) {
     return Container(

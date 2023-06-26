@@ -1,6 +1,7 @@
+// ignore_for_file: must_call_super
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 class NewInvoicesController extends GetxController{
   TextEditingController idInvoicesController = TextEditingController();
