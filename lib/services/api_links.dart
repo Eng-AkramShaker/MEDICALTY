@@ -5,4 +5,5 @@ class ApiLinks {
   static String loginAdmin = "$_baseUrl/api/center/admin/login";
   static String RegisterDoctorUrl = '$_baseUrl/api/doctor/register';
   static String RegisterPharmacyUrl = '$_baseUrl/api/pharmacy/register';
+  static String addProductsPharmacyUrl = '$_baseUrl/api/pharmacy/addProduct';
 }

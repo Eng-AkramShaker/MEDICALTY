@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors, unused_import
 
+import 'package:Medicalty/model/pharmacy/AddProduct.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -209,8 +210,14 @@ class ProductsPharmacyPage extends StatelessWidget {
                   child: OnBoardingButton(
                     onPressed: () {
                       if(controller.formKey.currentState!.validate()){
-
                         controller.formKey.currentState!.save();
+                        controller.addProductPharmacy(AddProductModel(
+                          name: controller.productNameController.text,
+                          description: controller.descController.text,
+                          details: controller.informationController.text,
+                          price: controller.priceController.text,
+
+                        ), context);
 
                       }else{
                         showDialog(context: context, builder: (_) => AlertDialog(
