@@ -333,7 +333,7 @@ class CreatePharmacyPage extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 15.0),
-                          // MyTextFormField(
+                          // OnBoardingTextWidget(
                           //   text: 'Social media links for the cent',
                           //   fontWeight: FontWeight.w500,
                           //   color: ColorApp.primaryColor,

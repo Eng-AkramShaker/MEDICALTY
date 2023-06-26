@@ -1,5 +1,4 @@
 // ignore_for_file: must_be_immutable, use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
 
 class OnBoardingTextWidget extends StatelessWidget {
@@ -15,7 +14,6 @@ class OnBoardingTextWidget extends StatelessWidget {
       required this.fontWeight,
       required this.color,
       this.textDecoration});
-
 
   @override
   Widget build(BuildContext context) {

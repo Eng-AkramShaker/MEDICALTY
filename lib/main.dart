@@ -9,8 +9,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
+import 'View/Pages/informations/adding_products_pharmacy.dart';
 import 'View/Pages/informations/create_insurance_company.dart';
 import 'View/Pages/informations/create_laboratory.dart';
+import 'View/Pages/informations/create_pharmacy.dart';
 import 'constatnt/color_app.dart';
 import 'services/initServieces.dart';
 

@@ -11,4 +11,6 @@ class ApiLinks {
   static String RegisterPharmacyUrl = '$baseUrl/api/pharmacy/register';
 
   static String LaboratoryUrl = '$baseUrl/api/lab/register';
+
+  static String addProductsPharmacyUrl = '$baseUrl/api/pharmacy/addProduct';
 }
