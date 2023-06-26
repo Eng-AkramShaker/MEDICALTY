@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 import '../../model/Insurance/Insurance_model.dart';
+import '../../services/api_links.dart';
 
 class InsuranceCompanyController extends GetxController {
   final formKey = GlobalKey<FormState>();
@@ -32,8 +33,6 @@ class InsuranceCompanyController extends GetxController {
   TextEditingController youtubeController = TextEditingController();
 
   void registerInsurance() async {
-    var url = "http://medicalty.space/api/center/insuranceCompany";
-
     var bodyy = jsonEncode(
       InsuranceModel(
         name: nameInsuranceController.text,
@@ -55,10 +54,10 @@ class InsuranceCompanyController extends GetxController {
         youtube: youtubeController.text,
       ).toJson(),
     );
-    var urlParse = Uri.parse(url);
 
     try {
-      var response = await http.post(Uri.parse(url), body: bodyy, headers: {
+      var response = await http
+          .post(Uri.parse(ApiLinks.insuranceUrl), body: bodyy, headers: {
         'Content-Type': 'application/json',
         // 'Authorization':'Bearer $token',
       });
