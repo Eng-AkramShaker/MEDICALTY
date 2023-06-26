@@ -1,5 +1,10 @@
 // ignore_for_file: file_names, prefer_const_constructors, unused_import
 
+import 'package:Medicalty/View/Pages/Physician/physicianPage.dart';
+import 'package:Medicalty/View/Pages/hospital/hospitlPage.dart';
+import 'package:Medicalty/View/Pages/medical_Center/medical_CenterPage.dart';
+import 'package:Medicalty/View/Pages/pharmcy/pharmcyPage.dart';
+import 'package:Medicalty/services/settingServices.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
@@ -25,7 +30,12 @@ class NavBar extends StatelessWidget {
           body: IndexedStack(
             index: controller.tabIndex,
             children: [
-              HomePage(),
+             myBox!.get('type') == 'center'? medical_CenterPage(): 
+             myBox!.get('type') == 'pharmacy'? PharmcyPage(): 
+             (myBox!.get('type') == 'Physiotherapy' || myBox!.get('type') == 'nurse' || myBox!.get('type') == 'doctor')? PhysicianPage(): 
+             myBox!.get('type') == 'hospital'? HospitalPage(): HomePage(),
+             
+              
               AppSetting(),
               Speed_Dial(),
               Favourite(),

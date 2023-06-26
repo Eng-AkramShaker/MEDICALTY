@@ -92,7 +92,7 @@ class OnboardingThree extends GetView<OnBoardingControllerImp> {
                               const Spacer(),
                               NextButtomWidget(
                                 onTap: () {
-                                  Get.off(ChooseMajor());
+                                  Get.off(()=>ChooseMajor());
                                 },
                               ),
                             ],

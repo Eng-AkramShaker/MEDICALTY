@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_print, depend_on_referenced_packages
 
 import 'dart:convert';
+import 'package:Medicalty/api/class/status_request.dart';
 import 'package:Medicalty/api/functions/check_internet.dart';
-import 'package:Medicalty/class/status_request.dart';
 import 'package:either_dart/either.dart';
 import 'package:http/http.dart' as http;
 
@@ -38,9 +38,13 @@ class Crud {
 
   Future<Either<StatusRequest, Map>> postRequest(String linkUrl,
       Map<String, String>? headers, Map<dynamic, dynamic> map) async {
+        print('=========================== postRequest');
+
     try {
-      // check internet ==============================
+     
       if (await checkInternet()) {
+        print('=========================== if checkInternet ');
+
         var response = await http.post(Uri.parse(linkUrl),
             body: json.encode(map), headers: headers);
         if (response.statusCode == 200 || response.statusCode == 201) {
@@ -60,7 +64,8 @@ class Crud {
     } catch (_) {
       return const Left(StatusRequest.serverFailure);
     }
-  }
+
+      }
 
   //===================== Put request ===================================================
 

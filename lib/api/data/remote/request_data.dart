@@ -1,7 +1,8 @@
 
 
-import 'package:Medicalty/class/crud.dart';
+import 'package:Medicalty/api/class/crud.dart';
 import 'package:Medicalty/model/create_center/center_body_model.dart';
+import 'package:Medicalty/services/api_links.dart';
 
 class RequestData {
   Crud crud;
@@ -9,6 +10,7 @@ class RequestData {
 
   Map<String, String>? headers = {
     'Content-Type': 'application/json',
+    
   };
 
   postCreateCenterData(CenterBody? map) async {
@@ -17,6 +19,7 @@ class RequestData {
         'http://medicalty.space/api/center/save',
         headers,
         map!.toJson());
+        print('=============== response : $response');
     return response.fold((l) => l, (r) => r);
   }
 }

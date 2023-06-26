@@ -86,7 +86,7 @@ class OnBoardingStart extends GetView<OnBoardingControllerImp> {
                           ),
                           CustomBottumOnBoarding(
                             onPressed: () {
-                              Get.to(const OnBoarding());
+                              Get.to(()=>const OnBoarding());
                             },
                             textTitle: ('Lets Start'),
                             color: ColorApp.primaryColor,
