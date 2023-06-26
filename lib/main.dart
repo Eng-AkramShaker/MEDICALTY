@@ -3,6 +3,7 @@
 import 'package:Medicalty/bindings/initail_Bindings.dart';
 import 'package:Medicalty/routes/routes.dart';
 import 'package:Medicalty/services/settingServices.dart';
+import 'package:Medicalty/test/center_home.dart';
 import 'package:Medicalty/view/pages/informations/new_expenses.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Medicalty',
       initialBinding: InitailBaindings(),
-      // home: NewExpensesPage(),
+      // home: CenterHo/me(),
       getPages: AppPage.routes,
       initialRoute: AppPage.getBoarding_Start(),
     );

@@ -52,7 +52,7 @@ class CenterBody {
          this.instagram,
          this.twitter,
          this.snapchat,
-          this.youtube,
+         this.youtube,
     });
 
     factory CenterBody.fromJson(Map<String, dynamic> json) => CenterBody(

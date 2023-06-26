@@ -1,6 +1,6 @@
 // ignore_for_file: unused_import, implementation_imports
 
-import 'package:Medicalty/class/status_request.dart';
+import 'package:Medicalty/api/class/status_request.dart';
 import 'package:flutter/material.dart';
 
 

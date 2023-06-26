@@ -2,7 +2,7 @@
 
 import 'package:Medicalty/View/Pages/home_screen.dart';
 import 'package:Medicalty/View/widget/textfield_screen/onboarding_text_widget.dart';
-import 'package:Medicalty/class/handling_data_view.dart';
+import 'package:Medicalty/api/class/handling_data_view.dart';
 import 'package:Medicalty/model/create_center/center_body_model.dart';
 import 'package:Medicalty/view/widget/textfield_screen/my_app_bar.dart';
 import 'package:Medicalty/view/widget/textfield_screen/my_textfield_container.dart';
@@ -13,7 +13,6 @@ import 'package:get/get.dart';
 import '../../../constatnt/color_app.dart';
 import '../../../controllers/informations/center_information_controller.dart';
 import '../../../utils/information_image.dart';
-import '../../widget/textfield_screen/onboarding_text_form_field.dart';
 
 class CenterInformationPage extends StatelessWidget {
   String? validateName(String value) {
@@ -245,55 +244,55 @@ class CenterInformationPage extends StatelessWidget {
                         ],
                       )),
                   
-                  HandlingDataView(
-                    statusRequest: controller.statusRequest,
-                    widget: OnBoardingButton(
-                      onPressed: () {
-                        if (controller.formKey.currentState!.validate()) {
-                          controller.formKey.currentState!.save();
-                          controller.update();
-                          controller.postData(CenterBody(
-                            name: controller.name.text,
-                            username: controller.username.text,
-                            email: controller.email.text,
-                            password: controller.password.text,
-                            country: controller.country.text,
-                            subscriptionType: controller.subscriptionType.text,
-                            subscriptionPeriod: controller.subscriptionPeriod.text,
-                            formalEmail: controller.formalEmail.text,
-                            phone: controller.phone.text,
-                            formalPhone: controller.formalPhone.text,
-                            website: controller.website.text,
-                            address1: controller.address1.text,
-                            address2: controller.address2.text,
-                            state: controller.state.text,
-                            province: controller.province.text,
-                            zipCode: controller.zipCode.text,
-                            facebook: controller.facebook.text,
-                            instagram: controller.instagram.text,
-                            twitter: controller.twitter.text,
-                            snapchat: controller.snapchat.text,
-                            youtube: controller.youtube.text,
-                          )
-                          );
-                          print('success');
-                          print(
-                              '===========================${controller.name.text}');
-                          print(
-                              '===========================${controller.email.text}');
-                          Get.to(() => HomeScreen());
-                        } else {
-                          showDialog(
-                              context: context,
-                              builder: (_) => AlertDialog(
-                                    title: Text('Please Enter all Fields'),
-                                  ));
-                        }
-                      },
-                      text: 'SAVE',
-                      size: 22,
-                    ),
-                  ),
+                 HandlingDataView(
+                  statusRequest: controller.statusRequest,
+                   widget: OnBoardingButton(
+                        onPressed: () {
+                          if (controller.formKey.currentState!.validate()) {
+                            controller.formKey.currentState!.save();
+                            // controller.update();
+                            controller.postData(CenterBody(
+                              name: controller.name.text,
+                              username: controller.username.text,
+                              email: controller.email.text,
+                              password: controller.password.text,
+                              country: controller.country.text,
+                              subscriptionType: controller.subscriptionType.text,
+                              subscriptionPeriod: controller.subscriptionPeriod.text,
+                              formalEmail: controller.formalEmail.text,
+                              phone: controller.phone.text,
+                              formalPhone: controller.formalPhone.text,
+                              website: controller.website.text,
+                              address1: controller.address1.text,
+                              address2: controller.address2.text,
+                              state: controller.state.text,
+                              province: controller.province.text,
+                              zipCode: controller.zipCode.text,
+                              facebook: controller.facebook.text,
+                              instagram: controller.instagram.text,
+                              twitter: controller.twitter.text,
+                              snapchat: controller.snapchat.text,
+                              youtube: controller.youtube.text,
+                            )
+                            );
+                            print('success');
+                            print(
+                                '===========================${controller.name.text}');
+                            print(
+                                '===========================${controller.email.text}');
+                            Get.to(() => HomeScreen());
+                          } else {
+                            showDialog(
+                                context: context,
+                                builder: (_) => AlertDialog(
+                                      title: Text('Please Enter all Fields'),
+                                    ));
+                          }
+                        },
+                        text: 'SAVE',
+                        size: 22,
+                      ),
+                 ),
                 ],
               ),
             ),
