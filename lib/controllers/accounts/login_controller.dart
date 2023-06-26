@@ -1,7 +1,6 @@
 import 'package:Medicalty/model/accounts/admin_login_model/admin_login_model.dart';
 import 'package:Medicalty/services/api.dart';
 import 'package:Medicalty/services/api_links.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';

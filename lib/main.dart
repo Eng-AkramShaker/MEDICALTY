@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
 import 'package:Medicalty/routes/routes.dart';
-import 'package:Medicalty/test/center_home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
@@ -17,7 +16,6 @@ import 'View/Pages/informations/center_information.dart';
 import 'View/Pages/informations/create_laboratory.dart';
 import 'View/Pages/informations/create_pharmacy.dart';
 import 'View/Pages/informations/disease_reporting.dart';
-import 'View/Pages/informations/new_doctor.dart';
 import 'View/Pages/informations/new_employee.dart';
 import 'View/Pages/informations/new_expenses.dart';
 import 'View/Pages/informations/new_experiences.dart';
