@@ -86,7 +86,7 @@ class OnboardingOne extends GetView<OnBoardingControllerImp> {
                             const Spacer(),
                             NextButtomWidget(
                               onTap: () {
-                                Get.to(const OnboardingTwo());
+                                Get.to(()=>const OnboardingTwo());
                               },
                             ),
                           ],

@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_print
 
+import 'package:Medicalty/api/class/status_request.dart';
 import 'package:Medicalty/api/functions/handling_data_controller.dart';
 import 'package:Medicalty/api/data/remote/request_data.dart';
-import 'package:Medicalty/class/status_request.dart';
 import 'package:Medicalty/model/create_center/center_body_model.dart';
 import 'package:Medicalty/model/create_center/create_center_model.dart';
 import 'package:Medicalty/services/settingServices.dart';
@@ -51,14 +51,16 @@ class CenterInformationController extends GetxController {
       print('=============== statusRequest is success: ===============');
       var createCenter = CreateCenter.fromJson(response);
       update();
+      print('======================= createcenter :$createCenter');
       print(
-          '====================== Create center token : ${createCenter.token}');
-      myBox!.put('token', createCenter.token);
+          '====================== Create center token : ${createCenter.center.token}');
+      myBox!.put('token', createCenter.center.token);
       print('====================== myBox token is put =================');
       print(
           '====================== myBox token is get ${myBox!.get('token')}=================');
     }
   }
+//====================================================
 
   @override
   void onInit() {

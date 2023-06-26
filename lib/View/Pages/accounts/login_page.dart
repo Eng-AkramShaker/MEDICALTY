@@ -1,3 +1,8 @@
+
+
+// ignore_for_file: sort_child_properties_last
+
+
 import 'package:Medicalty/View/widget/textfield_screen/my_text_form_field.dart';
 import 'package:Medicalty/controllers/accounts/login_controller.dart';
 import 'package:Medicalty/model/accounts/admin_login_model/admin_login_model.dart';
@@ -113,11 +118,7 @@ class Login extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => PaymentCompleted()),
-                            );
+                            Get.to(()=> PaymentCompleted());
                           },
                           child: InkWell(
                             onTap: () {
@@ -235,7 +236,7 @@ class Login extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text('Don’t have an account?',
+                            const Text('Don\'t have an account?',
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 14,
@@ -243,12 +244,9 @@ class Login extends StatelessWidget {
                                 )),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const Create_Accounts()),
-                                );
+
+                                 Get.to(const Create_Accounts());
+
                               },
                               child: InkWell(
                                 onTap: () {
