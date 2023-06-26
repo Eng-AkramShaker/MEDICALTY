@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../model/laboratory/laboratory_model.dart';
+import '../../services/api_links.dart';
 import '../../services/settingServices.dart';
 import 'package:http/http.dart' as http;
 
@@ -29,7 +30,6 @@ class CreateLaboratoryController extends GetxController {
   }
 
   void registerLaboratory() async {
-    var url = "http://medicalty.space/api/lab/register";
 
     var bodyy = jsonEncode(laboratoryModel(
       image: imageController.text,
@@ -43,7 +43,7 @@ class CreateLaboratoryController extends GetxController {
     ).toJson());
 
     try {
-      var response = await http.post(Uri.parse(url), body: bodyy, headers: {
+      var response = await http.post(Uri.parse(ApiLinks.LaboratoryUrl), body: bodyy, headers: {
         'Content-Type': 'application/json',
         // 'Authorization':'Bearer $token',
       });
