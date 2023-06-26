@@ -6,7 +6,7 @@ import 'package:Medicalty/api/functions/check_internet.dart';
 import 'package:either_dart/either.dart';
 import 'package:http/http.dart' as http;
 
-
+Map? responsebody;
 class Crud {
   //===================== Get request ===================================================
   Future<Either<StatusRequest, Map>> getRequest(
