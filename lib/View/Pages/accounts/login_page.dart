@@ -1,47 +1,44 @@
 
+
 // ignore_for_file: sort_child_properties_last
+
 
 import 'package:Medicalty/View/widget/textfield_screen/my_text_form_field.dart';
 import 'package:Medicalty/controllers/accounts/login_controller.dart';
 import 'package:Medicalty/model/accounts/admin_login_model/admin_login_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import '../../../constatnt/image_app.dart';
-import '../../../main.dart';
 import '../../widget/login/container.dart';
-import '../../widget/login/mytext_field.dart';
 import '../Trainer/paymentCompleted.dart';
-import '../home_page/navBar.dart';
 import 'create_accounts.dart';
 import 'forgot_password.dart';
 
 class Login extends StatelessWidget {
+  const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GetBuilder<LoginController>(
-      init: LoginController(),
+        init: LoginController(),
         builder: (controller) => Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 47, left: 24, right: 24),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: const Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.black,
-                  size: 20,
+                body: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 47, left: 24, right: 24),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.black,
+                      size: 20,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            Expanded(
-                child: ListView(children: [
+                Expanded(
+                    child: ListView(children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: Column(
@@ -71,8 +68,8 @@ class Login extends StatelessWidget {
                           height: 46,
                         ),
                         MyTextFormField(
-                          controller:controller.emailController ,
-                          validator: (){},
+                          controller: controller.emailController,
+                          validator: () {},
                           obscureText: false,
                           labelText: 'yourmail@mail.com',
                           keyboardType: TextInputType.text,
@@ -81,16 +78,18 @@ class Login extends StatelessWidget {
                           height: 46,
                         ),
                         MyTextFormField(
-                          controller:controller.passwordController ,
-                          validator: (){},
+                          controller: controller.passwordController,
+                          validator: () {},
                           obscureText: controller.isVisibility,
                           labelText: 'Password',
                           keyboardType: TextInputType.text,
                           suffixIcon: InkWell(
-                            onTap: (){
+                            onTap: () {
                               controller.visibility();
                             },
-                            child: Icon(controller.isVisibility ? Icons.visibility : Icons.visibility_off),
+                            child: Icon(controller.isVisibility
+                                ? Icons.visibility
+                                : Icons.visibility_off),
                           ),
                         ),
                         const SizedBox(
@@ -123,14 +122,13 @@ class Login extends StatelessWidget {
                           },
                           child: InkWell(
                             onTap: () {
-                              controller.loginAdmin(AdminLoginModel(
-                                  email: controller.emailController.text,
-                                  password: controller.passwordController.text,
-
-                              ),
-                                context
-                              );
-
+                              controller.loginAdmin(
+                                  AdminLoginModel(
+                                    email: controller.emailController.text,
+                                    password:
+                                        controller.passwordController.text,
+                                  ),
+                                  context);
                             },
                             child: Container_wed(
                               color: const Color(0xff022939),
@@ -156,21 +154,29 @@ class Login extends StatelessWidget {
                         Container(
                           height: 51,
                           width: double.infinity,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: const Color(0xff69696940), width: 1),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(6)),
+                            color: const Color(0xffF5F5F5),
+                          ),
                           child: Center(
                             child: Padding(
                               padding:
-                              const EdgeInsets.only(left: 20, right: 20),
+                                  const EdgeInsets.only(left: 20, right: 20),
                               child: Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
                                       height: 30,
                                       width: 30,
                                       decoration: BoxDecoration(
                                           borderRadius:
-                                          BorderRadius.circular(25)),
-                                      child: Image.asset('assets/images/google1.png')),
+                                              BorderRadius.circular(25)),
+                                      child: Image.asset(
+                                          'assets/images/google1.png')),
                                   const Text('Connect with Google',
                                       style: TextStyle(
                                         color: Color(0xff303841),
@@ -182,12 +188,6 @@ class Login extends StatelessWidget {
                               ),
                             ),
                           ),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                color: const Color(0xff69696940), width: 1),
-                            borderRadius: const BorderRadius.all(Radius.circular(6)),
-                            color: const Color(0xffF5F5F5),
-                          ),
                         ),
                         const SizedBox(
                           height: 15,
@@ -195,22 +195,29 @@ class Login extends StatelessWidget {
                         Container(
                           height: 51,
                           width: double.infinity,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: const Color(0xff69696940), width: 1),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(6)),
+                              color: const Color(0xff4267B2)),
                           child: Center(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 20, right: 20),
+                              padding:
+                                  const EdgeInsets.only(left: 20, right: 20),
                               child: Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
                                     height: 30,
                                     width: 30,
                                     decoration: BoxDecoration(
                                         borderRadius:
-                                        BorderRadius.circular(25)),
-                                    child: Image.asset('assets/images/facebook1.png'),
+                                            BorderRadius.circular(25)),
+                                    child: Image.asset(
+                                        'assets/images/facebook1.png'),
                                   ),
-
                                   const Text('Connect With Facebook',
                                       style: TextStyle(
                                         color: Colors.white,
@@ -222,12 +229,6 @@ class Login extends StatelessWidget {
                               ),
                             ),
                           ),
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: const Color(0xff69696940), width: 1),
-                              borderRadius:
-                              const BorderRadius.all(Radius.circular(6)),
-                              color: const Color(0xff4267B2)),
                         ),
                         const SizedBox(
                           height: 40,
@@ -243,7 +244,9 @@ class Login extends StatelessWidget {
                                 )),
                             GestureDetector(
                               onTap: () {
+
                                  Get.to(const Create_Accounts());
+
                               },
                               child: InkWell(
                                 onTap: () {
@@ -263,7 +266,7 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ]))
-          ],
-        )));
+              ],
+            )));
   }
 }
