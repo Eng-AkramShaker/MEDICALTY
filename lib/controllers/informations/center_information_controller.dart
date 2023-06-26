@@ -43,6 +43,7 @@ class CenterInformationController extends GetxController {
     print('==================== centerBody Befor loading: $centerBody');
     statusRequest = StatusRequest.loading;
     var response = await requestData.postCreateCenterData(centerBody);
+    
     print('==================== response After loading: $response');
 
     statusRequest = handlingData(response);
